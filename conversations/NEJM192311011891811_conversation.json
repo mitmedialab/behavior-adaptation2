@@ -1,0 +1,539 @@
+{
+    "case_metadata": {
+        "case_id": "9441",
+        "title": "Case 9441",
+        "source": {
+            "journal": "Massachusetts General Hospital Case Records",
+            "publication_date": "1923",
+            "pages": "1-20"
+        }
+    },
+    "patient_info": {
+        "age": 35,
+        "gender": "M",
+        "demographics": {
+            "ethnicity": "Portugese-American",
+            "occupation": "Druggist, former Sailor",
+            "living_arrangement": "Not mentioned"
+        },
+        "social_history": {
+            "alcohol_use": "Not mentioned",
+            "tobacco_use": "Not mentioned",
+            "substance_use": "Took Fowler's solution (Arsenic-based medicine)",
+            "other": "Sailor, contact with people worldwide (New England coast only)"
+        },
+        "medical_history": {
+            "allergies": "Not mentioned",
+            "past_medical_conditions": "Constipation for years, occasional dizziness and visual disturbance with light, headaches, compound fracture of right leg (19 years ago), occasional colds, generalized eczema (2 years ago), skin nodules (1 year ago)",
+            "medications": "Salve (for eczema), Intravenous treatment (for eczema), Intramuscular injection (for eczema), Intravenous injection (arsenic), Fowler's solution (arsenic)"
+        },
+        "surgical_history": {
+            "compound_fracture_right_leg": "19 years ago"
+        }
+    },
+    "participants": {
+        "clinicians": {
+            "Doctor Cabot": {
+                "specialty": "General Clinician",
+                "role": "Primary Presenter/Attending",
+                "real_name": "Richard C. Cabot, M.D."
+            },
+            "Doctor Oliver": {
+                "specialty": "Dermatology",
+                "role": "Dermatology Consultant",
+                "real_name": "E. L. Oliver"
+            },
+            "Doctor Richardson": {
+                "specialty": "Pathology",
+                "role": "Pathologist",
+                "real_name": "Dr. Richardson"
+            },
+            "Physician A": {
+                "specialty": "General Medicine",
+                "role": "Physician in Discussion",
+                "real_name": "A Physician",
+                "created": true
+            },
+            "Doctor Holmes": {
+                "specialty": "Radiology",
+                "role": "Radiology Consultant (X-ray Treatment)",
+                "real_name": "Dr. Holmes"
+            },
+            "Nurse A": {
+                "specialty": "Nursing",
+                "role": "Inpatient Nurse",
+                "real_name": "Nurse A",
+                "created": true
+            }
+        },
+        "others": {
+            "Patient": {
+                "role": "Patient",
+                "real_name": "Portugese-American Druggist"
+            }
+        }
+    },
+    "conversation": {
+        "turn_1": {
+            "speaker": "Nurse A",
+            "listeners": [
+                "Patient"
+            ],
+            "real_name": "Nurse A",
+            "timestamp": "Upon admission on April 17, 1923",
+            "message": "Good morning, sir. Welcome to Massachusetts General Hospital.  We are here to help you. Could you please tell me your name and why you are here today?",
+            "intention": "Admission and initial patient greeting and chief complaint inquiry.",
+            "context": "Patient entering the hospital 'for study'.",
+            "source_reference": "Page 1: 'A Portugese-American druggist of thirtyfive entered April 17, 1923, for study.'"
+        },
+        "turn_2": {
+            "speaker": "Patient",
+            "listeners": [
+                "Nurse A"
+            ],
+            "real_name": "Portugese-American Druggist",
+            "timestamp": "Immediately after Nurse A's greeting",
+            "message": "Yes, I am here because of my skin. It\u2019s been terrible. It started as eczema two years ago, but now\u2026 nodules and ulcers everywhere.  Itching too, but not so much anymore now.  And I've been coughing lately, feeling quite hoarse.",
+            "intention": "Describing chief complaint and recent symptoms.",
+            "context": "Patient explaining the reason for admission.",
+            "source_reference": "Page 1: 'Two years ago he slowly developed a generalized eczema...Since then some of the lesions had broken down...His general health had not changed until a week ago, when he \"caught cold.\"' Page 2: 'A poorly nourished man with hoarse voice and dry cough.'"
+        },
+        "turn_3": {
+            "speaker": "Doctor Cabot",
+            "listeners": [
+                "Patient",
+                "Nurse A"
+            ],
+            "real_name": "Richard C. Cabot, M.D.",
+            "timestamp": "Shortly after admission, during initial examination",
+            "message": "Good morning. I'm Dr. Cabot.  I understand you've been having skin issues. Can you tell me more about when this started and how it's progressed?",
+            "intention": "Starting patient history taking.",
+            "context": "Doctor Cabot begins to take patient history.",
+            "source_reference": "Page 1: 'A Portugese-American druggist of thirtyfive entered April 17, 1923, for study.'"
+        },
+        "turn_4": {
+            "speaker": "Patient",
+            "listeners": [
+                "Doctor Cabot",
+                "Nurse A"
+            ],
+            "real_name": "Portugese-American Druggist",
+            "timestamp": "Immediately following Dr. Cabot's question",
+            "message": "It started about two years ago with just dry, flaky skin and itching all over, like eczema.  Then, about a year ago, these small bumps started showing up on my legs, coming and going.  They treated me with some salve at first, then Alpine lamp treatments, and even some intravenous stuff... seemed to help for a bit, but then it got worse again. About seven weeks ago, the nodules came back on my leg and spread everywhere... face, arms, body.  Some are breaking open now.",
+            "intention": "Providing history of present illness.",
+            "context": "Patient describing the timeline and progression of skin condition and treatments received.",
+            "source_reference": "Page 1: 'Two years ago he slowly developed a generalized eczema...A year ago small firm nodules appeared on the legs...For the first year he was treated with salve...Then he had vigorous treatment with the Alpine lamp...Then he had intravenous treatment...A week after this, seven weeks ago, he noted some nodules on his right leg...Others began to appear on his face, arms and body...Since then some of the lesions had broken down...'"
+        },
+        "turn_5": {
+            "speaker": "Doctor Cabot",
+            "listeners": [
+                "Patient",
+                "Nurse A"
+            ],
+            "real_name": "Richard C. Cabot, M.D.",
+            "timestamp": "Continuing history taking",
+            "message": "And before this skin condition, were you generally healthy? Any other medical issues?",
+            "intention": "Gathering past medical history.",
+            "context": "Doctor Cabot inquiring about past health.",
+            "source_reference": "Page 1: 'P. H. Negative except for constipation for years...'"
+        },
+        "turn_6": {
+            "speaker": "Patient",
+            "listeners": [
+                "Doctor Cabot",
+                "Nurse A"
+            ],
+            "real_name": "Portugese-American Druggist",
+            "timestamp": "Answering Dr. Cabot\u2019s question about past medical history",
+            "message": "Mostly, yes.  I\u2019ve had constipation for years.  Sometimes I get dizzy, and see lights in front of my eyes with headaches.  Headaches can last a week sometimes.  Oh, and I broke my right leg pretty bad, compound fracture, about nineteen years ago. And the usual colds now and then.",
+            "intention": "Providing past medical history details.",
+            "context": "Patient detailing past health issues including fracture, headaches, and constipation.",
+            "source_reference": "Page 1: 'Negative except for constipation for years, accompanied at times by occasional dizziness and visual disturbance with light in front of the eyes and headaches lasting for a week; compound fracture of the right leg nineteen years ago; and an occasional cold.'"
+        },
+        "turn_7": {
+            "speaker": "Doctor Cabot",
+            "listeners": [
+                "Patient",
+                "Nurse A"
+            ],
+            "real_name": "Richard C. Cabot, M.D.",
+            "timestamp": "During physical examination",
+            "message": "Let\u2019s take a look at these skin lesions. Nurse, could you assist me with the examination?",
+            "intention": "Initiating physical examination.",
+            "context": "Doctor Cabot preparing for physical examination of the patient's skin.",
+            "source_reference": "Page 2: 'P. E. A poorly nourished man with hoarse voice and dry cough. Skin of forehead, lips and cheeks dry and scaling, with some crusting...'"
+        },
+        "turn_8": {
+            "speaker": "Doctor Cabot",
+            "listeners": [
+                "Patient",
+                "Nurse A"
+            ],
+            "real_name": "Richard C. Cabot, M.D.",
+            "timestamp": "Describing findings during physical examination",
+            "message": "(To Nurse A) Note the hoarse voice and dry cough. Skin is dry and scaling.  See these nodules\u2026 here on the forehead, lips, cheeks, ear, eyebrow, eyelid\u2026 some ulcerated.  Many flattened nodules on the mouth, chin, neck, clavicle.  Lichenoid infiltration on the neck. Scalp crusting.  Chest lesions, some like faded psoriasis. Right chest, one broken down lesion with foul-smelling secretion. Abdomen, a few patches, and some projections near the umbilicus when he stands. Back is extensively involved, some ulcerated. Arms and forearms covered in tumors, hands too, especially extensor surfaces. Right hand deformed. Right leg involved, left leg worse, large ulcerated areas. Teeth are in poor condition, pyorrhea, foul breath. Throat inflamed. Glands in neck, above clavicle, submaxillary, axillae, groin are enlarged. Chest is hyperresonant, lungs with bronchial r\u00e2les. Heart borders hard to percuss, apex impulse not felt, rough systolic murmur at base. Pulses normal. Abdomen rigid. Right leg atrophied and bent, foot deformed. Pupils and reflexes normal.",
+            "intention": "Documenting physical examination findings.",
+            "context": "Doctor Cabot comprehensively describing the skin lesions and other physical findings.",
+            "source_reference": "Page 2: 'P. E. A poorly nourished man with hoarse voice and dry cough...The scalp showed crusting and infiltration at the posterior hair border...The right chest was clear except for one flattened, slightly raised broken-down papular lesion...The back was much more extensively involved than the front...Right leg slightly atrophied, bent. Foot deformed (equinus). Pupils and reflexes normal.'"
+        },
+        "turn_9": {
+            "speaker": "Doctor Cabot",
+            "listeners": [
+                "Doctor Oliver"
+            ],
+            "real_name": "Richard C. Cabot, M.D.",
+            "timestamp": "During medical discussion, after initial examination",
+            "message": "Dr. Oliver, this case is quite puzzling.  The history of eczema progressing to these nodules and ulcerations... and the eosinophilia in the blood... What are your thoughts? Could this still be related to the initial eczema, or are we looking at something else?",
+            "intention": "Seeking dermatology consultation and differential diagnosis.",
+            "context": "Doctor Cabot discussing the case with Dr. Oliver, considering eczema and other possibilities.",
+            "source_reference": "Page 3: 'Dr. Cabot : But if we could not call it anything else than that we might have to say \"eczema,\" Isuppose. This being a dermatological case up to this point I am going to ask Dr. Oliver to help me.'"
+        },
+        "turn_10": {
+            "speaker": "Doctor Oliver",
+            "listeners": [
+                "Doctor Cabot"
+            ],
+            "real_name": "E. L. Oliver",
+            "timestamp": "Responding to Dr. Cabot's query",
+            "message": "Dr. Cabot, the initial eczema history isn't entirely unusual, though late onset is less common. Arsenic and mercury treatments suggest syphilis consideration, but the itching at the beginning is less typical for syphilis. These nodules and ulcerations are definitely beyond eczema.  Leprosy, granuloma fungoides, lymphoma, sarcoma are all considerations.",
+            "intention": "Providing dermatological perspective and differential diagnosis.",
+            "context": "Dr. Oliver offering his expert opinion and suggesting possible diagnoses.",
+            "source_reference": "Page 3: 'Dr. Oliver : I should not say it was very uncommon...Dr. Oliver : It is more likely to have been mercury in some form...Dr. Oliver: I don't see how it can be.'"
+        },
+        "turn_11": {
+            "speaker": "Doctor Cabot",
+            "listeners": [
+                "Doctor Oliver"
+            ],
+            "real_name": "Richard C. Cabot, M.D.",
+            "timestamp": "Continuing discussion with Dr. Oliver",
+            "message": "The eosinophilia is striking.  Could that point us in a direction?",
+            "intention": "Focusing on eosinophilia as a diagnostic clue.",
+            "context": "Doctor Cabot highlighting a specific lab finding for diagnostic guidance.",
+            "source_reference": "Page 4: 'In the report of the blood examination...the eosinophils are high in all counts.'"
+        },
+        "turn_12": {
+            "speaker": "Doctor Oliver",
+            "listeners": [
+                "Doctor Cabot"
+            ],
+            "real_name": "E. L. Oliver",
+            "timestamp": "Responding to Dr. Cabot about eosinophilia",
+            "message": "Eosinophilia is indeed interesting, but it's seen in many skin conditions, parasitic infections, neoplasms, even asthma.  It's not specific enough to rule anything in or out definitively at this stage.",
+            "intention": "Explaining the non-specificity of eosinophilia.",
+            "context": "Dr. Oliver clarifies that eosinophilia is a broad finding.",
+            "source_reference": "Page 5: 'The eosinophilia, as Dr. Cabot said, is so common in so many skin diseases that I do not think it counts for very much.'"
+        },
+        "turn_13": {
+            "speaker": "Nurse A",
+            "listeners": [
+                "Patient"
+            ],
+            "real_name": "Nurse A",
+            "timestamp": "After initial examination and discussion, during treatment phase",
+            "message": "Mr. Painter, we are going to start treating some of your lesions.  We\u2019ll use salicylic acid ointment for the dry ones and Dakin's solution for the ulcers.",
+            "intention": "Informing patient about initial treatment plan.",
+            "context": "Nurse informing the patient about the topical treatments being initiated.",
+            "source_reference": "Page 2: 'The dry lesions were treated with salicylic acid ointment*, the ulc\u00e9rations with Dakin's solution.'"
+        },
+        "turn_14": {
+            "speaker": "Doctor Holmes",
+            "listeners": [
+                "Patient",
+                "Doctor Cabot",
+                "Doctor Oliver"
+            ],
+            "real_name": "Dr. Holmes",
+            "timestamp": "After initial topical treatments, initiating X-ray therapy",
+            "message": "We're going to try X-ray treatment to target some of the lesions, starting with your right arm. This can help flatten them and hopefully reduce some of the discomfort.",
+            "intention": "Explaining and initiating X-ray treatment.",
+            "context": "Dr. Holmes explaining the purpose and process of X-ray therapy.",
+            "source_reference": "Page 2: 'After x-ray treatment the lesions on the right arm flattened definitely and some almost disappeared.'"
+        },
+        "turn_15": {
+            "speaker": "Nurse A",
+            "listeners": [
+                "Patient"
+            ],
+            "real_name": "Nurse A",
+            "timestamp": "On May 9th and 10th",
+            "message": "Mr. Painter, Doctor has prescribed sodium cacodylate. We'll give you a small dose under the skin once a day for now.",
+            "intention": "Administering medication and informing patient.",
+            "context": "Nurse preparing and administering subcutaneous sodium cacodylate.",
+            "source_reference": "Page 2: 'May 9 and 10 sodium cacodylate gr. ss was given s.c. once i.d.'"
+        },
+        "turn_16": {
+            "speaker": "Nurse A",
+            "listeners": [
+                "Patient"
+            ],
+            "real_name": "Nurse A",
+            "timestamp": "From May 11th to May 17th",
+            "message": "We will continue the sodium cacodylate, but now twice a day as prescribed.",
+            "intention": "Adjusting medication dosage and informing patient.",
+            "context": "Nurse continuing sodium cacodylate administration at increased frequency.",
+            "source_reference": "Page 2: 'May 11-17 twice i.d.'"
+        },
+        "turn_17": {
+            "speaker": "Nurse A",
+            "listeners": [
+                "Patient"
+            ],
+            "real_name": "Nurse A",
+            "timestamp": "On May 18th",
+            "message": "Mr. Painter, we have to stop the sodium cacodylate for now because we found some red blood cells in your urine. Please let us know if you feel any new pains.",
+            "intention": "Discontinuing medication due to side effect and monitoring for new symptoms.",
+            "context": "Nurse stopping medication due to hematuria and asking about new symptoms.",
+            "source_reference": "Page 2: 'It was discontinued because of the appearance of red blood cells in the urine. May 18 the patient complained of sharp pain in the left ankle at times.'"
+        },
+        "turn_18": {
+            "speaker": "Doctor Cabot",
+            "listeners": [
+                "Doctor Oliver",
+                "Physician A"
+            ],
+            "real_name": "Richard C. Cabot, M.D.",
+            "timestamp": "During discussion for differential diagnosis",
+            "message": "Considering the persistent skin lesions, gland involvement, and eosinophilia, and now the rapid progression, what are we leaning towards? Is it malignant lymphoma, Hodgkin's, granuloma fungoides?",
+            "intention": "Discussing differential diagnosis and narrowing down possibilities.",
+            "context": "Doctor Cabot leading the differential diagnosis discussion.",
+            "source_reference": "Page 4: 'If it was not syphilis, what else could it have been? Well, it might have been some form of ulcerating neoplasm...His blood is perfectly consistent with a lymphoma with skin lesions, malignant lymphoma, which we often call Hodgkin's disease.'"
+        },
+        "turn_19": {
+            "speaker": "Doctor Oliver",
+            "listeners": [
+                "Doctor Cabot",
+                "Physician A"
+            ],
+            "real_name": "E. L. Oliver",
+            "timestamp": "Responding to differential diagnosis question",
+            "message": "Granuloma fungoides fits quite well with the course and appearance. Leukemia cutis and Hodgkin's are also in the differential, but the clinical picture here strongly suggests granuloma fungoides. The ulceration, rapid progression, and skin involvement are very characteristic.",
+            "intention": "Prioritizing granuloma fungoides in differential diagnosis.",
+            "context": "Dr. Oliver emphasizing granuloma fungoides as the most likely diagnosis.",
+            "source_reference": "Page 5: 'Dr. Oliver : The story in this ease and the patient's appearance make the dermatologist think of one disease and of almost no other,\u2014 that is granuloma fungoides...This case, however, is more typical of granuloma fungoides in that it ulcerated rather early.'"
+        },
+        "turn_20": {
+            "speaker": "Physician A",
+            "listeners": [
+                "Doctor Cabot",
+                "Doctor Oliver"
+            ],
+            "real_name": "A Physician",
+            "timestamp": "During the differential diagnosis discussion",
+            "message": "How are we ruling out sarcoma in this case?",
+            "intention": "Questioning about sarcoma as a differential diagnosis.",
+            "context": "Physician A raising a question about another possible diagnosis.",
+            "source_reference": "Page 6: 'A Physician: May I ask how you ruled out sarcoma ?'"
+        },
+        "turn_21": {
+            "speaker": "Doctor Oliver",
+            "listeners": [
+                "Doctor Cabot",
+                "Physician A"
+            ],
+            "real_name": "E. L. Oliver",
+            "timestamp": "Responding to the question about sarcoma",
+            "message": "The multiplicity of lesions, rapid ulceration, and the preceding chronic skin condition are less typical of sarcoma. Sarcomas usually appear more suddenly, not after a long eczema-like phase.",
+            "intention": "Explaining why sarcoma is less likely.",
+            "context": "Dr. Oliver explaining the factors that make sarcoma less probable than granuloma fungoides.",
+            "source_reference": "Page 6: 'Dr. Oliver: I think the multiplicity of the lesions and the rapid ulc\u00e9ration are very much against that; also the previous skin trouble...Sarcoma usually does not begin after this long period of chronic skin disease.'"
+        },
+        "turn_22": {
+            "speaker": "Nurse A",
+            "listeners": [
+                "Patient"
+            ],
+            "real_name": "Nurse A",
+            "timestamp": "On May 27th",
+            "message": "Mr. Painter, we are starting you on Fowler's solution, another form of arsenic, as prescribed by the doctor.  We'll start with a low dose and increase it gradually.",
+            "intention": "Starting Fowler's solution treatment and informing patient.",
+            "context": "Nurse initiating Fowler's solution administration.",
+            "source_reference": "Page 2: 'May 27 Fowler's solution was given, three minims t.i.d., increased by one minim daily.'"
+        },
+        "turn_23": {
+            "speaker": "Nurse A",
+            "listeners": [
+                "Doctor Cabot",
+                "Doctor Oliver"
+            ],
+            "real_name": "Nurse A",
+            "timestamp": "On June 1st",
+            "message": "Doctor, Mr. Painter's condition is worsening. He has large moist and bronchial r\u00e2les in his chest, and his left chest is dull posteriorly. His pulse is very weak.",
+            "intention": "Reporting patient's deteriorating condition.",
+            "context": "Nurse updating doctors about the patient's critical state.",
+            "source_reference": "Page 2: 'June 1 there were large moist and bronchial r\u00e2les in the chest. The left chest was dull posteriorly. The pulse was very poor in quality.'"
+        },
+        "turn_24": {
+            "speaker": "Doctor Cabot",
+            "listeners": [],
+            "real_name": "Richard C. Cabot, M.D.",
+            "timestamp": "June 1st, after Nurse A's report",
+            "message": "It appears Mr. Painter is nearing the end.  Prepare for palliative care and ensure his comfort.",
+            "intention": "Acknowledging terminal status and shifting to palliative care.",
+            "context": "Doctor Cabot recognizing the patient's imminent death.",
+            "source_reference": "Page 2: 'That day he died.'"
+        },
+        "turn_25": {
+            "speaker": "Narrator",
+            "listeners": [],
+            "real_name": "Narrator",
+            "timestamp": "June 1st, later that day",
+            "message": "The patient died on June 1, 1923.",
+            "intention": "Announcing patient's death.",
+            "context": "Reporting the patient's death as per case record.",
+            "source_reference": "Page 2: 'That day he died.'"
+        },
+        "turn_26": {
+            "speaker": "Doctor Richardson",
+            "listeners": [
+                "Doctor Cabot",
+                "Doctor Oliver",
+                "Other Physicians"
+            ],
+            "real_name": "Dr. Richardson",
+            "timestamp": "Post-mortem examination discussion",
+            "message": "Post-mortem examination reveals extensive skin tumors, necrosis, and ulceration, consistent with malignant lymphoma of the skin, or mycosis fungoides.  The lesions were largely confined to the skin, unlike the previous case we discussed where internal organs were heavily involved. We also found suppurative pneumonia, pleuritis, pericarditis, and liver changes, likely secondary to the skin condition.",
+            "intention": "Presenting anatomical diagnosis based on autopsy findings.",
+            "context": "Doctor Richardson discussing the post-mortem findings and confirming the diagnosis.",
+            "source_reference": "Page 7: 'Dr. Richardson : The skin of the face, neck, body, extremities, showed numerous smaller and larger tumors discrete and confluent...The main lesions here were in the skin, and it is rather a typical picture of malignant lymphoma of the skin, for which the old name is mycosis fungoides...Suppurative pneumonia. Serofibrinous pleuritis, left. Acute pericarditis. Fatty metamorphosis of the liver.'"
+        },
+        "turn_27": {
+            "speaker": "Doctor Cabot",
+            "listeners": [
+                "Doctor Oliver",
+                "Doctor Richardson",
+                "Other Physicians"
+            ],
+            "real_name": "Richard C. Cabot, M.D.",
+            "timestamp": "Following Dr. Richardson's post-mortem report",
+            "message": "So, the anatomical diagnosis confirms our clinical suspicion of malignant lymphoma of the skin, or mycosis fungoides.  It highlights the importance of considering these cutaneous lymphomas in cases of progressive, ulcerating skin lesions, especially with eosinophilia and gland involvement.",
+            "intention": "Summarizing and confirming the final diagnosis.",
+            "context": "Doctor Cabot concluding the case discussion with the confirmed diagnosis.",
+            "source_reference": "Page 7: 'DR. RICHARD C CABOT's DIAGNOSIS Malignant lymphomata of the skin. ANATOMICAL DIAGNOSIS 1. Primary fatal lesion Mycosis fungoides (malignant lymphoma of skin.)'"
+        }
+    },
+    "clinical_data": {
+        "presentation": {
+            "chief_complaint": "Generalized eczema progressing to nodules and ulcerating skin lesions.",
+            "history_of_present_illness": "Two years of generalized eczema, initially dry and flaky with itching. One year ago, small firm nodules appeared and disappeared. Treated with salve, Alpine lamp, intravenous and intramuscular injections. Seven weeks prior to admission, nodules reappeared and spread rapidly, ulcerating and crusting. Recent unproductive cough and hoarseness.",
+            "physical_exam": "Poorly nourished man, hoarse voice, dry cough. Dry, scaling, crusting skin on face and scalp. Multiple nodules and tumors on face, neck, trunk, and extremities, some ulcerated and foul-smelling. Generalized lymphadenopathy. Chest hyperresonant with bronchial r\u00e2les. Heart murmur. Abdominal wall infiltrated, rigid. Right leg atrophied and deformed.",
+            "vital_signs": {
+                "initial": {
+                    "temperature": "97.1\u00b0-102.8\u00b0F (fluctuating with daily evening rise)",
+                    "pulse": "95-132 bpm",
+                    "respiratory_rate": "22-32/min (terminal rise to 42/min)"
+                }
+            }
+        },
+        "diagnostics": {
+            "laboratory_data": [
+                {
+                    "test": "Urine analysis",
+                    "value": "Specific gravity 1.010-1.025, Cloudy, slight trace of albumin, leucocytes (few to loaded), red blood cells (rare to many)",
+                    "units": "Not specified",
+                    "reference_range": "Not specified"
+                },
+                {
+                    "test": "Blood count (April 17)",
+                    "value": "Hgb 80%, Leucocytes 30,000/mm\u00b3, Polynuclears 57%, Lymphocytes 6%, Eosinophils 30% (atypical), Unclassified 7%, Platelets slightly diminished, Reds normal",
+                    "units": "Various",
+                    "reference_range": "Not specified"
+                },
+                {
+                    "test": "Blood count (later examinations)",
+                    "value": "Leucocytes 33,200-44,200/mm\u00b3, Polynuclears 45%-82%, Lymphocytes 3%-67%, Eosinophils 9%-48%, Unclassified 3%-7%, Reds normal, slight achromia (twice), Platelets increased (once), slightly diminished (once), normal (once)",
+                    "units": "Various",
+                    "reference_range": "Not specified"
+                },
+                {
+                    "test": "Bleeding time",
+                    "value": "3 minutes",
+                    "units": "minutes",
+                    "reference_range": "Not specified"
+                },
+                {
+                    "test": "Nasal smear",
+                    "value": "Negative for lepra bacilli",
+                    "units": "Not applicable",
+                    "reference_range": "Negative"
+                }
+            ],
+            "imaging": [
+                {
+                    "modality": "X-ray of heart and lungs",
+                    "description": "Normal",
+                    "figures": []
+                }
+            ]
+        },
+        "procedures": [
+            {
+                "procedure": "Topical treatment",
+                "description": "Salicylic acid ointment for dry lesions, Dakin's solution for ulcerations.",
+                "time": "During hospitalization"
+            },
+            {
+                "procedure": "X-ray treatment",
+                "description": "To right arm, right leg, face, and right arm again.",
+                "time": "During hospitalization"
+            },
+            {
+                "procedure": "Sodium cacodylate (s.c.)",
+                "description": "Given May 9-17, discontinued due to hematuria.",
+                "time": "May 9-17"
+            },
+            {
+                "procedure": "Fowler's solution (oral)",
+                "description": "Started May 27, gradually increased dosage.",
+                "time": "From May 27 until death"
+            }
+        ],
+        "timeline_events": [
+            {
+                "time": "Two years prior to admission",
+                "event": "Slowly developed generalized eczema."
+            },
+            {
+                "time": "One year prior to admission",
+                "event": "Small firm nodules appeared on legs."
+            },
+            {
+                "time": "Seven weeks prior to admission",
+                "event": "Nodules reappeared on right leg and spread extensively."
+            },
+            {
+                "time": "One week prior to admission",
+                "event": "Developed cough and hoarseness, 'caught cold'."
+            },
+            {
+                "time": "April 17, 1923",
+                "event": "Patient admitted to hospital."
+            },
+            {
+                "time": "May 9-17",
+                "event": "Sodium cacodylate treatment."
+            },
+            {
+                "time": "May 18",
+                "event": "Sodium cacodylate discontinued due to hematuria."
+            },
+            {
+                "time": "May 27",
+                "event": "Fowler's solution treatment started."
+            },
+            {
+                "time": "June 1",
+                "event": "Patient died."
+            }
+        ],
+        "final_diagnoses": [
+            "Clinical Diagnosis: Mycosis fungoides, Bronchopneumonia?",
+            "Dr. Cabot's Diagnosis: Malignant lymphomata of the skin.",
+            "Anatomical Diagnosis: 1. Primary fatal lesion: Mycosis fungoides (malignant lymphoma of skin). 2. Secondary or terminal lesions: Degeneration of marrow of femur, Abscesses in retroperitoneal tissue and abdominal wall, Suppurative pneumonia, Serofibrinous pleuritis, Acute pericarditis, Fatty metamorphosis of liver, Wet brain. 3. Historical landmarks: Slight chronic pleuritis, Chronic hyperplasia of spleen."
+        ]
+    },
+    "setting": "Inpatient Setting",
+    "case_id": "NEJM192311011891811",
+    "original_case_number": "NEJM192311011891811",
+    "final_diagnosis": "N/A"
+}

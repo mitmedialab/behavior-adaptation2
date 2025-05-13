@@ -1,0 +1,467 @@
+{
+    "case_metadata": {
+        "case_id": "9432",
+        "title": "Case 9432: A Thirteen-Year-Old Schoolgirl with Chorea, Endocarditis, and Tuberculosis",
+        "source": {
+            "journal": "Medical Case Text",
+            "publication_date": "1910",
+            "volume": "Unknown",
+            "issue": "Unknown",
+            "pages": "Multiple",
+            "doi": "N/A"
+        }
+    },
+    "patient_info": {
+        "age": 13,
+        "gender": "F",
+        "demographics": {
+            "ethnicity": "American",
+            "occupation": "Schoolgirl",
+            "living_arrangement": "Not specified"
+        },
+        "social_history": {
+            "alcohol_use": "No mention",
+            "tobacco_use": "No mention",
+            "substance_use": "No mention",
+            "other": "Very nervous"
+        },
+        "medical_history": {
+            "allergies": "No mention",
+            "past_medical_conditions": "Sore throats, Chorea (3 years prior)",
+            "medications": "Sedatives (Veronal, Morphine) during hospitalization"
+        },
+        "surgical_history": {
+            "adenoidectomy": "Several years prior"
+        }
+    },
+    "participants": {
+        "clinicians": {
+            "Dr. Cabot": {
+                "real_name": "Richard C. Cabot",
+                "specialty": "Internal Medicine/Pathology (based on discussion content)",
+                "role": "Discussant"
+            },
+            "Dr. Richardson": {
+                "real_name": "Dr. Richardson",
+                "specialty": "Pathology (presented anatomical findings)",
+                "role": "Presenter of Anatomical Diagnosis"
+            },
+            "Dr. E. L. Oliver": {
+                "real_name": "E. L. Oliver",
+                "specialty": "Unknown",
+                "role": "Questioner"
+            },
+            "Dr. Sampson": {
+                "real_name": "Dr. Sampson",
+                "specialty": "Unknown",
+                "role": "Confirmer (Throat Exam)"
+            },
+            "Dr. Merrill": {
+                "real_name": "Dr. Merrill",
+                "specialty": "Radiology (based on X-ray discussion)",
+                "role": "Discussant (X-ray discrepancy)"
+            },
+            "Dr. Foster": {
+                "real_name": "Dr. Foster",
+                "specialty": "Unknown",
+                "role": "Questioner (Blood Vessels/Endocarditis)"
+            },
+            "Physician": {
+                "real_name": "Physician",
+                "specialty": "Unknown",
+                "role": "Questioner (Staphylococcus)"
+            }
+        },
+        "others": {
+            "Patient": {
+                "role": "Patient",
+                "identifier": "Schoolgirl, Case 9432"
+            }
+        }
+    },
+    "conversation": {
+        "turn_1": {
+            "speaker": "Dr. Cabot",
+            "listeners": [
+                "Dr. Richardson",
+                "Dr. E. L. Oliver",
+                "Dr. Sampson",
+                "Dr. Merrill",
+                "Dr. Foster",
+                "Physician"
+            ],
+            "real_name": "Richard C. Cabot",
+            "timestamp": "Beginning of Case 9432 Discussion",
+            "message": "Alright, let's discuss Case 9432. A thirteen-year-old girl who passed away after a short illness. Considering her age and the rapid course, what fatal diseases come to mind?",
+            "intention": "Initiate case discussion and consider differential diagnoses based on age and illness duration.",
+            "context": "Starting the discussion of Case 9432 at a medical conference.",
+            "source_reference": "Notes On The History: 'We know that this girl died at the age of thirteen and that her illness lasted only a little more than a month. What acute fatal diseases are most common at this age?'"
+        },
+        "turn_2": {
+            "speaker": "Dr. Cabot",
+            "listeners": [
+                "Dr. Richardson",
+                "Dr. E. L. Oliver",
+                "Dr. Sampson",
+                "Dr. Merrill",
+                "Dr. Foster",
+                "Physician"
+            ],
+            "real_name": "Richard C. Cabot",
+            "timestamp": "Following initial question about differential diagnoses",
+            "message": "Exanthemata are common but not usually fatal. Tuberculous meningitis and other forms of TB are possibilities, though rapid fatality in a month is less typical for TB in older children. Neoplasms are rare, and ductless gland issues or anaphylaxis tend to be chronic. Accidents are possible but less likely given the presented history. Rheumatic heart disease and nephritis are moderately common but less likely to kill this quickly. So, infection is high on the list.",
+            "intention": "Narrow down differential diagnoses to infection based on typical disease progression at this age.",
+            "context": "Continuing discussion of differential diagnoses.",
+            "source_reference": "Notes On The History: 'Of course, the exanthemata are the commonest, but not ordinarily fatal. Tuberculous meningitis is common and fatal... Certainly then the commonest menace to life characterized by a brief illness at this age is some form of infection.'"
+        },
+        "turn_3": {
+            "speaker": "Dr. Cabot",
+            "listeners": [
+                "Dr. Richardson",
+                "Dr. E. L. Oliver",
+                "Dr. Sampson",
+                "Dr. Merrill",
+                "Dr. Foster",
+                "Physician"
+            ],
+            "real_name": "Richard C. Cabot",
+            "timestamp": "After considering infection as primary differential",
+            "message": "Her mother died of tuberculosis, so TB exposure is a factor. But past history points more towards streptococcal infection with sore throats and chorea. And in this illness, chorea seems central.",
+            "intention": "Consider patient's family and past medical history to refine the diagnosis towards streptococcal infection and TB exposure.",
+            "context": "Focusing on patient history to refine differential diagnosis.",
+            "source_reference": "Notes On The History: 'It may be assumed that the patient was exposed to tuberculosis during the illness of her mother... On the other hand, there is definite evidence suggesting streptococcus infection both in the form of sore throats and of chorea...'"
+        },
+        "turn_4": {
+            "speaker": "Dr. Cabot",
+            "listeners": [
+                "Dr. Richardson",
+                "Dr. E. L. Oliver",
+                "Dr. Sampson",
+                "Dr. Merrill",
+                "Dr. Foster",
+                "Physician"
+            ],
+            "real_name": "Richard C. Cabot",
+            "timestamp": "Moving to physical exam findings",
+            "message": "Physical exam confirms chorea. Heart involvement is evident, primarily enlargement. Systolic murmurs are present, which could be from infection, but endocarditis is very likely given the chorea history. We should suspect mitral valve involvement, possibly other valves too.",
+            "intention": "Interpret physical exam findings in the context of suspected streptococcal infection and chorea, focusing on heart involvement and endocarditis.",
+            "context": "Discussing physical examination findings.",
+            "source_reference": "Notes On The Physical Examination: 'In the physical examination there seems no reason to doubt that the movements of the patient are due to chorea... In this particular disease, however, endocarditis is socommon that we may picture to ourselves a collection of minute reddish granulations dotted along the mitral valve...'"
+        },
+        "turn_5": {
+            "speaker": "Dr. Cabot",
+            "listeners": [
+                "Dr. Richardson",
+                "Dr. E. L. Oliver",
+                "Dr. Sampson",
+                "Dr. Merrill",
+                "Dr. Foster",
+                "Physician"
+            ],
+            "real_name": "Richard C. Cabot",
+            "timestamp": "Continuing discussion of physical exam",
+            "message": "Leukocytosis and fever further support infection. Treatment is challenging - sedatives for movements can be risky, but without them, exhaustion is a concern. In this case, motions were controlled, at least somewhat.",
+            "intention": "Link lab findings and treatment challenges to the overall clinical picture of infection.",
+            "context": "Discussing lab results and treatment considerations.",
+            "source_reference": "Notes On The Physical Examination: 'Otherwise the physical examination shows nothing of importance, though the leucocytosis and the rise of temperature go to confirm the idea of a streptococcus endocarditis... The treatment of a case of this kind offers great difficulties.'"
+        },
+        "turn_6": {
+            "speaker": "Dr. Cabot",
+            "listeners": [
+                "Dr. Richardson",
+                "Dr. E. L. Oliver",
+                "Dr. Sampson",
+                "Dr. Merrill",
+                "Dr. Foster",
+                "Physician"
+            ],
+            "real_name": "Richard C. Cabot",
+            "timestamp": "Describing hospital course",
+            "message": "During hospitalization, signs of pericarditis, pleuritis, and a pulmonary lesion emerged. This lung issue could be bronchopneumonia from strep or pneumococcus, or even TB, possibly triggered by the maternal exposure and now exacerbated.",
+            "intention": "Describe the progression of the illness during hospitalization and broaden the differential to include lung and pleural infections, and TB.",
+            "context": "Describing disease progression during hospital stay.",
+            "source_reference": "Notes On The Physical Examination: 'During the patient's stay in the hospital there developed additional physical signs pointing to acute pericarditis and acute pleuritis, and also to some pulmonary lesion... This pulmonary condition may be a bronchopneumonia due to the streptococcus or the pneumococcus, or possibly to the development of a tuberculosis...'"
+        },
+        "turn_7": {
+            "speaker": "Dr. Cabot",
+            "listeners": [
+                "Dr. Richardson",
+                "Dr. E. L. Oliver",
+                "Dr. Sampson",
+                "Dr. Merrill",
+                "Dr. Foster",
+                "Physician"
+            ],
+            "real_name": "Richard C. Cabot",
+            "timestamp": "Summarizing initial clinical impression",
+            "message": "My impression is that infection, involving pleura, lung, pericardium, and heart, was overwhelming and led to her death, not just exhaustion.",
+            "intention": "Conclude the initial clinical assessment, emphasizing infection as the primary cause of death.",
+            "context": "Summarizing clinical impression.",
+            "source_reference": "DIFFERENTIAL DIAGNOSIS: 'Our impression is that this patient died not so much of exhaustion as of infection, and as we have evidences of infection in the pleura, lung, pericardium, and probably in the heart, it is not surprising that the patient was overwhelmed.'"
+        },
+        "turn_8": {
+            "speaker": "Dr. Cabot",
+            "listeners": [
+                "Dr. Richardson",
+                "Dr. E. L. Oliver",
+                "Dr. Sampson",
+                "Dr. Merrill",
+                "Dr. Foster",
+                "Physician"
+            ],
+            "real_name": "Richard C. Cabot",
+            "timestamp": "Presenting clinical diagnosis from hospital record",
+            "message": "The hospital record listed the clinical diagnoses as: Acute chorea, acute endocarditis, acute pericarditis, mitral regurgitation, dry pleurisy, and possible bronchopneumonia.",
+            "intention": "Present the official clinical diagnoses documented in the hospital record.",
+            "context": "Presenting hospital record diagnoses.",
+            "source_reference": "CLINICAL DIAGNOSIS (FROM HOSPITAL RECORD): 'Acute chorea. Acute endocarditis. Acute pericarditis. Mitral r\u00e9gurgitation. Dry pleurisy. Bronchopneumonia ( ? )'"
+        },
+        "turn_9": {
+            "speaker": "Dr. Cabot",
+            "listeners": [
+                "Dr. Richardson",
+                "Dr. E. L. Oliver",
+                "Dr. Sampson",
+                "Dr. Merrill",
+                "Dr. Foster",
+                "Physician"
+            ],
+            "real_name": "Richard C. Cabot",
+            "timestamp": "Presenting Dr. Cabot's clinical diagnosis",
+            "message": "My clinical diagnosis was: Streptococcus infection, chorea, acute endocarditis, possible acute pericarditis, possible acute pleuritis, and either bronchopneumonia or tuberculosis of the left lung.",
+            "intention": "State Dr. Cabot's refined clinical diagnoses, highlighting streptococcal infection and lung involvement.",
+            "context": "Presenting Dr. Cabot's diagnosis.",
+            "source_reference": "DR. RICHARD C. CABOT's DIAGNOSIS: 'Streptococcus infection. Chorea. Acute endocarditis. Acute pericarditis (?) Acute pleuritis (?) Bronchopneumonia or tuberculosis of the left lung.'"
+        },
+        "turn_10": {
+            "speaker": "Dr. Richardson",
+            "listeners": [
+                "Dr. Cabot",
+                "Dr. E. L. Oliver",
+                "Dr. Sampson",
+                "Dr. Merrill",
+                "Dr. Foster",
+                "Physician"
+            ],
+            "real_name": "Dr. Richardson",
+            "timestamp": "Presenting anatomical diagnosis after necropsy",
+            "message": "The anatomical diagnoses include: Primary fatal lesions of acute chorea, fibrous and verrucous endocarditis of the aortic valve, verrucous endocarditis of the mitral valve, and serofibrinous pericarditis. Secondary lesions were heart hypertrophy and dilatation, chronic passive congestion, hydrothorax, status lymphaticus, and tuberculosis of the upper lobe of the left lung. Historical findings include old TB foci in bronchial glands and lungs, chronic pleuritis, and chronic appendicitis.",
+            "intention": "Present the detailed anatomical findings from the necropsy, differentiating between primary, secondary, and historical lesions.",
+            "context": "Presenting anatomical diagnosis.",
+            "source_reference": "ANATOMICAL DIAGNOSIS: '1. Primary fatal lesions (Acute chorea.) Fibrous and verfucose endocarditis of the aortic valve. Verrueose endocarditis of the mitral valve. Serofibrinous pericarditis. 2. Secondary or terminal lesions Hypertrophy and dilatation of the heart. Chronic passive congestion, general. Hydrothorax, double. Tuberculosis of the upper lobe of the left lung. Status lymphaticus. 3. Historical landmarks Foci of obsolete tuberculosis in the bronchial lymphatic glands and lungs. Chronic pleuritis. Chronic appendicitis.'"
+        },
+        "turn_11": {
+            "speaker": "Dr. Richardson",
+            "listeners": [
+                "Dr. Cabot",
+                "Dr. E. L. Oliver",
+                "Dr. Sampson",
+                "Dr. Merrill",
+                "Dr. Foster",
+                "Physician"
+            ],
+            "real_name": "Dr. Richardson",
+            "timestamp": "Immediately after presenting anatomical diagnosis",
+            "message": "We weren't allowed to examine the head. The appendix showed chronic appendicitis. Each pleural cavity had fluid. The right lung had old adhesions, left lung had some old adhesions, especially at the apex. Trachea and bronchi had mucopurulent material.",
+            "intention": "Provide further details on specific anatomical findings, including limitations of the examination.",
+            "context": "Adding details to anatomical findings.",
+            "source_reference": "Anatomical Diagnosis Description: 'Dr. Richardson : We were not permitted to examine the head. The appendix showed a well-marked stage of chronic appendicitis. Each pleural caAdty was half full of thin, pale fluid. The right hing was bound down generally by old adhesions, and the left lung presented a few scattered old adhesions, some in the region of the apex. The trachea and bronchi contained a moderate amount of dirty yellowish mucopurulent material.'"
+        },
+        "turn_12": {
+            "speaker": "Dr. Richardson",
+            "listeners": [
+                "Dr. Cabot",
+                "Dr. E. L. Oliver",
+                "Dr. Sampson",
+                "Dr. Merrill",
+                "Dr. Foster",
+                "Physician"
+            ],
+            "real_name": "Dr. Richardson",
+            "timestamp": "Continuing anatomical findings",
+            "message": "Thymus was present, weighing 12 grams. Bronchial and mediastinal glands were enlarged and pigmented, some with fibrocalcareous masses. Right lung tissue was leathery, dark red, with frothy fluid and a fibrocalcareous mass in the upper lobe. Left lung upper lobe was lumpy and resistant, with a cavity containing caseo-purulent material, fibrosis, tubercles, and fibrocaseous/fibrocalcareous masses.",
+            "intention": "Detail the findings in the thymus, lymph nodes, and lungs, particularly the TB-related lesions in the left lung.",
+            "context": "Further detailing anatomical findings, focusing on specific organs.",
+            "source_reference": "Anatomical Diagnosis Description: 'The thymus gland was still present and weighed 12 grams. The bronchial and mediastinal glands, generally, were more or less enlarged and pigmented, and three of the bronchial glands on section showed small fibrocalcareous masses... The upper two-thirds of the upper lobe of the left lung was resistant and lumpy to the touch...'"
+        },
+        "turn_13": {
+            "speaker": "Dr. Richardson",
+            "listeners": [
+                "Dr. Cabot",
+                "Dr. E. L. Oliver",
+                "Dr. Sampson",
+                "Dr. Merrill",
+                "Dr. Foster",
+                "Physician"
+            ],
+            "real_name": "Dr. Richardson",
+            "timestamp": "Completing anatomical findings",
+            "message": "Pericardium had cloudy fluid and fibrinous material. Heart was enlarged, myocardium negative, valves measured, mitral and aortic valves showed granulations and thickening. Aorta had fibrous streaks. Spleen showed dark red tissue and prominent follicles. Kidneys showed passive congestion. GI tract negative except for lymphoid prominence. Lymph glands enlarged.",
+            "intention": "Conclude the presentation of anatomical findings, covering pericardium, heart, valves, aorta, spleen, kidneys, GI tract, and lymph nodes.",
+            "context": "Finalizing anatomical findings presentation.",
+            "source_reference": "Anatomical Diagnosis Description: 'The pericardium contained a considerable amount of pale, cloudy fluid supporting fibrinous shreds and masses... The heart Aveighed 257 grams, enlarged... The kidneys weighed 252 grams and showed passive congestion...'"
+        },
+        "turn_14": {
+            "speaker": "Dr. Cabot",
+            "listeners": [
+                "Dr. Richardson",
+                "Dr. E. L. Oliver",
+                "Dr. Sampson",
+                "Dr. Merrill",
+                "Dr. Foster",
+                "Physician"
+            ],
+            "real_name": "Richard C. Cabot",
+            "timestamp": "After anatomical diagnosis presentation",
+            "message": "The chronic aortic endocarditis is interesting, suggesting previous valve involvement, possibly from the chorea three years ago. Chronic pleuritis and old TB foci suggest TB spread earlier than this acute illness.",
+            "intention": "Interpret the anatomical findings, emphasizing the chronicity of aortic endocarditis and TB lesions, linking them to past medical history.",
+            "context": "Interpreting anatomical findings in light of patient history.",
+            "source_reference": "Dr. Cabot's Interpretation of Anatomical Diagnosis: 'Dr. Cabot : It is of interest to note that there was a fibrous and therefore chronic endocarditis on the aortic valve in addition to the acute process there and on the mitral. This means that at previous time, very possibly in the attack of chorea three years ago, the aortic valve was involved...'"
+        },
+        "turn_15": {
+            "speaker": "Dr. Cabot",
+            "listeners": [
+                "Dr. Richardson",
+                "Dr. E. L. Oliver",
+                "Dr. Sampson",
+                "Dr. Merrill",
+                "Dr. Foster",
+                "Physician"
+            ],
+            "real_name": "Richard C. Cabot",
+            "timestamp": "Continuing interpretation of anatomical findings",
+            "message": "One wonders if the old TB, acquired in childhood, was reactivated by the chorea, or if weakened immunity from TB predisposed her to streptococcal infection and chorea. I recall another similar case. It'd be valuable to gather more cases of this association to understand the sequence.",
+            "intention": "Speculate on the relationship between TB and chorea in this case, suggesting a possible link and the need for further investigation.",
+            "context": "Hypothesizing about the TB-chorea relationship.",
+            "source_reference": "Dr. Cabot's Interpretation of Anatomical Diagnosis: 'One may speculate a little perhaps upon the question whether this old tuberculosis, presumably acquired in her second year, was lighted up by the attack of chorea, or whether the chorea itself represents an infection made possible by diminished resistance, itself a result of tuberculosis...'"
+        },
+        "turn_16": {
+            "speaker": "Dr. Cabot",
+            "listeners": [
+                "Dr. Richardson",
+                "Dr. E. L. Oliver",
+                "Dr. Sampson",
+                "Dr. Merrill",
+                "Dr. Foster",
+                "Physician"
+            ],
+            "real_name": "Richard C. Cabot",
+            "timestamp": "Considering status lymphaticus finding",
+            "message": "What's the role of status lymphaticus here? We tend to think it worsens outcomes in other conditions or injuries, but its connection to these infections needs more exploration.",
+            "intention": "Question the significance of status lymphaticus in the context of the patient's infections and overall prognosis.",
+            "context": "Discussing status lymphaticus.",
+            "source_reference": "Dr. Cabot's Interpretation of Anatomical Diagnosis: 'What relation, if any, has the condition of status lymphaticus found here at necropsy to the rest of the lesions ? We have ordinarily supposed, on rather insufficient evidence, Ithink, that the presence of status lymphaticus makes any other disease or injury, such as operative insult, much more serious...'"
+        },
+        "turn_17": {
+            "speaker": "Dr. Cabot",
+            "listeners": [
+                "Dr. Richardson",
+                "Dr. E. L. Oliver",
+                "Dr. Sampson",
+                "Dr. Merrill",
+                "Dr. Foster",
+                "Physician"
+            ],
+            "real_name": "Richard C. Cabot",
+            "timestamp": "Addressing cause of endocarditis lesions",
+            "message": "Since only TB was confirmed in the lung, one might argue heart and pericardium lesions are also TB. But morphology suggests otherwise \u2013 they look more like streptococcal lesions. We rarely find TB bacilli in valve vegetations in such cases. Until proven, I doubt TB causes endocarditis like this.",
+            "intention": "Debate the etiology of the endocarditis lesions, arguing against a TB origin based on morphology and typical streptococcal presentation.",
+            "context": "Debating the cause of endocarditis.",
+            "source_reference": "Dr. Cabot's Interpretation of Anatomical Diagnosis: 'Since no organisms were demonstrated in this case except those of tuberculosis in the lung, it might be argued that the lesions in the heart and pericardium were really manifestations of tuberculosis. Against that we can merely say that from their morphology it is reasonable to suppose that they represent another infection, since we often see such lesions in connection with streptococcus disease...'"
+        }
+    },
+    "clinical_data": {
+        "presentation": {
+            "chief_complaint": "Twitching, cough",
+            "history_of_present_illness": "Three weeks prior to admission, twitching began, worsening significantly on March 8th and becoming violent by evening. Slight cough for two days before admission.",
+            "physical_exam": "Well-nourished girl, unable to sit, screaming, violent choreiform movements. Left tonsil enlarged. Rapid heart action, faint systolic murmur at apex, late systolic murmur in pulmonic area with accentuated pulmonic second sound. Reddened and roughened skin on back and exposed areas.",
+            "vital_signs": {
+                "initial": {
+                    "temperature": "99.8\u00b0-105\u00b0F (fluctuating, continuous rise after March 10)",
+                    "pulse": "119-151 bpm",
+                    "respiratory_rate": "29-58 breaths/min"
+                }
+            }
+        },
+        "diagnostics": {
+            "laboratory_data": [
+                {
+                    "test": "Urine",
+                    "value": "Cloudy, slight trace of albumin (last exam), slight acetone (two exams)",
+                    "units": "Sp. gr. 1.012-1.026"
+                },
+                {
+                    "test": "Blood Hemoglobin",
+                    "value": "75%",
+                    "units": "%"
+                },
+                {
+                    "test": "Leukocytes",
+                    "value": "17,000",
+                    "units": "/mm\u00b3"
+                },
+                {
+                    "test": "Polynuclears",
+                    "value": "85%",
+                    "units": "%"
+                }
+            ]
+        },
+        "procedures": [
+            {
+                "procedure": "Sedation",
+                "description": "Veronal and Morphine administered to control violent choreiform movements."
+            },
+            {
+                "procedure": "Adenoidectomy",
+                "description": "Removal of adenoids several years prior to admission."
+            },
+            {
+                "procedure": "Necropsy",
+                "description": "Post-mortem examination performed to determine anatomical diagnoses."
+            }
+        ],
+        "timeline_events": [
+            {
+                "time": "Several years prior to admission",
+                "event": "Adenoidectomy performed."
+            },
+            {
+                "time": "3 years prior to admission",
+                "event": "Bad attack of chorea."
+            },
+            {
+                "time": "3 weeks before admission",
+                "event": "Twitching began."
+            },
+            {
+                "time": "March 8, 1910",
+                "event": "Twitching became much worse, very violent in the evening."
+            },
+            {
+                "time": "March 9, 1910",
+                "event": "Admission to hospital."
+            },
+            {
+                "time": "March 10, 1910 onwards",
+                "event": "Continuous general rise in temperature."
+            },
+            {
+                "time": "March 16, 1910",
+                "event": "Heart seemed larger, pleural rub developed, cardiac rub developed."
+            },
+            {
+                "time": "March 19, 1910",
+                "event": "Patient became suddenly worse and died."
+            }
+        ],
+        "final_diagnoses": [
+            "Clinical Diagnosis (Hospital Record): Acute chorea, Acute endocarditis, Acute pericarditis, Mitral regurgitation, Dry pleurisy, Bronchopneumonia (?)",
+            "Dr. Cabot's Clinical Diagnosis: Streptococcus infection, Chorea, Acute endocarditis, Acute pericarditis (?), Acute pleuritis (?), Bronchopneumonia or tuberculosis of the left lung.",
+            "Anatomical Diagnosis: Primary fatal lesions: Acute chorea, Fibrous and verrucous endocarditis of aortic valve, Verrucous endocarditis of mitral valve, Serofibrinous pericarditis. Secondary/terminal lesions: Hypertrophy and dilatation of heart, Chronic passive congestion, general, Hydrothorax, double, Tuberculosis of upper lobe of left lung, Status lymphaticus. Historical landmarks: Foci of obsolete tuberculosis in bronchial lymphatic glands and lungs, Chronic pleuritis, Chronic appendicitis."
+        ]
+    },
+    "case_id": "NEJM192310251891706",
+    "original_case_number": "NEJM192310251891706",
+    "final_diagnosis": "N/A"
+}

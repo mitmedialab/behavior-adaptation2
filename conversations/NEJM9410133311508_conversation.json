@@ -1,0 +1,574 @@
+{
+    "case_metadata": {
+        "case_id": "37-1994",
+        "title": "Case 37-1994",
+        "source": {
+            "journal": "New England Journal of Medicine",
+            "publication_date": "1994",
+            "volume": "331",
+            "issue": "14",
+            "pages": "1007-1017"
+        }
+    },
+    "patient_info": {
+        "age": "newborn",
+        "gender": "M",
+        "demographics": {
+            "ethnicity": "Not mentioned",
+            "occupation": "Infant",
+            "living_arrangement": "Hospital"
+        },
+        "social_history": {
+            "alcohol_use": "Mother: No alcohol use during pregnancy",
+            "tobacco_use": "Mother: No tobacco use during pregnancy",
+            "substance_use": "Mother: No medications during pregnancy",
+            "other": "Family history of SIDS in a previous son"
+        },
+        "medical_history": {
+            "allergies": "Not mentioned",
+            "past_medical_conditions": "Mother: Febrile illness with vomiting, diarrhea, and dehydration during the third month of pregnancy",
+            "medications": "Mother: None during pregnancy",
+            "maternal_blood_group": "A Rh positive",
+            "maternal_platelet_count": "187,000 per cubic millimeter",
+            "maternal_indirect_coombs_test": "Negative",
+            "maternal_serologic_test_for_syphilis": "Negative",
+            "maternal_anti_rubella_antibodies": "Present",
+            "maternal_hepatitis_b_antigen": "Negative",
+            "maternal_alpha_fetoprotein": "Negative",
+            "maternal_cervical_chlamydia": "Positive",
+            "maternal_group_b_beta_hemolytic_streptococci": "Positive"
+        },
+        "surgical_history": {}
+    },
+    "participants": {
+        "clinicians": {
+            "Doctor A": {
+                "specialty": "Pediatrics, Hematology-Oncology",
+                "role": "Presenter, Associate professor of pediatrics",
+                "real_name": "Robert I. Parker"
+            },
+            "Doctor B": {
+                "specialty": "Radiology",
+                "role": "Radiologist",
+                "real_name": "Robert T. Bramson"
+            },
+            "Doctor C": {
+                "specialty": "Pathology",
+                "role": "Pathologist",
+                "real_name": "Phuong L. Nguyen"
+            },
+            "Doctor D": {
+                "specialty": "Pediatrics",
+                "role": "Clinician",
+                "real_name": "Eric F. Grabowski"
+            },
+            "Doctor E": {
+                "specialty": "Pathology",
+                "role": "Pathologist",
+                "real_name": "Nancy L. Harris"
+            },
+            "Nurse A": {
+                "specialty": "Nursing",
+                "role": "Staff Nurse",
+                "real_name": "Not mentioned"
+            }
+        },
+        "others": {
+            "Patient": {
+                "role": "Patient",
+                "identifier": "Newborn boy"
+            },
+            "Caregiver A": {
+                "role": "Mother",
+                "identifier": "Patient's Mother"
+            }
+        }
+    },
+    "conversation": {
+        "turn_1": {
+            "speaker": "Nurse A",
+            "listeners": [
+                "Doctor D"
+            ],
+            "real_name": "Not mentioned",
+            "timestamp": "Upon Admission",
+            "message": "Doctor, we have a newborn boy, admitted due to petechiae and a massively enlarged spleen.",
+            "intention": "Presenting patient for admission",
+            "context": "Initial assessment in the nursery.",
+            "source_reference": "# Case Records: Presentation Of Case. Page 1007"
+        },
+        "turn_2": {
+            "speaker": "Doctor D",
+            "listeners": [
+                "Nurse A"
+            ],
+            "real_name": "Eric F. Grabowski",
+            "timestamp": "Immediately after Nurse A's presentation",
+            "message": "Okay, let's get the details. Mother's age and pregnancy history?",
+            "intention": "Gathering patient history",
+            "context": "Initial assessment in the nursery.",
+            "source_reference": "Page 1007: 'A newborn boy was admitted to the hospital cause of petechiae and massive splenomegaly.'"
+        },
+        "turn_3": {
+            "speaker": "Nurse A",
+            "listeners": [
+                "Doctor D"
+            ],
+            "real_name": "Not mentioned",
+            "timestamp": "Immediately after Doctor D's question",
+            "message": "Mother is 35, this is her sixth pregnancy, 39th week gestation. Pregnancy was complicated by a febrile illness with vomiting and diarrhea in the third month, causing dehydration. No fetal distress during delivery. Apgar scores were good, 8 at one and five minutes. Birth weight appropriate for gestational age.",
+            "intention": "Providing maternal and birth history",
+            "context": "Initial assessment in the nursery.",
+            "source_reference": "Page 1007: 'The infant was born in the 39th week of the sixth pregnancy of a woman 35 years old...Apgar score was 8 at both one minute and five minutes. The birth weight was appropriate for the gestational age.'"
+        },
+        "turn_4": {
+            "speaker": "Doctor D",
+            "listeners": [
+                "Nurse A"
+            ],
+            "real_name": "Eric F. Grabowski",
+            "timestamp": "Immediately after Nurse A's update",
+            "message": "And the petechiae and abdominal distention were noted right after birth in the nursery?",
+            "intention": "Confirming newborn's initial symptoms",
+            "context": "Initial assessment in the nursery.",
+            "source_reference": "Page 1007: 'In the nursery abdominal distention and petechiae were observed.'"
+        },
+        "turn_5": {
+            "speaker": "Nurse A",
+            "listeners": [
+                "Doctor D"
+            ],
+            "real_name": "Not mentioned",
+            "timestamp": "Immediately after Doctor D's question",
+            "message": "Yes, doctor. His oxygen saturation dropped to 92% on room air, so he\u2019s on supplemental oxygen. We got blood cultures and started ampicillin and gentamicin.",
+            "intention": "Describing initial nursery findings and interventions",
+            "context": "Initial assessment in the nursery.",
+            "source_reference": "Page 1007: 'The oxygen saturation declined gradually to 92 percent while the patient was breathing room air, and he was given oxygen by hood...A specimen was obtained for blood culture, and ampicillin and gentamicin were administered intravenously.'"
+        },
+        "turn_6": {
+            "speaker": "Doctor D",
+            "listeners": [
+                "Nurse A"
+            ],
+            "real_name": "Eric F. Grabowski",
+            "timestamp": "Shortly after admission",
+            "message": "Let\u2019s review these initial hematologic studies. And what about the mother\u2019s blood work and history?",
+            "intention": "Requesting further patient information",
+            "context": "Reviewing initial patient data.",
+            "source_reference": "Page 1007: 'Hematologic studies were performed (Table 1).'"
+        },
+        "turn_7": {
+            "speaker": "Nurse A",
+            "listeners": [
+                "Doctor D"
+            ],
+            "real_name": "Not mentioned",
+            "timestamp": "Shortly after Doctor D's request",
+            "message": "Mother is A Rh positive, platelet count 187,000. Coombs\u2019 and syphilis tests negative, rubella antibodies present. Hepatitis B and alpha-fetoprotein negative. Cervical chlamydia and group B strep positive. Membranes ruptured at delivery, no fever during labor, no antibiotics then. No tobacco, alcohol, or drugs during pregnancy. No HIV risk factors. She did lose a son to SIDS at 2 1/2 months, six years ago. Two living, healthy siblings.",
+            "intention": "Providing maternal medical history and social history",
+            "context": "Reviewing maternal history.",
+            "source_reference": "Page 1007: 'The mother's blood group was A Rh positive...A son had died of the sudden infant death syndrome six years earlier at the age of 21/2 months; two of the patient's siblings were alive and well.'"
+        },
+        "turn_8": {
+            "speaker": "Doctor D",
+            "listeners": [
+                "Nurse A"
+            ],
+            "real_name": "Eric F. Grabowski",
+            "timestamp": "After reviewing initial information",
+            "message": "Okay, physically, temperature 36.6, pulse 130, respirations 60 to 90, blood pressure 65/35. Length 54 cm, weight 4.1 kg, head circumference 36.5 cm, all around the 90th percentile. Petechiae on thighs, back, abdomen, ecchymoses in inguinal areas. Axillary nodes 5mm, inguinal 8 to 10mm. Lungs clear except for some rhonchi, heart normal. Abdomen distended at 38cm, spleen 8cm below costal margin, liver 5-6cm. Extremities well perfused, genitalia and neuro exam normal. Anus patent, no sacral dimple.",
+            "intention": "Describing physical exam findings",
+            "context": "Presenting physical examination results.",
+            "source_reference": "Page 1007-1008: 'The temperature was 36.6\u2103, the pulse was 130, and the respirations were 60 to 90...On physical examination the baby appeared comfortable in an oxygen-enriched atmosphere...Neurologic examination was negative.'"
+        },
+        "turn_9": {
+            "speaker": "Doctor D",
+            "listeners": [
+                "Nurse A"
+            ],
+            "real_name": "Eric F. Grabowski",
+            "timestamp": "After physical exam findings",
+            "message": "Lab values show glucose 56, LDH 2002. Chest and abdomen X-rays show hepatosplenomegaly. Cranial CT negative. Abdominal ultrasound shows marked hepatosplenomegaly, no ascites, normal vena cava and hepatic/portal veins. Forearm and knee X-rays show distal ulnar metaphyses irregularities, consistent with rickets.",
+            "intention": "Presenting initial lab and imaging results",
+            "context": "Reviewing initial diagnostic findings.",
+            "source_reference": "Page 1008: 'Values were normal for urea nitrogen, creatinine, electrolytes, uric acid, bilirubin, alkaline phosphatase, and aspartate and alanine aminotransferase; the glucose concentration was 56 mg per deciliter...Radiographs of the chest and abdomen (Fig. 2) were normal except for evidence of hepatosplenomegaly...X-ray films of the forearms and knees (Fig. 3) disclosed irregularity at the distal ulnar metaphyses'"
+        },
+        "turn_10": {
+            "speaker": "Doctor D",
+            "listeners": [
+                "Nurse A"
+            ],
+            "real_name": "Eric F. Grabowski",
+            "timestamp": "Following initial investigations",
+            "message": "Continue oxygen, ampicillin, gentamicin, and start allopurinol. Give one unit of platelets.",
+            "intention": "Ordering initial treatment",
+            "context": "Initiating treatment plan.",
+            "source_reference": "Page 1009: 'Supplemental oxygen, ampicillin, and gentamicin were continued, and allopurinol was begun. One unit of platelets was transfused...'"
+        },
+        "turn_11": {
+            "speaker": "Doctor D",
+            "listeners": [
+                "Doctor A",
+                "Doctor B",
+                "Doctor C",
+                "Doctor E"
+            ],
+            "real_name": "Eric F. Grabowski",
+            "timestamp": "During a clinical meeting",
+            "message": "We have a newborn boy with petechiae, massive splenomegaly, lymphadenopathy, leukoerythroblastic blood picture, and a hypocellular marrow with abnormal bony trabeculae. We need to discuss the differential.",
+            "intention": "Presenting case for differential diagnosis",
+            "context": "Start of differential diagnosis discussion.",
+            "source_reference": "Page 1009: 'A diagnostic procedure was performed. Differential Diagnosis...DR. PARKER: The differential diagnosis in this case includes disorders that produce marked neonatal hepatosplenomegaly, lymphadenopathy, a leukoerythroblastic blood picture, and a hypocellular marrow with an abnormal architecture of the bony trabeculae.'"
+        },
+        "turn_12": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Doctor B",
+                "Doctor C",
+                "Doctor D",
+                "Doctor E"
+            ],
+            "real_name": "Robert I. Parker",
+            "timestamp": "Immediately after Doctor D's presentation",
+            "message": "Dr. Bramson, can you review the radiographs?",
+            "intention": "Requesting radiology review",
+            "context": "Differential diagnosis discussion.",
+            "source_reference": "Page 1009: 'DR. ROBERT I. PARKER: May we review the x logic studies?'"
+        },
+        "turn_13": {
+            "speaker": "Doctor B",
+            "listeners": [
+                "Doctor A",
+                "Doctor C",
+                "Doctor D",
+                "Doctor E"
+            ],
+            "real_name": "Robert T. Bramson",
+            "timestamp": "Immediately after Doctor A's request",
+            "message": "Knee and wrist films show widening of the ulna metaphysis with frayed edges, similar changes in distal femoral metaphysis. Consistent with rickets. Chest and abdomen X-ray normal except for hepatosplenomegaly.",
+            "intention": "Providing radiology findings",
+            "context": "Differential diagnosis discussion.",
+            "source_reference": "Page 1009: 'DR. ROBERT T. BRAMSON: The radiographs of knees and wrists reveal a slight widening of the metaphyseal region of the ulna, with frayed edges...A radiograph of the chest and abdomen (Fig. 2) is normal except for densities in the upper portion of the abdomen that are consistent with hepatosplenomegaly.'"
+        },
+        "turn_14": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Doctor B",
+                "Doctor C",
+                "Doctor D",
+                "Doctor E"
+            ],
+            "real_name": "Robert I. Parker",
+            "timestamp": "Following radiology review",
+            "message": "Bone mineralization and density? Cortical thickness? Any observations on orbits or optic foramina from the CT scan?",
+            "intention": "Requesting further radiology details",
+            "context": "Differential diagnosis discussion.",
+            "source_reference": "Page 1009: 'DR. PARKER: Will you comment on the bone mineralization and density and cortical thickness? Do vou have any observations on the orbits and the optic foramina as shown on the bone windows of the CT scan?'"
+        },
+        "turn_15": {
+            "speaker": "Doctor B",
+            "listeners": [
+                "Doctor A",
+                "Doctor C",
+                "Doctor D",
+                "Doctor E"
+            ],
+            "real_name": "Robert T. Bramson",
+            "timestamp": "Immediately after Doctor A's question",
+            "message": "Overall bone mineralization is normal. No corticomedullary junction abnormality in visualized long bones. CT bone windows showed no abnormality.",
+            "intention": "Providing further radiology findings",
+            "context": "Differential diagnosis discussion.",
+            "source_reference": "Page 1009: 'DR. BRAMSON: The overall bony mineralization was normal. There was no abnormality in the corticomedullary junction of the long bones that were visualized. The CT-scan bone windows showed no abnormalitv.'"
+        },
+        "turn_16": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Doctor B",
+                "Doctor C",
+                "Doctor D",
+                "Doctor E"
+            ],
+            "real_name": "Robert I. Parker",
+            "timestamp": "After radiology discussion",
+            "message": "Okay, let's consider the differential.  Less likely: intrauterine infection, sepsis, mechanical obstruction, intrauterine anemia. More likely: Letterer-Siwe, hemophagocytic syndromes, juvenile chronic myelogenous leukemia, systemic mast-cell disease, osteopetrosis.",
+            "intention": "Presenting differential diagnosis list",
+            "context": "Differential diagnosis discussion.",
+            "source_reference": "Page 1009-1010: 'DR. PARKER: The differential diagnosis in this case includes disorders that produce marked neonatal hepatosplenomegaly...I shall begin by discussing disorders that are less likely, before turning to the disease that I believe to be the correct diagnosis in this case (Table 2).'"
+        },
+        "turn_17": {
+            "speaker": "Doctor C",
+            "listeners": [
+                "Doctor A",
+                "Doctor B",
+                "Doctor D",
+                "Doctor E"
+            ],
+            "real_name": "Phuong L. Nguyen",
+            "timestamp": "After Liver Biopsy results are available",
+            "message": "The liver biopsy shows extensive portal and sinusoidal infiltrate of immature mononuclear cells, eosinophils, neutrophils, and rare erythroid precursors and megakaryocytes. Myeloid origin confirmed by myeloperoxidase and lysozyme stains. Consistent with leukemia, specifically juvenile chronic myelogenous leukemia.",
+            "intention": "Presenting liver biopsy results and pathological diagnosis",
+            "context": "Pathological discussion and diagnosis.",
+            "source_reference": "Page 1014: 'DR. PHUONG L. NGUYEN: The diagnostic procedure was an open-liver biopsy, which revealed an extensive portal and sinusoidal infiltrate composed of immature-appearing mononuclear cells, abundant eosinophils, scattered mature segmented neutrophils (Fig. 6 and 7), and rare erythroid precursors and megakaryocytes...Our diagnosis was a leukemia, consistent with juvenile chronic myelogenous leukemia.'"
+        },
+        "turn_18": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Doctor B",
+                "Doctor C",
+                "Doctor D",
+                "Doctor E"
+            ],
+            "real_name": "Robert I. Parker",
+            "timestamp": "After Doctor C's pathological diagnosis",
+            "message": "Dr. Nguyen, did you consider osteopetrosis given the bone marrow findings and radiographs?",
+            "intention": "Questioning pathological diagnosis in light of other findings",
+            "context": "Differential diagnosis discussion, questioning pathological findings.",
+            "source_reference": "Page 1017: 'DR. PARKER: Did you consider osteopetrosis in this patient?'"
+        },
+        "turn_19": {
+            "speaker": "Doctor C",
+            "listeners": [
+                "Doctor A",
+                "Doctor B",
+                "Doctor D",
+                "Doctor E"
+            ],
+            "real_name": "Phuong L. Nguyen",
+            "timestamp": "Immediately after Doctor A's question",
+            "message": "We interpreted the thickened trabeculae as normal endochondral ossification for a newborn.",
+            "intention": "Justifying pathological diagnosis against osteopetrosis",
+            "context": "Pathological discussion, justifying diagnosis.",
+            "source_reference": "Page 1017: 'DR. NGUYEN: We interpreted the area of thickened trabeculae as endochondral ossification in a newborn.'"
+        },
+        "turn_20": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Doctor B",
+                "Doctor C",
+                "Doctor D",
+                "Doctor E"
+            ],
+            "real_name": "Robert I. Parker",
+            "timestamp": "After Doctor C's justification",
+            "message": "But the thickened trabeculae in the marrow, the hypocellular marrow, and the long bone radiographs strongly suggested osteopetrosis to me.",
+            "intention": "Reiterating diagnosis of osteopetrosis",
+            "context": "Differential diagnosis discussion, defending osteopetrosis diagnosis.",
+            "source_reference": "Page 1017: 'DR. PARKER: The thickened trabeculae in the medullary cavity, the poor cellularity of the bone marrow specimen, and the radiographic appearance of the long bones led to my diagnosis of osteopetrosis.'"
+        },
+        "turn_21": {
+            "speaker": "Doctor D",
+            "listeners": [
+                "Doctor A",
+                "Doctor B",
+                "Doctor C",
+                "Doctor E"
+            ],
+            "real_name": "Eric F. Grabowski",
+            "timestamp": "Towards the end of the discussion",
+            "message": "Initially, we also considered Wiskott-Aldrich and malignant teratoma, but those didn't fit the elevated white count. We leaned towards juvenile chronic myelogenous leukemia, especially when the white count rose to 56,800.",
+            "intention": "Explaining clinical team's diagnostic reasoning",
+            "context": "Summarizing clinical team's diagnostic process.",
+            "source_reference": "Page 1013-1014: 'DR. ERIC F. GRABOWSKI: Two additional diseases that we considered early in the course are the Wiskott-Aldrich syndrome and a malignant teratoma, but neither of these diagnoses would explain the elevated white-cell count. We subsequently favored the diagnosis of juvenile chronic myelogenous leu-kemia, especially when the total white-cell count rose to 56,800 per cubic millimeter.'"
+        },
+        "turn_22": {
+            "speaker": "Doctor D",
+            "listeners": [
+                "Caregiver A"
+            ],
+            "real_name": "Eric F. Grabowski",
+            "timestamp": "After final diagnosis and before bone marrow transplant",
+            "message": "Mrs. [Patient's Mother's Last Name], we've concluded that your son has juvenile chronic myelogenous leukemia. It's a serious condition, but we have options. We are recommending a bone marrow transplant.",
+            "intention": "Explaining diagnosis and treatment plan to caregiver",
+            "context": "Post-diagnosis discussion with family.",
+            "source_reference": "Page 1014: 'CLINICAL DIAGNOSIS Juvenile chronic myelogenous leukemia.'"
+        },
+        "turn_23": {
+            "speaker": "Caregiver A",
+            "listeners": [
+                "Doctor D"
+            ],
+            "real_name": "Patient's Mother",
+            "timestamp": "Immediately after Doctor D's explanation",
+            "message": "A bone marrow transplant? Is there another way? What does this mean for my baby?",
+            "intention": "Expressing concern and seeking more information",
+            "context": "Post-diagnosis discussion with family, seeking clarification.",
+            "source_reference": "Page 1017: 'DR. GRABOWSKI: The patient received a bone marrow transplant from a sister whose marrow was HLA-compatible on mixed-lymphocyte culture; the transplantation was performed at another hospital when he was 31/2 months of age.'"
+        },
+        "turn_24": {
+            "speaker": "Doctor D",
+            "listeners": [
+                "Caregiver A"
+            ],
+            "real_name": "Eric F. Grabowski",
+            "timestamp": "Immediately after Caregiver A's question",
+            "message": "It's a complex situation, but a transplant offers the best chance for long-term survival. We'll explain everything in detail and connect you with the transplant team. His sister is a compatible donor, which is very good news.",
+            "intention": "Reassuring caregiver and outlining next steps",
+            "context": "Post-diagnosis discussion with family, providing reassurance and next steps.",
+            "source_reference": "Page 1017: 'DR. GRABOWSKI: The patient received a bone marrow transplant from a sister whose marrow was HLA-compatible on mixed-lymphocyte culture...'"
+        }
+    },
+    "clinical_data": {
+        "presentation": {
+            "chief_complaint": "Petechiae and massive splenomegaly",
+            "history_of_present_illness": "Newborn boy born at 39 weeks gestation to a 35-year-old woman. Pregnancy complicated by febrile illness in the third month. At birth, abdominal distention and petechiae were noted.",
+            "physical_exam": "Petechiae on upper thighs, lower back, and abdomen, ecchymoses in inguinal areas. Mobile 5mm axillary lymph nodes, palpable 8-10mm inguinal lymph nodes bilaterally. Protuberant abdomen (38cm), spleen descended 8cm below left costal margin, liver edge palpated 5-6cm below right costal margin.",
+            "vital_signs": {
+                "initial": {
+                    "temperature": "36.6\u2103",
+                    "pulse": "130 bpm",
+                    "respiratory_rate": "60-90/min",
+                    "blood_pressure": "65/35 mm Hg"
+                }
+            }
+        },
+        "diagnostics": {
+            "laboratory_data": [
+                {
+                    "test": "Hematocrit (On Admission)",
+                    "value": "48.1%",
+                    "units": "%",
+                    "reference_range": "37.5-47.2% (1-2 weeks after admission), 27.4-33% (3-4 weeks after admission)"
+                },
+                {
+                    "test": "White-cell count (On Admission)",
+                    "value": "48,200/mm\u00b3",
+                    "units": "per mm\u00b3",
+                    "reference_range": "25,000/mm\u00b3 (1-2 weeks after admission), Up to 56,800/mm\u00b3 (3-4 weeks after admission)"
+                },
+                {
+                    "test": "Platelet count (On Admission)",
+                    "value": "15,000/mm\u00b3",
+                    "units": "per mm\u00b3",
+                    "reference_range": "30,000-73,000/mm\u00b3 & 20,000-71,000/mm\u00b3 (3-4 weeks after admission)"
+                },
+                {
+                    "test": "Glucose concentration",
+                    "value": "56 mg/dL",
+                    "units": "mg/dL",
+                    "reference_range": "Normal"
+                },
+                {
+                    "test": "Lactate dehydrogenase level",
+                    "value": "2002 U/L",
+                    "units": "U/L",
+                    "reference_range": "Normal"
+                },
+                {
+                    "test": "Leukocyte alkaline phosphatase level",
+                    "value": "26 U/L",
+                    "units": "U/L",
+                    "reference_range": "30-160 U/L (normal)"
+                }
+            ],
+            "imaging": [
+                {
+                    "modality": "Radiographs of chest and abdomen",
+                    "description": "Hepatospelnomegaly, otherwise normal.",
+                    "figures": [
+                        "Figure 2"
+                    ]
+                },
+                {
+                    "modality": "CT scan of cranium",
+                    "description": "Negative.",
+                    "figures": []
+                },
+                {
+                    "modality": "Ultrasonographic examination of abdomen",
+                    "description": "Marked hepatosplenomegaly, normal inferior vena cava, hepatic and portal veins, normal blood flow, no ascites.",
+                    "figures": []
+                },
+                {
+                    "modality": "X-ray films of forearms and knees",
+                    "description": "Irregularity at the distal ulnar metaphyses and irregularity and widening of the distal femoral metaphyses, consistent with rickets.",
+                    "figures": [
+                        "Figure 3"
+                    ]
+                }
+            ],
+            "bone_marrow_studies": [
+                {
+                    "modality": "Bone marrow aspirates and biopsy",
+                    "description": "Complete erythroid and granulocytic maturation. Normal marrow cellularity. No evidence of storage disease. Thickened bony trabeculae of the woven type.",
+                    "figures": [
+                        "Figure 4",
+                        "Figure 5"
+                    ]
+                }
+            ]
+        },
+        "procedures": [
+            {
+                "procedure": "Blood culture",
+                "description": "Obtained on admission.",
+                "time": "On admission"
+            },
+            {
+                "procedure": "Platelet transfusion",
+                "description": "One unit transfused initially, repeated transfusions required.",
+                "time": "During hospitalization"
+            },
+            {
+                "procedure": "Liver biopsy",
+                "description": "Open liver biopsy performed for diagnosis.",
+                "time": "During diagnostic workup"
+            },
+            {
+                "procedure": "Bone marrow transplant",
+                "description": "Received from HLA-compatible sister.",
+                "time": "At 3 1/2 months of age"
+            },
+            {
+                "procedure": "Whole blood transfusion from sister",
+                "description": "To induce graft-versus-host disease.",
+                "time": "Post-transplant"
+            },
+            {
+                "procedure": "Mononuclear-cell transfusions from sister",
+                "description": "Over four weeks to enhance graft-versus-leukemia effect.",
+                "time": "Post-transplant"
+            }
+        ],
+        "timeline_events": [
+            {
+                "time": "39th week of gestation",
+                "event": "Birth of newborn boy."
+            },
+            {
+                "time": "At birth in nursery",
+                "event": "Abdominal distention and petechiae observed."
+            },
+            {
+                "time": "Shortly after birth",
+                "event": "Oxygen saturation declined to 92%, supplemental oxygen given."
+            },
+            {
+                "time": "On admission",
+                "event": "Transferred to Massachusetts General Hospital, blood culture obtained, antibiotics started, platelet transfusion given."
+            },
+            {
+                "time": "During hospitalization",
+                "event": "Hematologic studies, radiographs, CT scan, ultrasound, bone marrow aspirates and biopsy performed."
+            },
+            {
+                "time": "After liver biopsy",
+                "event": "Diagnosis of juvenile chronic myelogenous leukemia made based on pathological findings."
+            },
+            {
+                "time": "At 3 1/2 months of age",
+                "event": "Bone marrow transplant from sister."
+            },
+            {
+                "time": "Post-transplant",
+                "event": "Whole blood and mononuclear cell transfusions from sister due to mixed chimerism."
+            }
+        ],
+        "final_diagnoses": [
+            "Juvenile chronic myelogenous leukemia",
+            "Rickets (consistent with radiographic findings)"
+        ]
+    },
+    "case_id": "NEJM9410133311508",
+    "original_case_number": "NEJM9410133311508",
+    "final_diagnosis": "N/A"
+}

@@ -1,0 +1,453 @@
+{
+    "case_metadata": {
+        "case_id": "Case 9443",
+        "title": "Case 9443: A Thirteen-Year-Old Schoolboy with Abdominal Pain",
+        "source": {
+            "journal": "Not specified, likely a medical case report",
+            "publication_date": "1923-05-23 (Admission Date)",
+            "volume": "Not specified",
+            "issue": "Not specified",
+            "pages": "From the provided text",
+            "doi": "Not applicable"
+        }
+    },
+    "patient_info": {
+        "age": 13,
+        "gender": "M",
+        "demographics": {
+            "ethnicity": "American",
+            "occupation": "Schoolboy",
+            "living_arrangement": "Not specified"
+        },
+        "social_history": {
+            "alcohol_use": "Not specified",
+            "tobacco_use": "Not specified",
+            "substance_use": "Not specified",
+            "other": "Schoolboy"
+        },
+        "medical_history": {
+            "allergies": "Not specified",
+            "past_medical_conditions": "Mumps, pertussis, pleurisy (last winter), occasional fleeting shooting pain in epigastrium on running (past winter)",
+            "medications": "Not specified"
+        },
+        "surgical_history": {
+            "appendectomy": "Yes (during this admission)"
+        }
+    },
+    "participants": {
+        "clinicians": {
+            "Doctor A": {
+                "specialty": "General Surgery",
+                "role": "Admitting/Operating Surgeon (Based on actions in text)"
+            },
+            "Doctor B": {
+                "specialty": "Internal Medicine/Medical Consultant",
+                "role": "Medical Consultant (mentioned in text)"
+            },
+            "Doctor C": {
+                "specialty": "Pathology",
+                "role": "Pathologist (H. F. Hartwell - Pathological Report)"
+            },
+            "Doctor D": {
+                "specialty": "Surgery",
+                "role": "Discussant, Dr. Edward L. Young, Jr. (Discussion Section)"
+            },
+            "Doctor E": {
+                "specialty": "Surgery/Pathology",
+                "role": "Discussant, Dr. Richardson (Further Discussion Section)"
+            }
+        },
+        "others": {
+            "Patient": {
+                "role": "Patient"
+            }
+        }
+    },
+    "conversation": {
+        "turn_1": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Patient"
+            ],
+            "real_name": "Not specified",
+            "timestamp": "May 23, 1923, Upon Admission",
+            "message": "Hello, I'm Dr. [Doctor A's Name]. What brings you in today?",
+            "intention": "Initiate patient encounter and inquire about chief complaint.",
+            "context": "Patient admitted to hospital complaining of abdominal pain.",
+            "source_reference": "Case 9443: 'An American schoolboy of thirteen entered May 23, 1923, complaining of pain in the right abdomen...'"
+        },
+        "turn_2": {
+            "speaker": "Patient",
+            "listeners": [
+                "Doctor A"
+            ],
+            "real_name": "Patient (13-year-old schoolboy)",
+            "timestamp": "May 23, 1923, Upon Admission, immediately after Doctor A's greeting.",
+            "message": "I've had pain in my right abdomen. It started three days ago, on and off, but for the last two hours it's been constant.",
+            "intention": "Describe chief complaint - abdominal pain, its location, duration, and character.",
+            "context": "Patient describing the onset and progression of his abdominal pain.",
+            "source_reference": "Case 9443: '...complaining of pain in the right abdomen, intermittent for three days, constant for two hours.'"
+        },
+        "turn_3": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Patient"
+            ],
+            "real_name": "Not specified",
+            "timestamp": "May 23, 1923, During History Taking, shortly after patient describes abdominal pain.",
+            "message": "Tell me a bit more about this pain. Where exactly does it hurt?",
+            "intention": "Further investigate the nature and location of the pain.",
+            "context": "Doctor probing for more details about the patient's symptoms.",
+            "source_reference": "General medical history taking practice."
+        },
+        "turn_4": {
+            "speaker": "Patient",
+            "listeners": [
+                "Doctor A"
+            ],
+            "real_name": "Patient (13-year-old schoolboy)",
+            "timestamp": "May 23, 1923, During History Taking, in response to Doctor A's question about pain location.",
+            "message": "It started higher up, in my stomach area, but now it's more down here on the right side.",
+            "intention": "Describe the shifting location of the abdominal pain.",
+            "context": "Patient elaborating on the pain's migration from epigastrium to right lower quadrant.",
+            "source_reference": "P. I.: 'Late in the afternoon he had an attack of sudden intermittent cramp-like pain in the epigastrium, shifting at the end of half an hour into the right lower quadrant.'"
+        },
+        "turn_5": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Patient"
+            ],
+            "real_name": "Not specified",
+            "timestamp": "May 23, 1923, During History Taking, continuing to gather patient history.",
+            "message": "Any other symptoms? Nausea, vomiting, changes in bowel movements?",
+            "intention": "Inquire about associated symptoms related to abdominal pain.",
+            "context": "Doctor exploring associated gastrointestinal symptoms.",
+            "source_reference": "General medical history taking practice."
+        },
+        "turn_6": {
+            "speaker": "Patient",
+            "listeners": [
+                "Doctor A"
+            ],
+            "real_name": "Patient (13-year-old schoolboy)",
+            "timestamp": "May 23, 1923, During History Taking, in response to Doctor A's questions about other symptoms.",
+            "message": "Yes, I felt sick to my stomach a few days ago, and I did throw up once this morning. Maybe with a little blood? And my throat's been sore since this morning too. I had a loose bowel movement earlier today.",
+            "intention": "Describe associated symptoms: nausea, vomiting (possibly with blood), sore throat, and loose bowel movement.",
+            "context": "Patient detailing gastrointestinal and throat symptoms.",
+            "source_reference": "P. I.: 'The nausea persisted throughout the night without vomiting...vomited material possibly streaked with blood, relieving the nausea. Since morning his throat had been sore...had a loose bowel movement.'"
+        },
+        "turn_7": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Patient"
+            ],
+            "real_name": "Not specified",
+            "timestamp": "May 23, 1923, During History Taking, inquiring about past medical and family history.",
+            "message": "Have you had any illnesses in the past? And is there any family history of illness?",
+            "intention": "Gather past medical history and family history.",
+            "context": "Standard questions in medical history taking.",
+            "source_reference": "General medical history taking practice."
+        },
+        "turn_8": {
+            "speaker": "Patient",
+            "listeners": [
+                "Doctor A"
+            ],
+            "real_name": "Patient (13-year-old schoolboy)",
+            "timestamp": "May 23, 1923, During History Taking, providing past medical and family history.",
+            "message": "I had mumps and whooping cough, and pleurisy last winter. They strapped me up for that. And my dad has had a cough his whole life. He gets sick with it and has to stop working sometimes.",
+            "intention": "Provide past medical history (mumps, pertussis, pleurisy) and family history (father's chronic cough).",
+            "context": "Patient providing relevant medical history.",
+            "source_reference": "F. H.: 'His father had been sick with a cough all his life...'\nP. H.: 'He had had mumps, pertussis, and pleurisy, for which he was strapped, last winter.'"
+        },
+        "turn_9": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Patient"
+            ],
+            "real_name": "Not specified",
+            "timestamp": "May 23, 1923, Physical Examination, after history taking.",
+            "message": "Okay, let's take a look at you. You look quite unwell and your skin is flushed. Your throat and tonsils are red, and your glands in your neck are enlarged. Your heart and lungs sound fine, and your abdomen...well, we'll need to examine that more closely. Everything else seems normal at first glance.",
+            "intention": "Describe initial physical examination findings - general appearance, throat, glands, and preliminary abdominal assessment.",
+            "context": "Initial physical exam observations.",
+            "source_reference": "P. E.: 'A well-built, well-nourished, sick-looking boy with flushed skin. Throat and tonsils injected. Cervical glands enlarged. Heart, lungs, abdomen, genitals, extremities, pupils, and reflexes normal.'"
+        },
+        "turn_10": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Patient"
+            ],
+            "real_name": "Not specified",
+            "timestamp": "May 23, 1923, Rectal Examination, as part of the physical examination.",
+            "message": "(During rectal exam) Does this hurt anywhere?",
+            "intention": "Assess for tenderness during rectal examination.",
+            "context": "Performing rectal exam to evaluate abdominal tenderness.",
+            "source_reference": "P. E.: 'Rectal examination.'"
+        },
+        "turn_11": {
+            "speaker": "Patient",
+            "listeners": [
+                "Doctor A"
+            ],
+            "real_name": "Patient (13-year-old schoolboy)",
+            "timestamp": "May 23, 1923, Rectal Examination, responding to Doctor A's question during rectal exam.",
+            "message": "Yes, it's tender here, on both sides, high up.",
+            "intention": "Report tenderness during rectal examination, bilaterally and high up.",
+            "context": "Patient indicating areas of tenderness during rectal exam.",
+            "source_reference": "P. E.: 'Rectal examination. Tenderness high up on both sides equally.'"
+        },
+        "turn_12": {
+            "speaker": "Doctor A",
+            "listeners": [],
+            "real_name": "Not specified",
+            "timestamp": "May 23, 1923, Post Examination, formulating initial assessment.",
+            "message": "(To self, thinking aloud) Temperature 100.2, high white blood cell count of 30,000... acute appendicitis is high on the list, especially with the pain shifting to the right lower quadrant. Enlarged cervical glands could suggest tuberculosis, given the family history, but appendicitis is more pressing.",
+            "intention": "Formulate differential diagnosis based on history, physical exam and initial lab results (leukocytosis and temperature).",
+            "context": "Doctor synthesizing findings to arrive at a pre-operative diagnosis.",
+            "source_reference": "Before operation T. 100.2\u00b0, ... leucocytes 30,000.\nDiscussion: 'In this particular case pain in the right abdomen of course can be any one of a great many things. In a boy of thirteen, where it is of acute onset, as this is, we of course think of appendicitis first...The thing that is most conclusive is the fact that this severe pain started in the epigastrium and then shifted to the right lower quadrant. That is always extremely suggestive of acute appendicitis.'"
+        },
+        "turn_13": {
+            "speaker": "Doctor D",
+            "listeners": [],
+            "real_name": "Dr. Edward L. Young, Jr.",
+            "timestamp": "May 23, 1923, Pre-operative Discussion (Hypothetical reconstruction of Dr. Young's thought process based on 'Discussion' section)",
+            "message": "Acute onset abdominal pain in a 13-year-old... appendicitis is the first thought. Family history of possible phthisis and past pleurisy raises suspicion for tuberculosis, but appendicitis is more likely given the pain shift.  Exam findings are not very specific but the elevated temperature and white count support infection.  We should proceed with operation for suspected acute appendicitis.",
+            "intention": "Articulate pre-operative diagnostic reasoning, favoring acute appendicitis.",
+            "context": "Dr. Young's diagnostic thought process as described in the 'Discussion' section.",
+            "source_reference": "Discussion: 'In this particular case pain in the right abdomen of course can be any one of a great many things. In a boy of thirteen, where it is of acute onset, as this is, we of course think of appendicitis first...When we find in the family history that he has a father who may be afflicted with chronic phthisis we think that the boy is the age when tabes mesenterica is frequently seen. When we find from his past history that he had what was called a pleurisy that diagnosis certainly ought to intrude itself, with further thought of tuberculosis....The thing that is most conclusive is the fact that this severe pain started in the epigastrium and then shifted to the right lower quadrant. That is always extremely suggestive of acute appendicitis....The temperature and leucocytosis are consistent with acute appendicitis.'"
+        },
+        "turn_14": {
+            "speaker": "Doctor A",
+            "listeners": [],
+            "real_name": "Not specified",
+            "timestamp": "May 24, 1923, Post-Operation, the day after admission.",
+            "message": "(Post-operative note) Operation performed under local novocaine and gas-oxygen anesthesia. Appendix found in pelvis, long and injected, but not thickened. No inflammation or lesions found. Appendix removed. No other pathology found in pelvis or lower abdomen.",
+            "intention": "Document operative findings and procedure performed.",
+            "context": "Surgical findings and procedure details.",
+            "source_reference": "Operation: 'Local novocain; gas-oxygen. Lower rectus muscle-splitting incision...The appendix was found in the pelvis, very long, quite injected, but not thickened. No inflammatory membrane or lesion was found...The appendix was delivered in the wound and removed, the stump inverted. Further exploration of the pelvis and lower abdomen revealed no adhesions or pathology.'"
+        },
+        "turn_15": {
+            "speaker": "Doctor A",
+            "listeners": [],
+            "real_name": "Not specified",
+            "timestamp": "May 25, 1923, Post-operative Day 1, morning after surgery.",
+            "message": "(Progress note) Patient recovered well from anesthesia and seemed better this morning.",
+            "intention": "Document initial post-operative recovery.",
+            "context": "Patient's condition on the first morning post-surgery.",
+            "source_reference": "The patient made a good recovery from anesthesia and seemed to feel better the following morning."
+        },
+        "turn_16": {
+            "speaker": "Nurse A",
+            "listeners": [
+                "Doctor A"
+            ],
+            "real_name": "Not specified",
+            "timestamp": "May 26, 1923, Post-operative Day 2, morning, reporting patient's deteriorating condition.",
+            "message": "Doctor, the patient isn't doing well this morning. His temperature is up to 103.4, pulse is 140, and respirations are 40. He looks worse.",
+            "intention": "Report patient's deteriorating vital signs and clinical condition.",
+            "context": "Nurse alerting doctor to patient's worsening state on post-operative day 2.",
+            "source_reference": "May 26, however, he was not so well. The temperature and pulse had risen to 103.4\u00b0 and 140 respectively, the respirations to 40."
+        },
+        "turn_17": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Nurse A"
+            ],
+            "real_name": "Not specified",
+            "timestamp": "May 26, 1923, Post-operative Day 2, immediately after Nurse A's report.",
+            "message": "Let's get a medical consultant in here right away. And check his abdomen again.",
+            "intention": "Request medical consultation and reassessment of abdomen.",
+            "context": "Doctor responding to patient's deterioration and requesting further evaluation.",
+            "source_reference": "May 26, however, he was not so well."
+        },
+        "turn_18": {
+            "speaker": "Doctor B",
+            "listeners": [
+                "Doctor A"
+            ],
+            "real_name": "Not specified",
+            "timestamp": "May 26, 1923, Post-operative Day 2, after examination by Medical Consultant.",
+            "message": "(To Doctor A) I've examined him. Respiratory and cardiac systems seem clear. Abdomen is tense, wound looks okay, not infected. Rectal exam still shows tenderness on both sides. Stomach wash showed dilatation.",
+            "intention": "Report findings of medical consultation - exclusion of respiratory and cardiac issues, abdominal exam findings, and stomach dilatation.",
+            "context": "Medical consultant's assessment.",
+            "source_reference": "A medical consultant excluded the respiratory tract and the heart. The abdomen was tense, the wound apparently not infected. Rectal examination showed tenderness on both sides as before. A stomach wash showed dilatation."
+        },
+        "turn_19": {
+            "speaker": "Nurse A",
+            "listeners": [
+                "Doctor A",
+                "Doctor B"
+            ],
+            "real_name": "Not specified",
+            "timestamp": "May 26, 1923, Post-operative Day 2, evening, urgent update on patient's condition.",
+            "message": "Doctor, his temperature is now 105.4, and I can't even get a pulse reading. He's getting much worse!",
+            "intention": "Report critical deterioration in vital signs \u2013 extremely high temperature and unrecordable pulse.",
+            "context": "Nurse reporting a life-threatening change in patient's condition.",
+            "source_reference": "That evening the temperature was 105.4\u00b0, the pulse not countable."
+        },
+        "turn_20": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Nurse A",
+                "Doctor B"
+            ],
+            "real_name": "Not specified",
+            "timestamp": "May 26, 1923, Post-operative Day 2, evening, immediate response to critical deterioration.",
+            "message": "Start subpectoral fluids, give sips of fluid by mouth if he can take them, and morphine for pain. We need to do everything we can.",
+            "intention": "Initiate supportive measures \u2013 fluids, pain relief \u2013 in response to critical deterioration.",
+            "context": "Emergency treatment measures in a rapidly declining patient.",
+            "source_reference": "He was given a subpectoral, sips of fluid and morphia."
+        },
+        "turn_21": {
+            "speaker": "Nurse A",
+            "listeners": [
+                "Doctor A",
+                "Doctor B"
+            ],
+            "real_name": "Not specified",
+            "timestamp": "May 26, 1923, Post-operative Day 2, late evening, reporting patient's death.",
+            "message": "Doctor, he's gone. He just died.",
+            "intention": "Report patient's death.",
+            "context": "Patient's demise.",
+            "source_reference": "That evening he died."
+        },
+        "turn_22": {
+            "speaker": "Doctor C",
+            "listeners": [
+                "Doctor E"
+            ],
+            "real_name": "H. F. Hartwell",
+            "timestamp": "Post-mortem, Pathological Report, after appendectomy.",
+            "message": "(Pathology report) Appendix shows chronic appendicitis.  It's 11.5 cm long with a vascular surface, but walls are not thickened and mucosa is pale.",
+            "intention": "Report pathological findings of the removed appendix.",
+            "context": "Pathology report on the appendectomy specimen.",
+            "source_reference": "PATHOLOGICAL REPORT: 'An appendix 11.5 cm. long. Its surface is covered with a vascular membrane. Its walls are not thickened. The mucosa is pale. Chronic appendicitis.H. F. Hartwell.'"
+        },
+        "turn_23": {
+            "speaker": "Doctor E",
+            "listeners": [
+                "Doctor D"
+            ],
+            "real_name": "Dr. Richardson",
+            "timestamp": "Post-mortem, Further Discussion, reporting autopsy findings.",
+            "message": "At autopsy, we found a lot of brownish-red fluid coming from his mouth. The peritoneal cavity had purulent fluid and fibrinopurulent exudate generally coating the peritoneum, weakly binding the intestines.  There were pockets of pus in the pelvis. Small intestine was slightly distended but intact, mucosa mostly negative except for follicle hyperplasia. Large intestine similar. Appendix was missing, stump ligated and watertight. Mesenteric glands were enlarged with fibrocalcareous degeneration and old adhesions to the small intestine. Retroperitoneal glands were okay. Thymus gland was enlarged, 30 grams.",
+            "intention": "Describe gross autopsy findings - peritonitis, mesenteric gland tuberculosis, status lymphaticus (thymus enlargement).",
+            "context": "Autopsy findings presented by Dr. Richardson.",
+            "source_reference": "Dr. Richardson: 'Much brownish-red, opaque fluid material flowed from the mouth...The peritoneal cavity contained a moderate amount of purulent fluid material...The mesenteric glands were enlarged up to two cm., and at least half a dozen of them showed much fibrocalcareous degeneration...The thymus gland weighed 30 grams,\u2014considerably enlarged.'"
+        },
+        "turn_24": {
+            "speaker": "Doctor D",
+            "listeners": [],
+            "real_name": "Dr. Edward L. Young, Jr.",
+            "timestamp": "Post-mortem Discussion, reflecting on the case after autopsy findings.",
+            "message": "Well, no wonder we were confused! He had appendicitis, peritonitis, mesenteric gland tuberculosis, and status lymphaticus.  It seems the peritonitis and status lymphaticus combination was lethal.  The mesenteric glands probably weren't related to this acute illness.",
+            "intention": "Summarize and interpret the autopsy findings, explaining the diagnostic confusion and cause of death.",
+            "context": "Dr. Young's post-mortem analysis and reflection.",
+            "source_reference": "Dr. Young : 'No wonder we did not guess one condition accurately, because he had all of the conditions which we have discussed. His death was due to peritonitis plus status lymphaticus, and he did have the infected mesenteric glands which were discussed, although they presumably had nothing to do with the present picture.'"
+        }
+    },
+    "clinical_data": {
+        "presentation": {
+            "chief_complaint": "Pain in the right abdomen",
+            "history_of_present_illness": "Intermittent right abdominal pain for three days, constant for two hours. Preceded by nausea, vomiting (possibly blood-streaked), sore throat, and loose bowel movement. Pain initially epigastric, shifting to right lower quadrant.",
+            "physical_exam": "Sick-looking, flushed skin. Throat and tonsils injected. Cervical glands enlarged. Heart, lungs, abdomen, genitals, extremities, pupils, reflexes normal except for rectal tenderness high up on both sides.",
+            "vital_signs": {
+                "initial": {
+                    "temperature": "100.2\u00b0F",
+                    "pulse": "Not recorded",
+                    "respiratory_rate": "Not recorded",
+                    "blood_pressure": "Not recorded"
+                },
+                "deterioration": {
+                    "temperature": "103.4\u00b0F, then 105.4\u00b0F",
+                    "pulse": "140 bpm, then uncountable",
+                    "respiratory_rate": "40/min",
+                    "blood_pressure": "Not recorded"
+                }
+            }
+        },
+        "diagnostics": {
+            "laboratory_data": [
+                {
+                    "test": "Leucocytes",
+                    "value": "30,000",
+                    "units": "/mm3",
+                    "reference_range": "Not specified"
+                },
+                {
+                    "test": "Urine",
+                    "value": "Not recorded, assumed negative",
+                    "units": "Not applicable",
+                    "reference_range": "Normal"
+                },
+                {
+                    "test": "Stomach wash",
+                    "value": "Dilatation",
+                    "units": "Not applicable",
+                    "reference_range": "Normal"
+                }
+            ],
+            "imaging": []
+        },
+        "procedures": [
+            {
+                "procedure": "Appendectomy",
+                "description": "Lower rectus muscle-splitting incision, removal of appendix",
+                "time": "Day after admission"
+            },
+            {
+                "procedure": "Rectal examination",
+                "description": "Performed on admission and post-operatively",
+                "time": "Admission and post-operative day 2"
+            },
+            {
+                "procedure": "Stomach wash",
+                "description": "Performed during deterioration",
+                "time": "Post-operative day 2"
+            },
+            {
+                "procedure": "Subpectoral fluids, sips of fluid, morphia",
+                "description": "Supportive treatment",
+                "time": "Evening of post-operative day 2"
+            }
+        ],
+        "timeline_events": [
+            {
+                "time": "May 20",
+                "event": "Sharp, colicky pain in epigastrium, nausea."
+            },
+            {
+                "time": "May 22",
+                "event": "Nausea returns, watery movement, vomiting possibly with blood, sore throat, pain shifts to right lower quadrant."
+            },
+            {
+                "time": "May 23",
+                "event": "Admission to hospital, examination, pre-operative diagnosis of acute appendicitis."
+            },
+            {
+                "time": "May 24",
+                "event": "Appendectomy performed."
+            },
+            {
+                "time": "May 25",
+                "event": "Patient seemed better in the morning."
+            },
+            {
+                "time": "May 26",
+                "event": "Patient deteriorates, high fever, tachycardia, medical consultant examined, stomach dilatation found, death in the evening."
+            }
+        ],
+        "final_diagnoses": [
+            "Anatomical Diagnosis: General fibrinopurulent peritonitis",
+            "Status lymphaticus",
+            "Chronic appendicitis",
+            "Chronic tuberculosis of the mesenteric glands",
+            "Slight chronic peritonitis",
+            "Edema of the lungs",
+            "Soft spleen"
+        ]
+    },
+    "case_id": "NEJM192311011891813",
+    "original_case_number": "NEJM192311011891813",
+    "final_diagnosis": "N/A"
+}

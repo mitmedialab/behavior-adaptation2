@@ -1,0 +1,347 @@
+{
+  "metadata": {
+    "case_id": "NEJM192311011891811",
+    "task_generation_model": "gemini-2.5-flash-preview-04-17",
+    "task_count": 5,
+    "avg_proactive_score": 0.894,
+    "min_proactive_score": 0.62,
+    "max_proactive_score": 1.0,
+    "proactive_score_scale_definition": "Proactive-Reactive Scale (0.0-1.0):\n- 0.0-0.2: Highly reactive (simple recall/identification - Use Sparingly)\n- 0.2-0.4: Primarily reactive (timeline sequencing, straightforward reasoning from stated info)\n- 0.4-0.6: Balanced (requires retrieval AND inference/synthesis across sections)\n- 0.6-0.8: Primarily proactive (significant inference, interpretation, evaluating consistency/SOC based on summary)\n- 0.8-1.0: Highly proactive (detecting omissions/conflicts, evaluating hypothetical errors, complex prediction, resolving ambiguity)",
+    "score_distribution_categories": {
+      "highly_reactive (0.0-0.2)": 0,
+      "primarily_reactive (0.2-0.4)": 0,
+      "balanced (0.4-0.6)": 0,
+      "primarily_proactive (0.6-0.8)": 1,
+      "highly_proactive (0.8-1.0+)": 4
+    },
+    "task_types_distribution": {
+      "predictive_next_action": 1,
+      "proactive_explicit_error_correction": 1,
+      "proactive_data_conflict_resolution": 1,
+      "reasoning_differential_evolution": 1,
+      "integrity_missing_turn_inference": 1
+    },
+    "complexity_distribution": {
+      "advanced": 5
+    },
+    "evaluation_instructions_summary": "For evaluation: Use the 'evaluation_guide' within each task.\n1. 'llm_input_template': Provides the prompt structure for the agent being evaluated.\n2. 'data_extraction_guidance': Hints at where the generating LLM found context ('context_source_provided' is the snippet used). For full evaluation, retrieve original data based on 'required_turns_hint'/'required_sections_hint' from the complete case file, or provide the full case summary. For resource tasks, use the 'resource_path' (relative to the case folder).\n3. 'evaluation_criteria': Contains the 'correct_option_index' (e.g., 'A'-'F'), 'correct_answer_text', and 'rationale_components' for judging the response quality.\n4. 'evaluation_prompt_template': A pre-filled prompt string using the originally provided context snippet (for convenience in basic evaluations).",
+    "resources_relative": {
+      "image_path_relative": "NEJM192311011891811/images",
+      "table_path_relative": "NEJM192311011891811/tables/NEJM192311011891811_tables.json"
+    }
+  },
+  "tasks": [
+    {
+      "task_type": "predictive_next_action",
+      "question": "Based on the clinical case progression up to Turn 23, what is the single most critical and clinically appropriate immediate next action for the medical team?",
+      "correct_answer": "Order STAT Portable Chest X-ray to evaluate for consolidation and pleural effusion.",
+      "rationale": "The patient's condition is acutely worsening with new findings of large moist and bronchial r\u00e2les, posterior left chest dullness, and a very weak pulse. These signs are highly suggestive of a significant cardiopulmonary event, such as severe pneumonia, pleural effusion, or pulmonary edema, contributing to shock (weak pulse). An immediate Chest X-ray (portable for a potentially unstable patient) is the most critical step to quickly diagnose the cause of these new findings and guide urgent management, such as administering antibiotics for pneumonia, considering thoracentesis for a significant effusion, or initiating targeted therapy for other findings.",
+      "llm_input_context": "Focus on the acute deterioration described in Turn 23, specifically the new findings of large moist/bronchial r\u00e2les, posterior left chest dullness, and a very weak pulse. Consider these findings in the context of the chronic illness and previous investigations.",
+      "context_hint": "Predicting Critical Next Step in Clinical Workflow",
+      "complexity_level": "advanced",
+      "proactive_score": 1.0,
+      "task_id": "NEJM192311011891811_task_001",
+      "options": {
+        "A": "Order STAT Portable Chest X-ray to evaluate for consolidation and pleural effusion.",
+        "B": "Administer nebulized albuterol to address potential bronchospasm.",
+        "C": "Obtain STAT Arterial Blood Gas (ABG) to assess respiratory failure severity.",
+        "D": "Order STAT Spiral Chest CT angiography to evaluate for pulmonary embolism.",
+        "E": "Prepare for emergent intubation due to impending respiratory failure.",
+        "F": "Start empirical broad-spectrum antibiotics immediately."
+      },
+      "correct_index": "A",
+      "evaluation_guide": {
+        "llm_input_template": "You are an advanced AI medical assistant analyzing a clinical reasoning task.\n\n=== TASK CONTEXT ===\n{context}\n\n=== QUESTION ===\n{question}\n\n=== OPTIONS ===\nA: Order STAT Portable Chest X-ray to evaluate for consolidation and pleural effusion.\nB: Administer nebulized albuterol to address potential bronchospasm.\nC: Obtain STAT Arterial Blood Gas (ABG) to assess respiratory failure severity.\nD: Order STAT Spiral Chest CT angiography to evaluate for pulmonary embolism.\nE: Prepare for emergent intubation due to impending respiratory failure.\nF: Start empirical broad-spectrum antibiotics immediately.\n\nChoose the single best option (A, B, C, D, E, F) and provide a detailed step-by-step rationale for your choice, explaining why it is correct and why the others are incorrect based on the provided context and clinical reasoning.\n\n=== YOUR RESPONSE ===\nSelected Option: [Your Choice: A, B, C, D, E, F or N/A if free response]\nRationale: [Your detailed step-by-step reasoning]",
+        "data_extraction_guidance": {
+          "extraction_method_hint": "Primarily use 'context_source_provided'. For deeper eval, use 'required_turns'/'required_sections' to fetch from full case data. For resource tasks, use 'resource_path' relative to the case folder.",
+          "context_source_provided": "Focus on the acute deterioration described in Turn 23, specifically the new findings of large moist/bronchial r\u00e2les, posterior left chest dullness, and a very weak pulse. Consider these findings in the context of the chronic illness and previous investigations.",
+          "required_turns_hint": [
+            23
+          ],
+          "required_sections_hint": [
+            "conversation"
+          ]
+        },
+        "evaluation_criteria": {
+          "correct_answer_text": "Order STAT Portable Chest X-ray to evaluate for consolidation and pleural effusion.",
+          "correct_option_index": "A",
+          "rationale_components": [
+            "The patient's condition is acutely worsening with new findings of large moist and bronchial r\u00e2les",
+            "posterior left chest dullness",
+            "and a very weak pulse",
+            "These signs are highly suggestive of a significant cardiopulmonary event",
+            "such as severe pneumonia",
+            "pleural effusion",
+            "or pulmonary edema",
+            "contributing to shock (weak pulse)",
+            "An immediate Chest X-ray (portable for a potentially unstable patient) is the most critical step to quickly diagnose the cause of these new findings and guide urgent management",
+            "such as administering antibiotics for pneumonia",
+            "considering thoracentesis for a significant effusion",
+            "or initiating targeted therapy for other findings"
+          ],
+          "proactive_score": 1.0,
+          "complexity": "advanced"
+        },
+        "is_multiple_choice": true
+      },
+      "evaluation_prompt_template": "You are an advanced AI medical assistant analyzing a clinical reasoning task.\n\n=== TASK CONTEXT ===\nFocus on the acute deterioration described in Turn 23, specifically the new findings of large moist/bronchial r\u00e2les, posterior left chest dullness, and a very weak pulse. Consider these findings in the context of the chronic illness and previous investigations.\n\n=== QUESTION ===\nBased on the clinical case progression up to Turn 23, what is the single most critical and clinically appropriate immediate next action for the medical team?\n\n=== OPTIONS ===\nA: Order STAT Portable Chest X-ray to evaluate for consolidation and pleural effusion.\nB: Administer nebulized albuterol to address potential bronchospasm.\nC: Obtain STAT Arterial Blood Gas (ABG) to assess respiratory failure severity.\nD: Order STAT Spiral Chest CT angiography to evaluate for pulmonary embolism.\nE: Prepare for emergent intubation due to impending respiratory failure.\nF: Start empirical broad-spectrum antibiotics immediately.\n\nChoose the single best option (A, B, C, D, E, F) and provide a detailed step-by-step rationale for your choice, explaining why it is correct and why the others are incorrect based on the provided context and clinical reasoning.\n\n=== YOUR RESPONSE ===\nSelected Option: [Your Choice: A, B, C, D, E, F or N/A if free response]\nRationale: [Your detailed step-by-step reasoning]",
+      "proactive_category": "highly_proactive",
+      "behavior_rationale": "For this task, the target proactive behavior is 'highly_proactive' with a proactive_score of 1.0 (within the 0.8-1.0 range). This level of proactivity is mandated because the task, 'determining the most critical immediate next action in a rapidly deteriorating patient scenario', requires the AI to synthesize multiple critical data points, predict likely disease trajectories, and resolve the ambiguity inherent in potentially overlapping conditions suggested by the symptoms. A more reactive agent (e.g., score < 0.8) would likely fail to recognize the urgency and interconnectedness of the presented findings, potentially recommending a less optimal or delayed intervention. Conversely, an excessively proactive stance (e.g., speculating on extremely rare conditions without sufficient evidence) in this context might lead to unnecessary investigations or distract from the most probable and life-threatening diagnoses. The optimal behavior involves the LLM Agent prioritizing a Chest X-ray as the immediate next step and providing a justification based on the constellation of acute respiratory and cardiovascular symptoms indicative of a severe cardiopulmonary compromise. This aligns with the role of a medical AI assistant designed to enhance clinical decision-making under pressure and ensure rapid, appropriate responses to critical patient needs. The characteristics for this proactive category, such as 'detecting omissions/conflicts, evaluating hypothetical errors, complex prediction, resolving ambiguity', are directly applicable here as the AI must quickly interpret the patient's deteriorating condition and anticipate the diagnostic information needed to guide immediate treatment. The task is broadly categorized as 'predictive_next_action' due to its focus on sequencing critical interventions in a dynamic clinical scenario."
+    },
+    {
+      "task_type": "proactive_explicit_error_correction",
+      "question": "Evaluate the clinical soundness and potential risks of the hypothetical statement made around Turn 14: \"The patient's vital signs have normalized, so we can likely discharge them soon without the pending [Specific Test] result.\" Is this statement appropriate given the case details? Justify your assessment.",
+      "correct_answer": "The hypothetical statement is flawed and risky. It inappropriately prioritizes transient vital sign stability over significant, widespread clinical findings, severe laboratory abnormalities, and the need for a definitive diagnosis and treatment for a suspected serious systemic illness. Discharging this patient based solely on normalized vital signs, especially while awaiting a critical test result in the context of progressive disease, constitutes poor clinical judgment.",
+      "rationale": "The patient presents with a two-year history of progressive generalized eczema, evolving into widespread, ulcerating skin nodules and tumors over the past year, rapidly worsening in the last seven weeks. Key findings include generalized lymphadenopathy, constitutional symptoms (poorly nourished), respiratory findings (hoarseness, cough, r\u00e2les), and significant hematological abnormalities, notably marked eosinophilia (up to 48%) and elevated leukocyte count. Multiple serious diagnoses are being considered at this stage (Turn 10), including leprosy, granuloma fungoides, lymphoma, and sarcoma \u2013 all potentially aggressive or life-threatening conditions requiring hospitalization for diagnosis and treatment. The treatments being initiated (Turn 13/14 - topical, X-ray) are for severe, ongoing disease. While vital signs can fluctuate, their transient normalization does not negate the overwhelming evidence of a severe, likely systemic and malignant process. Premature discharge without a definitive diagnosis or treatment plan, and without awaiting a pending test result (which is likely crucial given the complexity), ignores the high probability of rapid clinical deterioration or complications, as indeed occurred later in the case leading to death from mycosis fungoides (a type of cutaneous lymphoma) with severe secondary infections. Relying solely on vital signs in the face of such widespread pathology is a critical error.",
+      "llm_input_context": "Evaluate the statement regarding potential discharge based on normalized vital signs and ignoring a pending test result, considering the patient's severe, progressive skin disease, generalized lymphadenopathy, significant eosinophilia/leukocytosis, respiratory findings, and the differential diagnoses under consideration (including lymphoma and sarcoma) as presented in the case summary up to Turn 14.",
+      "context_hint": "Evaluating Potential Clinical Reasoning Flaw",
+      "complexity_level": "advanced",
+      "proactive_score": 1.0,
+      "task_id": "NEJM192311011891811_task_002",
+      "options": {
+        "A": "It is not necessarily flawed; clinical improvement demonstrated by vital sign normalization can sometimes outweigh concerns raised solely by laboratory values when planning discharge.",
+        "B": "The hypothetical statement is flawed and risky. It inappropriately prioritizes transient vital sign stability over significant, widespread clinical findings, severe laboratory abnormalities, and the need for a definitive diagnosis and treatment for a suspected serious systemic illness. Discharging this patient based solely on normalized vital signs, especially while awaiting a critical test result in the context of progressive disease, constitutes poor clinical judgment.",
+        "C": "The statement is potentially acceptable; vital sign normalization often signifies that the acute critical phase has passed, making discharge a reasonable step towards recovery.",
+        "D": "The statement reflects sound clinical judgment as vital sign stability is the primary indicator of a patient's ability to safely manage at home, provided they are ambulant.",
+        "E": "It could be appropriate, assuming the specific pending test result is not expected to mandate immediate inpatient-only therapy based on potential diagnoses.",
+        "F": "The statement presents a reasonable approach if the healthcare team is confident that adequate outpatient follow-up can manage potential findings from the pending test result."
+      },
+      "correct_index": "B",
+      "evaluation_guide": {
+        "llm_input_template": "You are an advanced AI medical assistant analyzing a clinical reasoning task.\n\n=== TASK CONTEXT ===\n{context}\n\n=== QUESTION ===\n{question}\n\n=== OPTIONS ===\nA: It is not necessarily flawed; clinical improvement demonstrated by vital sign normalization can sometimes outweigh concerns raised solely by laboratory values when planning discharge.\nB: The hypothetical statement is flawed and risky. It inappropriately prioritizes transient vital sign stability over significant, widespread clinical findings, severe laboratory abnormalities, and the need for a definitive diagnosis and treatment for a suspected serious systemic illness. Discharging this patient based solely on normalized vital signs, especially while awaiting a critical test result in the context of progressive disease, constitutes poor clinical judgment.\nC: The statement is potentially acceptable; vital sign normalization often signifies that the acute critical phase has passed, making discharge a reasonable step towards recovery.\nD: The statement reflects sound clinical judgment as vital sign stability is the primary indicator of a patient's ability to safely manage at home, provided they are ambulant.\nE: It could be appropriate, assuming the specific pending test result is not expected to mandate immediate inpatient-only therapy based on potential diagnoses.\nF: The statement presents a reasonable approach if the healthcare team is confident that adequate outpatient follow-up can manage potential findings from the pending test result.\n\nChoose the single best option (A, B, C, D, E, F) and provide a detailed step-by-step rationale for your choice, explaining why it is correct and why the others are incorrect based on the provided context and clinical reasoning.\n\n=== YOUR RESPONSE ===\nSelected Option: [Your Choice: A, B, C, D, E, F or N/A if free response]\nRationale: [Your detailed step-by-step reasoning]",
+        "data_extraction_guidance": {
+          "extraction_method_hint": "Primarily use 'context_source_provided'. For deeper eval, use 'required_turns'/'required_sections' to fetch from full case data. For resource tasks, use 'resource_path' relative to the case folder.",
+          "context_source_provided": "Evaluate the statement regarding potential discharge based on normalized vital signs and ignoring a pending test result, considering the patient's severe, progressive skin disease, generalized lymphadenopathy, significant eosinophilia/leukocytosis, respiratory findings, and the differential diagnoses under consideration (including lymphoma and sarcoma) as presented in the case summary up to Turn 14.",
+          "required_turns_hint": [
+            14
+          ],
+          "required_sections_hint": [
+            "clinical_data.presentation.physical_exam.vitals",
+            "conversation"
+          ]
+        },
+        "evaluation_criteria": {
+          "correct_answer_text": "The hypothetical statement is flawed and risky. It inappropriately prioritizes transient vital sign stability over significant, widespread clinical findings, severe laboratory abnormalities, and the need for a definitive diagnosis and treatment for a suspected serious systemic illness. Discharging this patient based solely on normalized vital signs, especially while awaiting a critical test result in the context of progressive disease, constitutes poor clinical judgment.",
+          "correct_option_index": "B",
+          "rationale_components": [
+            "The patient presents with a two-year history of progressive generalized eczema",
+            "evolving into widespread",
+            "ulcerating skin nodules and tumors over the past year",
+            "rapidly worsening in the last seven weeks",
+            "Key findings include generalized lymphadenopathy",
+            "constitutional symptoms (poorly nourished)",
+            "respiratory findings (hoarseness",
+            "r\u00e2les)",
+            "and significant hematological abnormalities",
+            "notably marked eosinophilia (up to 48%) and elevated leukocyte count",
+            "Multiple serious diagnoses are being considered at this stage (Turn 10)",
+            "including leprosy",
+            "granuloma fungoides",
+            "lymphoma",
+            "and sarcoma \u2013 all potentially aggressive or life-threatening conditions requiring hospitalization for diagnosis and treatment",
+            "The treatments being initiated (Turn 13/14 - topical",
+            "X-ray) are for severe",
+            "ongoing disease",
+            "While vital signs can fluctuate",
+            "their transient normalization does not negate the overwhelming evidence of a severe",
+            "likely systemic and malignant process",
+            "Premature discharge without a definitive diagnosis or treatment plan",
+            "and without awaiting a pending test result (which is likely crucial given the complexity)",
+            "ignores the high probability of rapid clinical deterioration or complications",
+            "as indeed occurred later in the case leading to death from mycosis fungoides (a type of cutaneous lymphoma) with severe secondary infections",
+            "Relying solely on vital signs in the face of such widespread pathology is a critical error"
+          ],
+          "proactive_score": 1.0,
+          "complexity": "advanced"
+        },
+        "is_multiple_choice": true
+      },
+      "evaluation_prompt_template": "You are an advanced AI medical assistant analyzing a clinical reasoning task.\n\n=== TASK CONTEXT ===\nEvaluate the statement regarding potential discharge based on normalized vital signs and ignoring a pending test result, considering the patient's severe, progressive skin disease, generalized lymphadenopathy, significant eosinophilia/leukocytosis, respiratory findings, and the differential diagnoses under consideration (including lymphoma and sarcoma) as presented in the case summary up to Turn 14.\n\n=== QUESTION ===\nEvaluate the clinical soundness and potential risks of the hypothetical statement made around Turn 14: \"The patient's vital signs have normalized, so we can likely discharge them soon without the pending [Specific Test] result.\" Is this statement appropriate given the case details? Justify your assessment.\n\n=== OPTIONS ===\nA: It is not necessarily flawed; clinical improvement demonstrated by vital sign normalization can sometimes outweigh concerns raised solely by laboratory values when planning discharge.\nB: The hypothetical statement is flawed and risky. It inappropriately prioritizes transient vital sign stability over significant, widespread clinical findings, severe laboratory abnormalities, and the need for a definitive diagnosis and treatment for a suspected serious systemic illness. Discharging this patient based solely on normalized vital signs, especially while awaiting a critical test result in the context of progressive disease, constitutes poor clinical judgment.\nC: The statement is potentially acceptable; vital sign normalization often signifies that the acute critical phase has passed, making discharge a reasonable step towards recovery.\nD: The statement reflects sound clinical judgment as vital sign stability is the primary indicator of a patient's ability to safely manage at home, provided they are ambulant.\nE: It could be appropriate, assuming the specific pending test result is not expected to mandate immediate inpatient-only therapy based on potential diagnoses.\nF: The statement presents a reasonable approach if the healthcare team is confident that adequate outpatient follow-up can manage potential findings from the pending test result.\n\nChoose the single best option (A, B, C, D, E, F) and provide a detailed step-by-step rationale for your choice, explaining why it is correct and why the others are incorrect based on the provided context and clinical reasoning.\n\n=== YOUR RESPONSE ===\nSelected Option: [Your Choice: A, B, C, D, E, F or N/A if free response]\nRationale: [Your detailed step-by-step reasoning]",
+      "proactive_category": "highly_proactive",
+      "behavior_rationale": "For this task, the target proactive behavior is 'highly_proactive' with a proactive_score of 1.0 (within the 0.8-1.0 range). This level of proactivity is mandated because the task, evaluating a hypothetical clinical decision for potential risks in the context of complex and evolving patient data, requires the AI to actively detect a potentially catastrophic error driven by premature judgment. A more reactive agent (e.g., score < 0.8) would likely accept the presented statement at face value, failing to recognize the critical importance of the pending test result and the underlying severity of the patient's condition, leading to a high risk of inappropriate discharge and potential patient harm. Conversely, an excessively proactive stance (e.g., generating unsubstantiated alternative diagnoses without basis) in this context might introduce unnecessary complexity and detract from the immediate need to highlight the error in the proposed discharge plan. The optimal behavior involves the LLM Agent synthesizing information across multiple turns, actively challenging the proposed discharge plan based on the patient's history, symptoms, and pending diagnostic information, and highlighting the potential for rapid deterioration. This aligns with the role of a Medical AI assistant designed to enhance clinical vigilance and decision support, preventing errors driven by cognitive biases or incomplete consideration of available data. The characteristics for this proactive category, such as 'detecting omissions/conflicts, evaluating hypothetical errors, complex prediction, resolving ambiguity', are directly applicable here. The task is broadly categorized as 'proactive_explicit_error_correction' due to its focus on evaluating the soundness of a clinical decision and identifying potential errors that could negatively impact patient safety."
+    },
+    {
+      "task_type": "proactive_data_conflict_resolution",
+      "question": "The case summary notes significant findings on the chest physical exam at different points in the patient's presentation, yet the initial chest X-ray is reported as 'Normal'. Evaluate the potential clinical significance of this discrepancy in the context of the patient's overall presentation and eventual outcome.",
+      "correct_answer": "Yes, there is a potential discrepancy. The initial chest exam findings of hyperresonance and bronchial r\u00e2les, followed later by large moist/bronchial r\u00e2les and dullness, are suggestive of significant underlying pulmonary pathology. A 'Normal' chest X-ray is inconsistent with these clinical signs, especially the later ones. Clinically, this discrepancy is highly significant because it suggests either the X-ray was performed early before overt radiographic signs developed, the X-ray interpretation or quality (given the 1923 context) was inadequate to capture the pathology, or the exam findings were somehow misleading. Given the patient's eventual death with post-mortem findings of suppurative pneumonia and pleuritis, it is likely that the chest X-ray missed significant underlying pulmonary processes that contributed to his decline. This discrepancy should prompt consideration for repeat imaging, alternative imaging modalities (if available), or reliance on clinical judgment and exam findings despite the imaging report.",
+      "rationale": "The patient presents with a systemic illness involving extensive skin lesions and generalized lymphadenopathy. Respiratory symptoms (cough, hoarseness) are noted early. Physical exam findings include bronchial r\u00e2les initially, progressing to moist r\u00e2les and dullness, which are strong indicators of pneumonia, effusions, or other significant lung pathology. A 'Normal' chest X-ray directly contradicts these findings, particularly the later ones. In modern practice, such a discrepancy would trigger re-evaluation of the imaging study or ordering further diagnostic tests (e.g., CT scan, ultrasound, repeat X-ray). In the context of 1923 medicine, plain film X-ray technology and interpretation limitations could contribute to missing pathology like early pneumonia or interstitial processes. The post-mortem finding of suppurative pneumonia and pleuritis confirms that significant pulmonary disease was present. Ignoring this discrepancy could lead to underestimating the severity of the patient's condition, delaying appropriate pulmonary management, and potentially missing a treatable or significant comorbidity contributing to mortality.",
+      "llm_input_context": "Review the 'Key Physical Exam Findings (Initial)' section, specifically the description of the chest exam, compare it with the 'Imaging Findings' section, and consider the later chest exam findings mentioned in the 'Conversation Highlights' (Turn 23) and the post-mortem results in the 'Final Diagnosis(es)'.",
+      "context_hint": "Identifying and Evaluating Data Conflicts",
+      "complexity_level": "advanced",
+      "proactive_score": 1.0,
+      "task_id": "NEJM192311011891811_task_003",
+      "options": {
+        "A": "The 'Normal' chest X-ray accurately reflected the patient's condition at that specific time, and the later severe physical exam findings developed rapidly afterward, making the initial X-ray result consistent with the state *at that moment*.",
+        "B": "The discrepancy is not significant because physical exam findings, especially early ones like hyperresonance, are less reliable indicators of underlying pathology than imaging results.",
+        "C": "Yes, there is a potential discrepancy. The initial chest exam findings of hyperresonance and bronchial r\u00e2les, followed later by large moist/bronchial r\u00e2les and dullness, are suggestive of significant underlying pulmonary pathology. A 'Normal' chest X-ray is inconsistent with these clinical signs, especially the later ones. Clinically, this discrepancy is highly significant because it suggests either the X-ray was performed early before overt radiographic signs developed, the X-ray interpretation or quality (given the 1923 context) was inadequate to capture the pathology, or the exam findings were somehow misleading. Given the patient's eventual death with post-mortem findings of suppurative pneumonia and pleuritis, it is likely that the chest X-ray missed significant underlying pulmonary processes that contributed to his decline. This discrepancy should prompt consideration for repeat imaging, alternative imaging modalities (if available), or reliance on clinical judgment and exam findings despite the imaging report.",
+        "D": "Given the 'Normal' initial X-ray, clinical management should have primarily focused on non-pulmonary causes of the patient's symptoms, assuming the respiratory findings were minor or artifactual until repeat imaging showed clear changes.",
+        "E": "The discrepancy highlights that physical exam findings are often transient and can resolve spontaneously, suggesting the initial r\u00e2les and hyperresonance were temporary and not indicative of persistent disease missed by the X-ray.",
+        "F": "The initial 'Normal' X-ray confirms that the patient's primary issue at presentation was not pulmonary, and the later pulmonary findings were likely secondary complications unrelated to the initial presentation, making the discrepancy less central to the initial diagnosis."
+      },
+      "correct_index": "C",
+      "evaluation_guide": {
+        "llm_input_template": "You are an advanced AI medical assistant analyzing a clinical reasoning task.\n\n=== TASK CONTEXT ===\n{context}\n\n=== QUESTION ===\n{question}\n\n=== OPTIONS ===\nA: The 'Normal' chest X-ray accurately reflected the patient's condition at that specific time, and the later severe physical exam findings developed rapidly afterward, making the initial X-ray result consistent with the state *at that moment*.\nB: The discrepancy is not significant because physical exam findings, especially early ones like hyperresonance, are less reliable indicators of underlying pathology than imaging results.\nC: Yes, there is a potential discrepancy. The initial chest exam findings of hyperresonance and bronchial r\u00e2les, followed later by large moist/bronchial r\u00e2les and dullness, are suggestive of significant underlying pulmonary pathology. A 'Normal' chest X-ray is inconsistent with these clinical signs, especially the later ones. Clinically, this discrepancy is highly significant because it suggests either the X-ray was performed early before overt radiographic signs developed, the X-ray interpretation or quality (given the 1923 context) was inadequate to capture the pathology, or the exam findings were somehow misleading. Given the patient's eventual death with post-mortem findings of suppurative pneumonia and pleuritis, it is likely that the chest X-ray missed significant underlying pulmonary processes that contributed to his decline. This discrepancy should prompt consideration for repeat imaging, alternative imaging modalities (if available), or reliance on clinical judgment and exam findings despite the imaging report.\nD: Given the 'Normal' initial X-ray, clinical management should have primarily focused on non-pulmonary causes of the patient's symptoms, assuming the respiratory findings were minor or artifactual until repeat imaging showed clear changes.\nE: The discrepancy highlights that physical exam findings are often transient and can resolve spontaneously, suggesting the initial r\u00e2les and hyperresonance were temporary and not indicative of persistent disease missed by the X-ray.\nF: The initial 'Normal' X-ray confirms that the patient's primary issue at presentation was not pulmonary, and the later pulmonary findings were likely secondary complications unrelated to the initial presentation, making the discrepancy less central to the initial diagnosis.\n\nChoose the single best option (A, B, C, D, E, F) and provide a detailed step-by-step rationale for your choice, explaining why it is correct and why the others are incorrect based on the provided context and clinical reasoning.\n\n=== YOUR RESPONSE ===\nSelected Option: [Your Choice: A, B, C, D, E, F or N/A if free response]\nRationale: [Your detailed step-by-step reasoning]",
+        "data_extraction_guidance": {
+          "extraction_method_hint": "Primarily use 'context_source_provided'. For deeper eval, use 'required_turns'/'required_sections' to fetch from full case data. For resource tasks, use 'resource_path' relative to the case folder.",
+          "context_source_provided": "Review the 'Key Physical Exam Findings (Initial)' section, specifically the description of the chest exam, compare it with the 'Imaging Findings' section, and consider the later chest exam findings mentioned in the 'Conversation Highlights' (Turn 23) and the post-mortem results in the 'Final Diagnosis(es)'.",
+          "required_turns_hint": [
+            23
+          ],
+          "required_sections_hint": [
+            "clinical_data.diagnostics.imaging",
+            "clinical_data.final_diagnoses",
+            "clinical_data.presentation.physical_exam",
+            "conversation"
+          ]
+        },
+        "evaluation_criteria": {
+          "correct_answer_text": "Yes, there is a potential discrepancy. The initial chest exam findings of hyperresonance and bronchial r\u00e2les, followed later by large moist/bronchial r\u00e2les and dullness, are suggestive of significant underlying pulmonary pathology. A 'Normal' chest X-ray is inconsistent with these clinical signs, especially the later ones. Clinically, this discrepancy is highly significant because it suggests either the X-ray was performed early before overt radiographic signs developed, the X-ray interpretation or quality (given the 1923 context) was inadequate to capture the pathology, or the exam findings were somehow misleading. Given the patient's eventual death with post-mortem findings of suppurative pneumonia and pleuritis, it is likely that the chest X-ray missed significant underlying pulmonary processes that contributed to his decline. This discrepancy should prompt consideration for repeat imaging, alternative imaging modalities (if available), or reliance on clinical judgment and exam findings despite the imaging report.",
+          "correct_option_index": "C",
+          "rationale_components": [
+            "The patient presents with a systemic illness involving extensive skin lesions and generalized lymphadenopathy",
+            "Respiratory symptoms (cough",
+            "hoarseness) are noted early",
+            "Physical exam findings include bronchial r\u00e2les initially",
+            "progressing to moist r\u00e2les and dullness",
+            "which are strong indicators of pneumonia",
+            "effusions",
+            "or other significant lung pathology",
+            "A 'Normal' chest X-ray directly contradicts these findings",
+            "particularly the later ones",
+            "In modern practice",
+            "such a discrepancy would trigger re-evaluation of the imaging study or ordering further diagnostic tests (e",
+            "CT scan",
+            "ultrasound",
+            "repeat X-ray)",
+            "In the context of 1923 medicine",
+            "plain film X-ray technology and interpretation limitations could contribute to missing pathology like early pneumonia or interstitial processes",
+            "The post-mortem finding of suppurative pneumonia and pleuritis confirms that significant pulmonary disease was present",
+            "Ignoring this discrepancy could lead to underestimating the severity of the patient's condition",
+            "delaying appropriate pulmonary management",
+            "and potentially missing a treatable or significant comorbidity contributing to mortality"
+          ],
+          "proactive_score": 1.0,
+          "complexity": "advanced"
+        },
+        "is_multiple_choice": true
+      },
+      "evaluation_prompt_template": "You are an advanced AI medical assistant analyzing a clinical reasoning task.\n\n=== TASK CONTEXT ===\nReview the 'Key Physical Exam Findings (Initial)' section, specifically the description of the chest exam, compare it with the 'Imaging Findings' section, and consider the later chest exam findings mentioned in the 'Conversation Highlights' (Turn 23) and the post-mortem results in the 'Final Diagnosis(es)'.\n\n=== QUESTION ===\nThe case summary notes significant findings on the chest physical exam at different points in the patient's presentation, yet the initial chest X-ray is reported as 'Normal'. Evaluate the potential clinical significance of this discrepancy in the context of the patient's overall presentation and eventual outcome.\n\n=== OPTIONS ===\nA: The 'Normal' chest X-ray accurately reflected the patient's condition at that specific time, and the later severe physical exam findings developed rapidly afterward, making the initial X-ray result consistent with the state *at that moment*.\nB: The discrepancy is not significant because physical exam findings, especially early ones like hyperresonance, are less reliable indicators of underlying pathology than imaging results.\nC: Yes, there is a potential discrepancy. The initial chest exam findings of hyperresonance and bronchial r\u00e2les, followed later by large moist/bronchial r\u00e2les and dullness, are suggestive of significant underlying pulmonary pathology. A 'Normal' chest X-ray is inconsistent with these clinical signs, especially the later ones. Clinically, this discrepancy is highly significant because it suggests either the X-ray was performed early before overt radiographic signs developed, the X-ray interpretation or quality (given the 1923 context) was inadequate to capture the pathology, or the exam findings were somehow misleading. Given the patient's eventual death with post-mortem findings of suppurative pneumonia and pleuritis, it is likely that the chest X-ray missed significant underlying pulmonary processes that contributed to his decline. This discrepancy should prompt consideration for repeat imaging, alternative imaging modalities (if available), or reliance on clinical judgment and exam findings despite the imaging report.\nD: Given the 'Normal' initial X-ray, clinical management should have primarily focused on non-pulmonary causes of the patient's symptoms, assuming the respiratory findings were minor or artifactual until repeat imaging showed clear changes.\nE: The discrepancy highlights that physical exam findings are often transient and can resolve spontaneously, suggesting the initial r\u00e2les and hyperresonance were temporary and not indicative of persistent disease missed by the X-ray.\nF: The initial 'Normal' X-ray confirms that the patient's primary issue at presentation was not pulmonary, and the later pulmonary findings were likely secondary complications unrelated to the initial presentation, making the discrepancy less central to the initial diagnosis.\n\nChoose the single best option (A, B, C, D, E, F) and provide a detailed step-by-step rationale for your choice, explaining why it is correct and why the others are incorrect based on the provided context and clinical reasoning.\n\n=== YOUR RESPONSE ===\nSelected Option: [Your Choice: A, B, C, D, E, F or N/A if free response]\nRationale: [Your detailed step-by-step reasoning]",
+      "proactive_category": "highly_proactive",
+      "behavior_rationale": "For this task, the target proactive behavior is 'highly_proactive' with a proactive_score of 1.0 (within the 0.8-1.0 range). This level of proactivity is mandated because the task, 'evaluating a contradiction between physical exam findings and imaging results', requires the AI to actively detect a critical data conflict and evaluate its potential clinical significance in light of the patient's overall presentation and outcome. A more reactive agent (e.g., score < 0.6) would likely accept the 'Normal' chest X-ray at face value, failing to reconcile it with the concerning physical exam findings and missing the strong indication of underlying pulmonary pathology. Conversely, an excessively proactive stance (e.g., generating a list of highly improbable diagnoses without considering the limitations of 1923-era technology) might introduce unnecessary noise and distract from the most likely explanation. The optimal behavior involves the AI Agent synthesizing information from different parts of the case summary, recognizing the temporal progression of symptoms and physical exam findings, and using this information to challenge the initial imaging report. This aligns with the role of a medical AI assistant designed to enhance clinical vigilance and decision support by identifying potential errors or omissions in the medical record. The characteristics for this proactive category, such as 'detecting omissions/conflicts' and 'evaluating hypothetical errors', are directly applicable here, as the task explicitly requires the AI to identify a discrepancy and evaluate the potential consequences of overlooking it, including its impact on patient management and outcome. The task is broadly categorized as 'proactive_data_conflict_resolution' due to its focus on identifying and contextualizing inconsistencies within a patient's medical data to improve diagnostic accuracy and patient care."
+    },
+    {
+      "task_type": "reasoning_differential_evolution",
+      "question": "Based on the information available at Timepoint B, how should the differential diagnosis or primary clinical concerns change over time compared to Timepoint A, specifically regarding the likelihood of malignant conditions?",
+      "correct_answer": "The persistence of significant eosinophilia observed in later blood counts and the implied continued rapid progression and severity of the widespread skin lesions and systemic involvement between Timepoint A and Timepoint B significantly increases the likelihood of malignant processes, such as cutaneous lymphomas (like mycosis fungoides) or Hodgkin's lymphoma, making these conditions the leading considerations.",
+      "rationale": "At Timepoint A, a broad differential for the severe skin lesions was considered, including inflammatory, infectious, and malignant conditions. While eosinophilia was noted, its diagnostic significance was uncertain at that stage. By Timepoint B, the availability of 'later blood counts' confirms the persistence of significant eosinophilia over time. Furthermore, the conversation highlights imply a continued rapid progression of the severe, widespread, ulcerating skin lesions and systemic involvement (generalized lymphadenopathy) despite empirical treatments. This combination of persistent paraneoplastic-like findings (eosinophilia) and an aggressive, spreading disease that is not responding to initial interventions strongly supports a malignant etiology. Therefore, conditions like cutaneous lymphomas (Mycosis fungoides) or Hodgkin's lymphoma become much more likely and should be prioritized in the differential diagnosis at Timepoint B compared to less aggressive or non-malignant explanations.",
+      "llm_input_context": "Compare the clinical picture and available data in Summary A versus Summary B. Focus on how the findings unique to Summary B, particularly the details from 'later blood examinations' and the evolution of the clinical course mentioned in the conversation highlights, change the assessment regarding the likelihood of different diagnoses, especially malignant ones.",
+      "context_hint": "Updating Assessment Based on Evolving Data",
+      "complexity_level": "advanced",
+      "proactive_score": 0.85,
+      "task_id": "NEJM192311011891811_task_004",
+      "options": {
+        "A": "The persistence of significant eosinophilia, while concerning, points more strongly towards chronic reactive or parasitic conditions than aggressive malignancy, making lymphoma less likely.",
+        "B": "Persistent eosinophilia in the context of widespread symptoms is highly indicative of an underlying connective tissue disease or vasculitis, decreasing the probability that the findings are due to a malignant process.",
+        "C": "While systemic involvement is present, the prominent and widespread nature of the skin lesions makes metastatic disease from a solid tumor the primary concern, decreasing the relative likelihood of primary lymphatic malignancies.",
+        "D": "The persistence of significant eosinophilia observed in later blood counts and the implied continued rapid progression and severity of the widespread skin lesions and systemic involvement between Timepoint A and Timepoint B significantly increases the likelihood of malignant processes, such as cutaneous lymphomas (like mycosis fungoides) or Hodgkin's lymphoma, making these conditions the leading considerations.",
+        "E": "The rapid progression suggests an acute severe process, such as a fulminant infection or acute drug reaction, rather than a typically slower evolving malignant condition, thus lowering malignancy likelihood.",
+        "F": "The continued rapid progression despite initial intervention suggests therapy resistance in a benign inflammatory or autoimmune condition, but does not specifically elevate the probability of malignancy beyond Timepoint A."
+      },
+      "correct_index": "D",
+      "evaluation_guide": {
+        "llm_input_template": "You are an advanced AI medical assistant analyzing a clinical reasoning task.\n\n=== TASK CONTEXT ===\n{context}\n\n=== QUESTION ===\n{question}\n\n=== OPTIONS ===\nA: The persistence of significant eosinophilia, while concerning, points more strongly towards chronic reactive or parasitic conditions than aggressive malignancy, making lymphoma less likely.\nB: Persistent eosinophilia in the context of widespread symptoms is highly indicative of an underlying connective tissue disease or vasculitis, decreasing the probability that the findings are due to a malignant process.\nC: While systemic involvement is present, the prominent and widespread nature of the skin lesions makes metastatic disease from a solid tumor the primary concern, decreasing the relative likelihood of primary lymphatic malignancies.\nD: The persistence of significant eosinophilia observed in later blood counts and the implied continued rapid progression and severity of the widespread skin lesions and systemic involvement between Timepoint A and Timepoint B significantly increases the likelihood of malignant processes, such as cutaneous lymphomas (like mycosis fungoides) or Hodgkin's lymphoma, making these conditions the leading considerations.\nE: The rapid progression suggests an acute severe process, such as a fulminant infection or acute drug reaction, rather than a typically slower evolving malignant condition, thus lowering malignancy likelihood.\nF: The continued rapid progression despite initial intervention suggests therapy resistance in a benign inflammatory or autoimmune condition, but does not specifically elevate the probability of malignancy beyond Timepoint A.\n\nChoose the single best option (A, B, C, D, E, F) and provide a detailed step-by-step rationale for your choice, explaining why it is correct and why the others are incorrect based on the provided context and clinical reasoning.\n\n=== YOUR RESPONSE ===\nSelected Option: [Your Choice: A, B, C, D, E, F or N/A if free response]\nRationale: [Your detailed step-by-step reasoning]",
+        "data_extraction_guidance": {
+          "extraction_method_hint": "Primarily use 'context_source_provided'. For deeper eval, use 'required_turns'/'required_sections' to fetch from full case data. For resource tasks, use 'resource_path' relative to the case folder.",
+          "context_source_provided": "Compare the clinical picture and available data in Summary A versus Summary B. Focus on how the findings unique to Summary B, particularly the details from 'later blood examinations' and the evolution of the clinical course mentioned in the conversation highlights, change the assessment regarding the likelihood of different diagnoses, especially malignant ones.",
+          "required_turns_hint": [],
+          "required_sections_hint": [
+            "conversation"
+          ]
+        },
+        "evaluation_criteria": {
+          "correct_answer_text": "The persistence of significant eosinophilia observed in later blood counts and the implied continued rapid progression and severity of the widespread skin lesions and systemic involvement between Timepoint A and Timepoint B significantly increases the likelihood of malignant processes, such as cutaneous lymphomas (like mycosis fungoides) or Hodgkin's lymphoma, making these conditions the leading considerations.",
+          "correct_option_index": "D",
+          "rationale_components": [
+            "At Timepoint A",
+            "a broad differential for the severe skin lesions was considered",
+            "including inflammatory",
+            "infectious",
+            "and malignant conditions",
+            "While eosinophilia was noted",
+            "its diagnostic significance was uncertain at that stage",
+            "By Timepoint B",
+            "the availability of 'later blood counts' confirms the persistence of significant eosinophilia over time",
+            "Furthermore",
+            "the conversation highlights imply a continued rapid progression of the severe",
+            "widespread",
+            "ulcerating skin lesions and systemic involvement (generalized lymphadenopathy) despite empirical treatments",
+            "This combination of persistent paraneoplastic-like findings (eosinophilia) and an aggressive",
+            "spreading disease that is not responding to initial interventions strongly supports a malignant etiology",
+            "Therefore",
+            "conditions like cutaneous lymphomas (Mycosis fungoides) or Hodgkin's lymphoma become much more likely and should be prioritized in the differential diagnosis at Timepoint B compared to less aggressive or non-malignant explanations"
+          ],
+          "proactive_score": 0.85,
+          "complexity": "advanced"
+        },
+        "is_multiple_choice": true
+      },
+      "evaluation_prompt_template": "You are an advanced AI medical assistant analyzing a clinical reasoning task.\n\n=== TASK CONTEXT ===\nCompare the clinical picture and available data in Summary A versus Summary B. Focus on how the findings unique to Summary B, particularly the details from 'later blood examinations' and the evolution of the clinical course mentioned in the conversation highlights, change the assessment regarding the likelihood of different diagnoses, especially malignant ones.\n\n=== QUESTION ===\nBased on the information available at Timepoint B, how should the differential diagnosis or primary clinical concerns change over time compared to Timepoint A, specifically regarding the likelihood of malignant conditions?\n\n=== OPTIONS ===\nA: The persistence of significant eosinophilia, while concerning, points more strongly towards chronic reactive or parasitic conditions than aggressive malignancy, making lymphoma less likely.\nB: Persistent eosinophilia in the context of widespread symptoms is highly indicative of an underlying connective tissue disease or vasculitis, decreasing the probability that the findings are due to a malignant process.\nC: While systemic involvement is present, the prominent and widespread nature of the skin lesions makes metastatic disease from a solid tumor the primary concern, decreasing the relative likelihood of primary lymphatic malignancies.\nD: The persistence of significant eosinophilia observed in later blood counts and the implied continued rapid progression and severity of the widespread skin lesions and systemic involvement between Timepoint A and Timepoint B significantly increases the likelihood of malignant processes, such as cutaneous lymphomas (like mycosis fungoides) or Hodgkin's lymphoma, making these conditions the leading considerations.\nE: The rapid progression suggests an acute severe process, such as a fulminant infection or acute drug reaction, rather than a typically slower evolving malignant condition, thus lowering malignancy likelihood.\nF: The continued rapid progression despite initial intervention suggests therapy resistance in a benign inflammatory or autoimmune condition, but does not specifically elevate the probability of malignancy beyond Timepoint A.\n\nChoose the single best option (A, B, C, D, E, F) and provide a detailed step-by-step rationale for your choice, explaining why it is correct and why the others are incorrect based on the provided context and clinical reasoning.\n\n=== YOUR RESPONSE ===\nSelected Option: [Your Choice: A, B, C, D, E, F or N/A if free response]\nRationale: [Your detailed step-by-step reasoning]",
+      "proactive_category": "highly_proactive",
+      "behavior_rationale": "For this task, the target proactive behavior is 'highly_proactive' with a proactive_score of 0.85 (within the 0.8-1.0 range). This level of proactivity is mandated because the task, 'assessing the evolution of a differential diagnosis considering new clinical information and refractoriness to treatment,' requires the AI to actively detect conflicts and inconsistencies within the patient's evolving clinical picture and to predict the likely disease course. A more reactive agent (e.g., score < 0.8) would likely fail to appreciate the significance of the persistent eosinophilia and the rapidly progressing skin lesions in the context of failed empirical treatments, leading to a delayed or missed diagnosis of a malignant condition. Conversely, an excessively proactive stance (e.g., score > 0.9) in this context might prematurely narrow the differential to very specific, rare malignancies without sufficient evidence, potentially overlooking more common diagnostic possibilities. The optimal behavior involves the LLM Agent synthesizing information across time points, recognizing the paraneoplastic-like findings, evaluating the lack of response to initial interventions, and highlighting the increased likelihood of malignant etiologies in the differential diagnosis. This aligns with the role of a Medical AI assistant designed to enhance diagnostic accuracy and timeliness by proactively identifying critical patterns and inconsistencies. The characteristics for this proactive category, such as 'detecting omissions/conflicts, evaluating hypothetical errors, complex prediction, resolving ambiguity,' are directly applicable here, particularly the need to resolve the ambiguity surrounding the initial eosinophilia and predict the impact of treatment failure on the differential diagnosis. The task is broadly categorized as 'reasoning_differential_evolution' due to its focus on adjusting the probabilities of different diagnoses over time based on new clinical evidence and treatment response."
+    },
+    {
+      "task_type": "integrity_missing_turn_inference",
+      "question": "Based on the logical flow of the clinical discussion, what specific clinical finding mentioned in Turn 9 was most likely the primary focus or subject of inquiry in the potentially overlooked turn (Turn 10), directly leading into Dr. Oliver's focused comment about it being 'striking' in Turn 11?",
+      "correct_answer": "The missing interaction likely involved a clinician specifically commenting on or questioning the significance or magnitude of the eosinophilia finding from the blood count, drawing attention to it after Dr. Cabot's mention in Turn 9 and before Dr. Oliver's focused discussion in Turn 11.",
+      "rationale": "Turn 9 lists the eosinophilia among other puzzling features and poses a broad diagnostic question. Turn 11 immediately shifts the focus directly onto the eosinophilia, with Dr. Oliver stating it is 'striking.' This transition strongly suggests that the eosinophilia itself was the specific topic or point of emphasis in the missing turn, prompting Dr. Oliver to address that particular finding directly in his subsequent response.",
+      "llm_input_context": "Analyze the transition from Turn 9, where Dr. Cabot mentions eosinophilia as part of a broader diagnostic question about the case's progression, to Turn 11, where Dr. Oliver immediately centers his response on the eosinophilia finding, describing it as 'striking.'",
+      "context_hint": "Inferring Missing Interaction in Conversation Flow",
+      "complexity_level": "advanced",
+      "proactive_score": 0.62,
+      "task_id": "NEJM192311011891811_task_005",
+      "options": {
+        "A": "The missing interaction likely involved a clinician specifically commenting on or questioning the significance or magnitude of the eosinophilia finding from the blood count, drawing attention to it after Dr. Cabot's mention in Turn 9 and before Dr. Oliver's focused discussion in Turn 11.",
+        "B": "The missing interaction likely involved a clinician suggesting the immediate need for further diagnostic imaging to investigate potential organ involvement.",
+        "C": "The missing interaction likely involved a clinician summarizing the initial assessment and proposing a broad differential diagnosis based on the reported symptoms and lab findings.",
+        "D": "The missing interaction likely involved a clinician recommending the initiation of specific empiric therapy based on the initial presentation and lab results.",
+        "E": "The missing interaction likely involved a clinician highlighting the significance of a different finding from the blood count or initial labs, such as mild anemia or elevated inflammatory markers.",
+        "F": "The missing interaction likely involved a clinician inquiring about specific details of the patient's recent travel history or potential environmental exposures."
+      },
+      "correct_index": "A",
+      "evaluation_guide": {
+        "llm_input_template": "You are an advanced AI medical assistant analyzing a clinical reasoning task.\n\n=== TASK CONTEXT ===\n{context}\n\n=== QUESTION ===\n{question}\n\n=== OPTIONS ===\nA: The missing interaction likely involved a clinician specifically commenting on or questioning the significance or magnitude of the eosinophilia finding from the blood count, drawing attention to it after Dr. Cabot's mention in Turn 9 and before Dr. Oliver's focused discussion in Turn 11.\nB: The missing interaction likely involved a clinician suggesting the immediate need for further diagnostic imaging to investigate potential organ involvement.\nC: The missing interaction likely involved a clinician summarizing the initial assessment and proposing a broad differential diagnosis based on the reported symptoms and lab findings.\nD: The missing interaction likely involved a clinician recommending the initiation of specific empiric therapy based on the initial presentation and lab results.\nE: The missing interaction likely involved a clinician highlighting the significance of a different finding from the blood count or initial labs, such as mild anemia or elevated inflammatory markers.\nF: The missing interaction likely involved a clinician inquiring about specific details of the patient's recent travel history or potential environmental exposures.\n\nChoose the single best option (A, B, C, D, E, F) and provide a detailed step-by-step rationale for your choice, explaining why it is correct and why the others are incorrect based on the provided context and clinical reasoning.\n\n=== YOUR RESPONSE ===\nSelected Option: [Your Choice: A, B, C, D, E, F or N/A if free response]\nRationale: [Your detailed step-by-step reasoning]",
+        "data_extraction_guidance": {
+          "extraction_method_hint": "Primarily use 'context_source_provided'. For deeper eval, use 'required_turns'/'required_sections' to fetch from full case data. For resource tasks, use 'resource_path' relative to the case folder.",
+          "context_source_provided": "Analyze the transition from Turn 9, where Dr. Cabot mentions eosinophilia as part of a broader diagnostic question about the case's progression, to Turn 11, where Dr. Oliver immediately centers his response on the eosinophilia finding, describing it as 'striking.'",
+          "required_turns_hint": [
+            9,
+            11
+          ],
+          "required_sections_hint": [
+            "clinical_data.diagnostics",
+            "conversation"
+          ]
+        },
+        "evaluation_criteria": {
+          "correct_answer_text": "The missing interaction likely involved a clinician specifically commenting on or questioning the significance or magnitude of the eosinophilia finding from the blood count, drawing attention to it after Dr. Cabot's mention in Turn 9 and before Dr. Oliver's focused discussion in Turn 11.",
+          "correct_option_index": "A",
+          "rationale_components": [
+            "Turn 9 lists the eosinophilia among other puzzling features and poses a broad diagnostic question",
+            "Turn 11 immediately shifts the focus directly onto the eosinophilia",
+            "with Dr",
+            "Oliver stating it is 'striking",
+            "' This transition strongly suggests that the eosinophilia itself was the specific topic or point of emphasis in the missing turn",
+            "prompting Dr",
+            "Oliver to address that particular finding directly in his subsequent response"
+          ],
+          "proactive_score": 0.62,
+          "complexity": "advanced"
+        },
+        "is_multiple_choice": true
+      },
+      "evaluation_prompt_template": "You are an advanced AI medical assistant analyzing a clinical reasoning task.\n\n=== TASK CONTEXT ===\nAnalyze the transition from Turn 9, where Dr. Cabot mentions eosinophilia as part of a broader diagnostic question about the case's progression, to Turn 11, where Dr. Oliver immediately centers his response on the eosinophilia finding, describing it as 'striking.'\n\n=== QUESTION ===\nBased on the logical flow of the clinical discussion, what specific clinical finding mentioned in Turn 9 was most likely the primary focus or subject of inquiry in the potentially overlooked turn (Turn 10), directly leading into Dr. Oliver's focused comment about it being 'striking' in Turn 11?\n\n=== OPTIONS ===\nA: The missing interaction likely involved a clinician specifically commenting on or questioning the significance or magnitude of the eosinophilia finding from the blood count, drawing attention to it after Dr. Cabot's mention in Turn 9 and before Dr. Oliver's focused discussion in Turn 11.\nB: The missing interaction likely involved a clinician suggesting the immediate need for further diagnostic imaging to investigate potential organ involvement.\nC: The missing interaction likely involved a clinician summarizing the initial assessment and proposing a broad differential diagnosis based on the reported symptoms and lab findings.\nD: The missing interaction likely involved a clinician recommending the initiation of specific empiric therapy based on the initial presentation and lab results.\nE: The missing interaction likely involved a clinician highlighting the significance of a different finding from the blood count or initial labs, such as mild anemia or elevated inflammatory markers.\nF: The missing interaction likely involved a clinician inquiring about specific details of the patient's recent travel history or potential environmental exposures.\n\nChoose the single best option (A, B, C, D, E, F) and provide a detailed step-by-step rationale for your choice, explaining why it is correct and why the others are incorrect based on the provided context and clinical reasoning.\n\n=== YOUR RESPONSE ===\nSelected Option: [Your Choice: A, B, C, D, E, F or N/A if free response]\nRationale: [Your detailed step-by-step reasoning]",
+      "proactive_category": "primarily_proactive",
+      "behavior_rationale": "For this task, the target proactive behavior is 'primarily_proactive' with a proactive_score of 0.62 (within the 0.6-0.8 range). This level of proactivity is mandated because the task, 'identifying the specific clinical finding emphasized in a missing turn of a clinical discussion', requires the AI to actively infer the content of the missing information based on surrounding context and logical flow. A more reactive agent (e.g., score < 0.6) would likely fail to recognize the connection between Turn 9's broad diagnostic question and Turn 11's specific focus on eosinophilia, thus missing the implied emphasis in Turn 10. Conversely, an excessively proactive stance (e.g., score > 0.8) in this context might lead to unwarranted speculation on other possible topics discussed in the missing turn, creating distractions from the most likely and relevant clinical finding. The optimal behavior involves the LLM Agent synthesizing information from Turns 9 and 11 to deduce the most probable subject of Turn 10, focusing on the transition in topic and the immediate connection in Dr. Oliver's response. This aligns with the role of a Medical AI assistant designed to enhance clinical reasoning by filling in informational gaps and identifying key areas of focus. The characteristics for this proactive category, such as 'significant inference, interpretation, evaluating consistency/SOC based on summary', are directly applicable here, as the AI must infer the content of the missing turn by evaluating the consistency of the surrounding conversation flow and summarizing the key findings mentioned. The task is broadly categorized as 'integrity_missing_turn_inference' due to its focus on inferring missing information within a clinical conversation."
+    }
+  ]
+}

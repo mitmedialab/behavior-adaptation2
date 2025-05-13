@@ -1,0 +1,462 @@
+{
+    "case_metadata": {
+        "case_id": "Case 9453",
+        "title": "Case 9453: 73-Year-Old Male with Epigastric Pain and Subsequent Respiratory Complications Post-Surgery",
+        "source": {
+            "journal": "Medical Case Text",
+            "publication_date": "1923",
+            "volume": null,
+            "issue": null,
+            "pages": "Discussion By Dr. Hugh Cabot, Case 9453, Further Discussion, Necropsy Findings",
+            "doi": null
+        }
+    },
+    "patient_info": {
+        "age": 73,
+        "gender": "M",
+        "demographics": {
+            "ethnicity": "American",
+            "occupation": "Formerly a deep-sea fisherman",
+            "living_arrangement": null
+        },
+        "social_history": {
+            "alcohol_use": "Good habits mentioned, implying no excessive alcohol use",
+            "tobacco_use": "Not mentioned, likely non-smoker given 'good habits'",
+            "substance_use": "Not mentioned",
+            "other": null
+        },
+        "medical_history": {
+            "allergies": "Not mentioned",
+            "past_medical_conditions": "Dyspnea on exertion, occasional sharp precordial pain, urgency and frequency of urination five years ago, lessened urinary stream recently, epigastric pain for eight years with attacks every 3-4 months lasting 5-6 weeks. Constipation.",
+            "medications": "Soda for pain relief (self-medication)"
+        },
+        "surgical_history": {
+            "previous_surgeries": "None mentioned prior to current admission"
+        }
+    },
+    "participants": {
+        "clinicians": {
+            "Dr. Cabot": {
+                "specialty": "General Medicine/Surgery (Discussion Leader)",
+                "role": "Presenter",
+                "real_name": "Hugh Cabot"
+            },
+            "Dr. Richardson": {
+                "specialty": "Pathology (Necropsy)",
+                "role": "Pathologist (Necropsy Findings)",
+                "real_name": "Richardson"
+            },
+            "Dr. Young": {
+                "specialty": "Internal Medicine/Infectious Diseases (Staphylococcus Discussion)",
+                "role": "Discussant (Staphylococcus Discussion)",
+                "real_name": "Young"
+            },
+            "Physician A": {
+                "specialty": "General Medicine",
+                "role": "Discussant (Staphylococcus Discussion)",
+                "real_name": null
+            },
+            "House Officer": {
+                "specialty": "General Medicine",
+                "role": "Discussant (Staphylococcus Discussion)",
+                "real_name": null
+            },
+            "Surgeon A": {
+                "specialty": "Surgery",
+                "role": "Surgeon (Operation Notes)",
+                "real_name": null
+            }
+        },
+        "others": {
+            "Patient": {
+                "role": "Patient",
+                "real_name": null
+            }
+        }
+    },
+    "conversation": {
+        "turn_1": {
+            "speaker": "Dr. Cabot",
+            "listeners": [],
+            "real_name": "Hugh Cabot",
+            "timestamp": "Start of Discussion on Case 9453",
+            "message": "Alright, let's discuss Case 9453. This is a 73-year-old American man, formerly a deep-sea fisherman, who came to us from the Out-Patient Department on August 22nd, 1923.",
+            "intention": "Presenting patient case for discussion.",
+            "context": "Beginning case presentation.",
+            "source_reference": "Case 9453: 'An American of seventy-three, formerly a deep-sea fisherman, was sent from the Out-Patient Department August 22, 1923...'"
+        },
+        "turn_2": {
+            "speaker": "Dr. Cabot",
+            "listeners": [],
+            "real_name": "Hugh Cabot",
+            "timestamp": "Immediately after turn_1, Patient History",
+            "message": "He's complaining of pain in the epigastrium for eight years.  His mother died of tuberculosis, and a brother of 'stone cutters' consumption'. Another brother is possibly ill with the same.",
+            "intention": "Presenting family history and chief complaint.",
+            "context": "Relaying patient's family history.",
+            "source_reference": "Case 9453: 'complaining of pain in the epigastrium of eight years' duration. F. H. His mother died of tuberculosis, one brother of 'stone cutters' consumption.' Another brother was now ill, possibly with the same disease.'"
+        },
+        "turn_3": {
+            "speaker": "Dr. Cabot",
+            "listeners": [],
+            "real_name": "Hugh Cabot",
+            "timestamp": "Immediately after turn_2, Patient History continued.",
+            "message": "He says his habits are good.  Past medical history - he was healthy until this gastric trouble started eight years ago. Since then, he\u2019s had dyspnea on exertion and occasional precordial pain.  Five years ago, urinary urgency and frequency, and recently, a weaker urinary stream.",
+            "intention": "Presenting past medical and social history.",
+            "context": "Continuing patient's history, focusing on past illnesses.",
+            "source_reference": "Case 9453: 'Habits. Good. P. H. He was strong, healthy and active until the beginning of his gastric trouble eight years ago, Since the onset of this illness he had had dyspnea on exertion...Recently the stream had lessened in caliber and force.'"
+        },
+        "turn_4": {
+            "speaker": "Dr. Cabot",
+            "listeners": [],
+            "real_name": "Hugh Cabot",
+            "timestamp": "Immediately after turn_3, Present Illness",
+            "message": "For eight years he's had these attacks, similar to this one, every three or four months, lasting five or six weeks.  Between attacks, he feels well.  He\u2019s also been quite constipated since this started.",
+            "intention": "Describing the chronic nature of the patient's illness.",
+            "context": "Detailing the episodic pattern of the symptoms.",
+            "source_reference": "Case 9453: 'P. I. For eight years he had had attacks similar to the present one, occurring every three or four months and lasting five or six weeks. Between the attacks he had felt well. Since the beginning of this trouble his bowels had been Very constipated.'"
+        },
+        "turn_5": {
+            "speaker": "Dr. Cabot",
+            "listeners": [],
+            "real_name": "Hugh Cabot",
+            "timestamp": "Immediately after turn_4, Current Episode Details",
+            "message": "Six weeks ago, this current episode began with epigastric pain after eating, sometimes relieved by food or soda. It\u2019s constant, dull, often keeps him up at night, sometimes sharp and radiating to the shoulders. He's nauseous, vomiting almost everything, even coffee-ground material recently.  Lost about thirty pounds and strength. Bowels haven\u2019t moved for days and troubled by gas.",
+            "intention": "Detailing the acute symptoms and severity of the current episode.",
+            "context": "Explaining the progression and worsening of symptoms leading to admission.",
+            "source_reference": "Case 9453: 'Six weeks before admission he began to have epigastric pain...vomiting almost everything he ate. Two weeks ago and again the day before admission he vomited coffee ground material...bowels had not moved for days.'"
+        },
+        "turn_6": {
+            "speaker": "Dr. Cabot",
+            "listeners": [],
+            "real_name": "Hugh Cabot",
+            "timestamp": "Immediately after turn_5, Out-Patient Department Records from 1915",
+            "message": "Looking back at records from 1915, he had a similar attack then, lasting four months, with gastric distress and sharp epigastric pain after eating, relieved by food or vomiting.  He had gas, occasional vomiting, and lost 13.5 pounds back then. Examination showed spasm in the right upper rectus.",
+            "intention": "Referencing past medical records for context and comparison.",
+            "context": "Providing historical perspective on the recurring nature of the illness.",
+            "source_reference": "Case 9453: 'Records of the Out-Patient Department May 21, 1915. showed a history of the first attack, then of four months' duration...Examination showed spasm of the right upper rectus.'"
+        },
+        "turn_7": {
+            "speaker": "Dr. Cabot",
+            "listeners": [],
+            "real_name": "Hugh Cabot",
+            "timestamp": "Immediately after turn_6, 1915 Lab Findings",
+            "message": "Stomach contents in 1915 showed free HCl, guaiac negative, and the test meal had blood clots, free HCl 0.31%, total acid 0.4%. By June 1915, he was weaker, knee-jerks increased, Romberg positive.",
+            "intention": "Presenting historical lab and neurological findings.",
+            "context": "Detailing specific findings from the previous episode.",
+            "source_reference": "Case 9453: 'May 27, 1915, the fasting contents of the stomach showed free HC1, guaiac negative; test meal, a few blood clots, free HC1 0.31%, total acid 0.4%. June 8, 1915, he was weaker, knee-jerks increased, Romberg positive.'"
+        },
+        "turn_8": {
+            "speaker": "Dr. Cabot",
+            "listeners": [],
+            "real_name": "Hugh Cabot",
+            "timestamp": "Immediately after turn_7, Physical Examination on Current Admission",
+            "message": "On physical exam now, evidence of weight loss, poor teeth, moderate pyorrhea. Lungs normal. Heart apex impulse in the fifth space, A2 accentuated, soft systolic murmur at the apex. Radials slightly palpable. BP 180/88. Abdomen - rigidity and spasm in the right upper quadrant, tenderness there and down the midline. Possible mass felt in the area of spasm. Genitals, extremities, pupils, reflexes normal otherwise.",
+            "intention": "Describing current physical examination findings.",
+            "context": "Presenting the patient's condition upon admission.",
+            "source_reference": "Case 9453: 'P. E. Evidence of loss of weight. Teeth poor. Moderate pyorrhea. Lungs normal. Apex impulse of the heart...Abdomen. Definite rigidity and spasm in the right upper quadrant...'"
+        },
+        "turn_9": {
+            "speaker": "Dr. Cabot",
+            "listeners": [],
+            "real_name": "Hugh Cabot",
+            "timestamp": "Immediately after turn_8, Pre-operative Tests",
+            "message": "Pre-op chart unremarkable, urine cloudy and alkaline once, otherwise negative. Blood not recorded, Wassermann negative. X-ray showed stomach emptying normally, active peristalsis suggesting irritation, questionable sphincter regularity, and irregular filling of the first part of the duodenum with tenderness.",
+            "intention": "Presenting pre-operative investigations.",
+            "context": "Detailing results of urine, serology and X-ray before surgery.",
+            "source_reference": "Case 9453: 'Before operation chart not remarkable, urine cloudy and alkaline at the single examination, otherwise negative, blood not recorded, Wassermann negative. X-ray. Stomach empty in normal time...First portion of duodenum constantly irregular in filling. Tenderness in this region.'"
+        },
+        "turn_10": {
+            "speaker": "Dr. Cabot",
+            "listeners": [],
+            "real_name": "Hugh Cabot",
+            "timestamp": "After August 25 Operation",
+            "message": "He had an operation on August 25th.  The next day, he was generally okay, but started vomiting and continued for two days.",
+            "intention": "Describing the immediate post-operative period.",
+            "context": "Initial post-operative course and complications.",
+            "source_reference": "Case 9453: 'August 25 operation was done. Next day the general condition was good, but the patient vomited and continued to vomit during the next two days.'"
+        },
+        "turn_11": {
+            "speaker": "Dr. Cabot",
+            "listeners": [],
+            "real_name": "Hugh Cabot",
+            "timestamp": "August 28, Post-operative Complications",
+            "message": "By August 28th, his temperature rose to 102.2\u00b0, pulse to 136, respirations to 32.  Purulent sputum, and r\u00e2les were heard in his lungs. He worsened, became dyspneic and cyanotic, lungs filled with r\u00e2les.",
+            "intention": "Describing the worsening respiratory condition post-surgery.",
+            "context": "Development of post-operative respiratory infection.",
+            "source_reference": "Case 9453: 'August 28 the temperature rose to 102.2\u00b0, the pulse to 136, the respirations to 32. There was purulent sputum, and r\u00e2les were heard. The patient became worse, grew dyspneic and cyanotic ; the lungs filled with r\u00e2les.'"
+        },
+        "turn_12": {
+            "speaker": "Dr. Cabot",
+            "listeners": [],
+            "real_name": "Hugh Cabot",
+            "timestamp": "September 1, Patient Death",
+            "message": "He died on September 1st.",
+            "intention": "Announcing patient's death.",
+            "context": "Outcome of the patient's condition.",
+            "source_reference": "Case 9453: 'September 1 he died.'"
+        },
+        "turn_13": {
+            "speaker": "Dr. Cabot",
+            "listeners": [],
+            "real_name": "Hugh Cabot",
+            "timestamp": "Discussion of Pre-operative Diagnosis",
+            "message": "So, the dyspnea and precordial pain in his history certainly suggested angina, pointing to arteriosclerosis. The epigastric pain was different and suggestive of duodenal ulcer, especially given the 1915 findings, though maybe insufficient for a definitive diagnosis then. Increased knee-jerks and Romberg in 1915 are harder to explain, perhaps arteriosclerotic changes in the nervous system?",
+            "intention": "Analyzing patient's history and symptoms to reach a pre-operative diagnosis.",
+            "context": "Interpreting symptoms in light of possible underlying conditions.",
+            "source_reference": "Discussion By Dr. Hugh Cabot: 'The description of this man's present illness seems to coincide rather strikingly with the only suggestive fact in his previous history: namely, the dyspnea on exertion and the precordial pain...It is not easy to account for his other symptoms, namely increased knee-jerks and positive Romberg, except upon the assumption of arteriosclerotic changes in the nervous system.'"
+        },
+        "turn_14": {
+            "speaker": "Dr. Cabot",
+            "listeners": [],
+            "real_name": "Hugh Cabot",
+            "timestamp": "Continuing Discussion of Diagnosis",
+            "message": "It's surprising he lived this long if his 1915 condition was as described.  These attacks every few months must have been short, with good recovery in between. This current attack is different though, pain is constant, less relieved by food or soda.",
+            "intention": "Reflecting on the chronicity and progression of the illness.",
+            "context": "Analyzing the changing nature of symptoms over time.",
+            "source_reference": "Discussion By Dr. Hugh Cabot: 'It is on the whole a little surprising that he has continued to live as long as he has if one takes their description of his condition in 1915 at its face value...It is noticeable that the history of the present attack is slightly different from the first one in that the pain is constant and but partially relieved either by food or by soda.'"
+        },
+        "turn_15": {
+            "speaker": "Dr. Cabot",
+            "listeners": [],
+            "real_name": "Hugh Cabot",
+            "timestamp": "Discussion of Physical Exam and Investigations",
+            "message": "Physical exam suggests arteriosclerosis, though no clear hypertrophy or dilatation of the heart.  Blood pressure is high.  Possible arteriosclerotic nephritis, though not confirmed.  We can assume a stomach or duodenal lesion causing his symptoms.  Likely the same lesion for eight years, so primary cancer is less likely, but secondary cancer on chronic ulcer is possible.",
+            "intention": "Integrating physical exam and investigation findings into the diagnostic process.",
+            "context": "Formulating a differential diagnosis based on available evidence.",
+            "source_reference": "Discussion By Dr. Hugh Cabot: 'The physical examination suggests arteriosclerosis, though we have no positive evidence of hypertrophy and dilatation of the heart. His blood pressure is definitely above normal...We shall I think be justified in assuming that he has a lesion of the stomach or duodenum, and that this accounts for the symptoms of his present attack.'"
+        },
+        "turn_16": {
+            "speaker": "Dr. Cabot",
+            "listeners": [],
+            "real_name": "Hugh Cabot",
+            "timestamp": "Discussion of X-ray and Diagnosis",
+            "message": "X-ray points to a duodenal lesion, typical of chronic ulcer.  Pyloric sphincter description raises question of stomach and duodenum lesion, but that's unlikely.  Probably safe to exclude secondary malignancy to ulcer in this region. So, I'm leaning towards chronic duodenal ulcer.",
+            "intention": "Reaching a pre-operative diagnosis based on X-ray findings.",
+            "context": "Narrowing down the diagnosis to chronic duodenal ulcer.",
+            "source_reference": "Discussion By Dr. Hugh Cabot: 'The x-ray examination seems to be positive as to a lesion of the duodenum quite typical of a chronic ulcer...In this region we are pretty safe in excluding malignant disease secondary to ulcer, and I therefore cannot avoid the diagnosis of chronic duodenal ulcer.'"
+        },
+        "turn_17": {
+            "speaker": "Dr. Cabot",
+            "listeners": [],
+            "real_name": "Hugh Cabot",
+            "timestamp": "Discussion of Treatment and Operative Approach",
+            "message": "Treatment-wise, diet might not be enough for this chronic, indurated ulcer. In a younger man, operation is clear.  Here, age and arteriosclerosis make him a risk.  But operation might still be best if he understands the risks, though diet could be tried. I\u2019d advise operation cautiously. For surgery, prolonged ether anesthesia is risky. Spinal anesthesia too dangerous for his age. I prefer local infiltration, maybe short gas and oxygen if needed. Local anesthesia alone can work well.",
+            "intention": "Discussing treatment options and surgical strategy.",
+            "context": "Considering risks and benefits of surgery in an elderly patient with comorbidities.",
+            "source_reference": "Discussion By Dr. Hugh Cabot: 'In regard to treatment, this is not the sort of lesion likely to be benefited by dietetic measures, since it is clearly a chronic ulcer of the indurated type...In this case one might properly hesitate to advise operation, but simply on the ground that his age and probable arteriosclerosis make him a poor risk...My own choice in such cases has been local anesthesia by infiltration and then a short general anesthesia with gas and oxygen if the lesion proved unmanageable under local.'"
+        },
+        "turn_18": {
+            "speaker": "Dr. Cabot",
+            "listeners": [],
+            "real_name": "Hugh Cabot",
+            "timestamp": "Stating Pre-operative Diagnoses",
+            "message": "My pre-operative diagnoses are: Chronic duodenal ulcer and Arteriosclerosis.",
+            "intention": "Formalizing the pre-operative diagnoses.",
+            "context": "Concluding the diagnostic discussion before surgery.",
+            "source_reference": "DR. CABOT'S PRE-OPERATIVE DIAGNOSIS: 'Chronic duodenal ulcer. Arteriosclerosis.'"
+        },
+        "turn_19": {
+            "speaker": "Surgeon A",
+            "listeners": [],
+            "real_name": null,
+            "timestamp": "During Operation (August 25)",
+            "message": "(Surgeon's Notes) Made a 20 cm right rectus incision. Used block anesthesia with procaine near the lumbar vertebra and local novocain infiltration. Peritoneum opened without issue. Found an ulcer in an indurated area of the first duodenum. Omentum adherent, gall-bladder negative. Jejunum mobilized, mesocolon hole made, edges sutured to stomach. Gastro-enterostomy performed. Patient complained with mesentery traction, parietal peritoneum seemed anesthetic, snaps painless, closure difficult due to straining. Patient seemed okay at the end.",
+            "intention": "Documenting the surgical procedure and findings.",
+            "context": "Operative report details.",
+            "source_reference": "Operation: 'Twenty cm. right rectus incision...Exploration revealed an ulcer in an indurated area in the first portion of the duodenum...ordinary gastro-enterostomy was done...The patient complained of discomfort when traction was made on the mesentery.'"
+        },
+        "turn_20": {
+            "speaker": "Surgeon A",
+            "listeners": [],
+            "real_name": null,
+            "timestamp": "Surgeon's Notes, immediately after turn_19",
+            "message": "(Surgeon's Notes) In the first inch of the duodenum from the pylorus, marked thinning and narrowing. No further exploration. Omentum adhesion in lower right quadrant made stomach turning difficult, so it was tied and cut to relieve tension.",
+            "intention": "Further detailing surgical observations.",
+            "context": "Additional notes on surgical findings and maneuvers.",
+            "source_reference": "Surgeon's Notes: 'In the first portion of the duodenum extending from the pylorus downward for one inch there was marked thinning and narrowing of the duodenum...The only unusual fact was that the omentum was adherent in the lower right quadrant...'"
+        },
+        "turn_21": {
+            "speaker": "Dr. Cabot",
+            "listeners": [],
+            "real_name": "Hugh Cabot",
+            "timestamp": "Further Discussion Post-Operation",
+            "message": "The block anesthesia seems to have worked well. Wound closure difficulty is common with local anesthesia and gas. Duodenal ulcer diagnosis confirmed surgically, gastro-enterostomy was the right move. Good decision not to touch the ulcer.",
+            "intention": "Reviewing the surgical procedure and confirming its appropriateness.",
+            "context": "Post-operative assessment of the surgery itself.",
+            "source_reference": "Further Discussion: 'The block anesthesia which they elected to use seems to have worked pretty satisfactorily...The evidence that the lesion was in fact a chronic ulcer of the duodenum seemed satisfactory and the indication for a gastro-enterostomy clear. I think they were well advised in this case not to make any attack upon the ulcer.'"
+        },
+        "turn_22": {
+            "speaker": "Dr. Cabot",
+            "listeners": [],
+            "real_name": "Hugh Cabot",
+            "timestamp": "Further Discussion, Cause of Death",
+            "message": "Post-operative course strongly suggests respiratory infection causing death.  Purulent bronchitis or bronchopneumonia, we can't say for sure without necropsy.  No reason to suspect abdominal infection.",
+            "intention": "Hypothesizing the cause of post-operative death.",
+            "context": "Clinical interpretation of post-operative decline.",
+            "source_reference": "Further Discussion: 'The history after operation strongly suggests that his death was due to a respiratory infection such as is not uncommon in these patients...I see no reason for assuming that there was any important infection below the diaphragm.'"
+        },
+        "turn_23": {
+            "speaker": "Dr. Cabot",
+            "listeners": [],
+            "real_name": "Hugh Cabot",
+            "timestamp": "Predicting Necropsy Findings",
+            "message": "Necropsy should show arteriosclerosis, duodenal ulcer, heart hypertrophy and dilatation, coronary sclerosis, myocardial degeneration, maybe arteriosclerotic nephritis, purulent bronchitis, possibly bronchopneumonia.",
+            "intention": "Predicting anatomical findings at necropsy.",
+            "context": "Formulating expectations for the post-mortem examination.",
+            "source_reference": "Further Discussion: 'Necropsy should show arteriosclerosis, ulcer of the duodenum, hypertrophy, and dilatation of the heart, probably definite coronary sclerosis with areas of myocardial degeneration, possibly arteriosclerotic nephritis, purulent bronchitis, possibly bronchopneumonia.'"
+        },
+        "turn_24": {
+            "speaker": "Dr. Richardson",
+            "listeners": [],
+            "real_name": "Richardson",
+            "timestamp": "Presenting Necropsy Findings",
+            "message": "We weren't allowed to examine the head. Abdominal wall incision was 16 cm, closed. Peritoneal cavity, appendix, esophagus negative. Gastro-jejunal anastomosis patent and good. Stomach mucosa flat but negative. Duodenal ulcer in the posterior wall, 1.5cm by 12mm, rounded margins, smooth base over pancreas, adhesions in lesser omentum. Small intestine negative. Large intestine had sigmoid diverticula and rectal papillomata. Mesenteric and retroperitoneal glands negative.",
+            "intention": "Reporting macroscopic findings of the necropsy.",
+            "context": "Initial description of anatomical findings.",
+            "source_reference": "Necropsy Findings: 'In the anterior abdominal wall there was a linear operation wound 16 cm. long closed with sutures...The pyloric ridge formed the upper margin of a loss of substance in the posterior wall of the duodenum 1\u00bd cm. by 12 mm...The large intestine shewed several small intact diverticula in the sigmoid region, and in the region of the rectum there were two very small papillomata.'"
+        },
+        "turn_25": {
+            "speaker": "Dr. Richardson",
+            "listeners": [],
+            "real_name": "Richardson",
+            "timestamp": "Necropsy Findings - Pleura and Lungs",
+            "message": "Small amount of fibrinopurulent fluid in each pleural cavity, no adhesions. Lung apices negative. Upper lobes pale, spongy, thin reddish frothy fluid. Lower lobes dark red, spongy to leathery, with pneumonia foci, some subpleural, pleura coated with fibrinopurulent material.",
+            "intention": "Reporting necropsy findings in the pleural cavities and lungs.",
+            "context": "Describing respiratory pathology found at necropsy.",
+            "source_reference": "Necropsy Findings: 'In each pleural cavity there was a small amount of fibrinopurulent semi-fluid material...The tissue of the lower lobes was dark red, and spongy to a little leathery. In each lower lobe about midway there were several smaller and larger foci of pneumonia...'"
+        },
+        "turn_26": {
+            "speaker": "Dr. Richardson",
+            "listeners": [],
+            "real_name": "Richardson",
+            "timestamp": "Necropsy Findings - Heart and Vessels",
+            "message": "Heart weighed 400 grams, slightly enlarged. Myocardium brown-red, lax to soft. Cavities slightly dilated. Valves negative. Coronaries showed slight to moderate arteriosclerosis, no lumen narrowing. Aorta and great branches showed marked fibrous and fibrocalcareous sclerosis, capacious.",
+            "intention": "Reporting necropsy findings of the heart and major vessels.",
+            "context": "Cardiovascular pathology at post-mortem.",
+            "source_reference": "Necropsy Findings: 'The heart weighed 400 grams, slightly enlarged...The coronaries were free but showed a slight to moderate amount of arteriosclerosis...The aorta and great branches showed marked fibrous and fibrocalcareous sclerosis, and were rather capacious.'"
+        },
+        "turn_27": {
+            "speaker": "Dr. Richardson",
+            "listeners": [],
+            "real_name": "Richardson",
+            "timestamp": "Necropsy Findings - Spleen and Kidneys",
+            "message": "Spleen rather small and soft. Kidneys combined 213 grams, small. Capsules stripped, pale brown-red surfaces with depressions. Tissue slightly more consistent, vessel cut ends prominent. Markings visible, cortex 3-5mm.  Arteriosclerotic degeneration of kidneys, not full nephritis.",
+            "intention": "Reporting necropsy findings of the spleen and kidneys.",
+            "context": "Visceral pathology at post-mortem.",
+            "source_reference": "Necropsy Findings: 'The spleen was rather small and the tissue somewhat soft. The combined weight of the kidneys was 213 grams, rather small...The whole picture was that of arteriosclerotic degeneration of the kidneys, not of sufficient extent to be called arteriosclerotic nephritis.'"
+        },
+        "turn_28": {
+            "speaker": "Dr. Cabot",
+            "listeners": [],
+            "real_name": "Hugh Cabot",
+            "timestamp": "Dr. Cabot's Note on Necropsy",
+            "message": "Necropsy findings match what we expected.  The appendix being normal is a bit odd given the described adhesions.",
+            "intention": "Concluding remarks on the necropsy findings and discrepancies.",
+            "context": "Final assessment and minor inconsistencies noted.",
+            "source_reference": "NOTE BY DR. CABOT: 'The necropsy findings coincide closely with what one would have expected. The statement that the appendix is normal is a little hard to reconcile with the adhesions which they describe.'"
+        }
+    },
+    "clinical_data": {
+        "presentation": {
+            "chief_complaint": "Epigastric pain of eight years duration, worsening in current episode.",
+            "history_of_present_illness": "Recurrent epigastric pain for eight years, with exacerbations every 3-4 months. Current episode started six weeks prior to admission, with constant pain after eating, nausea, vomiting (including coffee-ground emesis), weight loss, and constipation.",
+            "physical_exam": "Evidence of weight loss, poor dentition, pyorrhea, normal lungs, cardiac murmur and accentuated A2, elevated blood pressure (180/88), right upper quadrant abdominal rigidity and tenderness, possible mass.",
+            "vital_signs": {
+                "initial": {
+                    "blood_pressure": "180/88 mm Hg"
+                },
+                "subsequent": {
+                    "temperature": "102.2\u00b0F (August 28)",
+                    "pulse": "136 bpm (August 28)",
+                    "respiratory_rate": "32/min (August 28)"
+                }
+            }
+        },
+        "diagnostics": {
+            "laboratory_data": [
+                {
+                    "test": "Gastric Analysis (1915)",
+                    "value": "Free HCl present, guaiac negative, blood clots, free HCl 0.31%, total acid 0.4%",
+                    "units": "%",
+                    "reference_range": null
+                },
+                {
+                    "test": "Urine",
+                    "value": "Cloudy and alkaline (single examination)",
+                    "units": null,
+                    "reference_range": null
+                },
+                {
+                    "test": "Wassermann Test",
+                    "value": "Negative",
+                    "units": null,
+                    "reference_range": null
+                }
+            ],
+            "imaging": [
+                {
+                    "modality": "X-ray",
+                    "description": "Stomach empty in normal time, active peristalsis, questionable sphincter regularity, irregular filling of first portion of duodenum, tenderness in duodenal region."
+                }
+            ]
+        },
+        "procedures": [
+            {
+                "procedure": "Posterior gastro-enterostomy",
+                "description": "Surgical anastomosis between stomach and jejunum performed for duodenal ulcer.",
+                "time": "August 25, 1923"
+            },
+            {
+                "procedure": "Block and Local Anesthesia",
+                "description": "Procaine injection near lumbar vertebra and local novocain infiltration used for anesthesia during surgery.",
+                "time": "August 25, 1923 (during surgery)"
+            }
+        ],
+        "timeline_events": [
+            {
+                "time": "8 years prior to admission",
+                "event": "Onset of epigastric pain and gastric issues."
+            },
+            {
+                "time": "8 years prior to admission, recurring every 3-4 months",
+                "event": "Attacks of epigastric pain lasting 5-6 weeks."
+            },
+            {
+                "time": "5 years prior to admission",
+                "event": "Onset of urinary urgency and frequency."
+            },
+            {
+                "time": "6 weeks prior to admission",
+                "event": "Current episode of epigastric pain begins, worsening symptoms, vomiting, weight loss."
+            },
+            {
+                "time": "August 22, 1923",
+                "event": "Patient sent from Out-Patient Department for admission."
+            },
+            {
+                "time": "August 25, 1923",
+                "event": "Posterior gastro-enterostomy performed."
+            },
+            {
+                "time": "August 26-27, 1923 (post-operation days 1-2)",
+                "event": "Patient vomits."
+            },
+            {
+                "time": "August 28, 1923 (post-operation day 3)",
+                "event": "Fever, tachycardia, tachypnea, purulent sputum, r\u00e2les in lungs, dyspnea, cyanosis."
+            },
+            {
+                "time": "September 1, 1923 (post-operation day 7)",
+                "event": "Patient dies."
+            }
+        ],
+        "final_diagnoses": [
+            "Clinical Diagnosis: Duodenal ulcer, Arteriosclerosis",
+            "Dr. Cabot's Diagnosis: Ulcer of duodenum, Arteriosclerosis, Hypertrophy and dilatation of the heart, Probably definite coronary sclerosis with areas of myocarditis and degeneration, Probably arteriosclerotic nephritis, Purulent bronchitis, Possibly bronchopneumonia.",
+            "Anatomical Diagnosis (Necropsy): Ulcer of the duodenum (Primary Fatal Lesion), Focal pneumonia of the lower lobes of the lungs, Fibrinopurulent pleuritis, Acute degeneration of the myocardium, Soft spleen, Arteriosclerosis, Arteriosclerotic degeneration of the kidneys, Hypertrophy and dilatation of the heart, Edema of the lungs (Secondary or Terminal Lesions)"
+        ]
+    },
+    "case_id": "NEJM192311081891907",
+    "original_case_number": "NEJM192311081891907",
+    "final_diagnosis": "N/A"
+}

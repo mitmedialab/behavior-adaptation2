@@ -1,0 +1,602 @@
+{
+    "case_metadata": {
+        "case_id": "9431",
+        "title": "Case 9431: An American student of twenty-four with pain and dyspnea",
+        "source": {
+            "journal": "Case Records Of The Massachusetts General Hospital",
+            "publication_date": "1923",
+            "volume": null,
+            "issue": null,
+            "pages": null,
+            "doi": null
+        }
+    },
+    "patient_info": {
+        "age": 24,
+        "gender": "M",
+        "demographics": {
+            "ethnicity": "American",
+            "occupation": "Student",
+            "living_arrangement": null
+        },
+        "social_history": {
+            "alcohol_use": null,
+            "tobacco_use": null,
+            "substance_use": null,
+            "other": null
+        },
+        "medical_history": {
+            "allergies": null,
+            "past_medical_conditions": null,
+            "medications": "Aspirin (ten grains every four hours on March 25th)"
+        },
+        "surgical_history": {
+            "hernia_operation": "Scar of hernia operation on the left side of abdomen"
+        }
+    },
+    "participants": {
+        "clinicians": {
+            "Doctor A": {
+                "real_name": "Richard C. Cabot",
+                "specialty": "Internal Medicine",
+                "role": "Clinician, Editor of Case Records"
+            },
+            "Doctor B": {
+                "real_name": "Hugh Cabot",
+                "specialty": "Surgery",
+                "role": "Clinician, Editor of Case Records"
+            },
+            "Doctor C": {
+                "real_name": "F. M. Painter",
+                "specialty": null,
+                "role": "Assistant Editor"
+            },
+            "Doctor D": {
+                "real_name": "W. H. Smith",
+                "specialty": null,
+                "role": "Clinician who examined patient on day after admission"
+            },
+            "Doctor E": {
+                "real_name": "Merrill",
+                "specialty": "Radiology",
+                "role": "Radiologist consulted on X-ray"
+            },
+            "Doctor F": {
+                "real_name": "Richardson",
+                "specialty": "Pathology",
+                "role": "Pathologist who performed autopsy"
+            },
+            "Doctor G": {
+                "real_name": "Linenthal",
+                "specialty": null,
+                "role": "Clinician in discussion"
+            },
+            "Doctor H": {
+                "real_name": "Young",
+                "specialty": null,
+                "role": "Clinician in discussion"
+            },
+            "Doctor I": {
+                "real_name": "E. L. Oliver",
+                "specialty": null,
+                "role": "Clinician in discussion"
+            },
+            "Doctor J": {
+                "real_name": "Sampson",
+                "specialty": null,
+                "role": "Clinician in discussion"
+            },
+            "Doctor K": {
+                "real_name": "Foster",
+                "specialty": null,
+                "role": "Clinician in discussion"
+            },
+            "House Officer A": {
+                "real_name": null,
+                "specialty": null,
+                "role": "House Officer who presented the case"
+            },
+            "House Officer B": {
+                "real_name": null,
+                "specialty": null,
+                "role": "House Officer who provided information during discussion"
+            }
+        },
+        "others": {
+            "Patient": {
+                "role": "Patient",
+                "real_name": null
+            }
+        }
+    },
+    "conversation": {
+        "turn_1": {
+            "speaker": "Patient",
+            "listeners": [
+                "Doctor A"
+            ],
+            "real_name": null,
+            "timestamp": "March 26, 1923, Upon Admission",
+            "message": "Doctor, I've been having pain and trouble breathing. It started a few days ago like a bad cold.",
+            "intention": "Reporting chief complaints and initial symptoms.",
+            "context": "Patient presenting to the hospital.",
+            "source_reference": "Case 9431: 'An American student of twenty-four entered March 26, 1923, complaining of pain and dyspnea.'"
+        },
+        "turn_2": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Patient"
+            ],
+            "real_name": "Richard C. Cabot",
+            "timestamp": "March 26, 1923, Upon Admission, immediately after patient's initial statement",
+            "message": "Tell me more about when this started and how it has progressed.",
+            "intention": "Gathering history of present illness.",
+            "context": "Beginning patient history taking.",
+            "source_reference": "P. I.: 'On the afternoon of March 23 the patient had a severe cold...'"
+        },
+        "turn_3": {
+            "speaker": "Patient",
+            "listeners": [
+                "Doctor A"
+            ],
+            "real_name": null,
+            "timestamp": "March 26, 1923, Upon Admission, immediately after Doctor A's question",
+            "message": "It was last Thursday afternoon, March 23rd. I got a bad cold, headache, and backache. Felt really weak. Stayed in bed most of Friday and all of Saturday. On Saturday, March 25th, I took aspirin for the headache and backache, which helped a bit. That afternoon, I started coughing, dry cough at first. Felt feverish and very weak. Then around four yesterday afternoon, I had a really bad chill, shaking all over.",
+            "intention": "Providing detailed history of present illness.",
+            "context": "Describing symptom onset and progression.",
+            "source_reference": "P. I.: 'On the afternoon of March 23 the patient had a severe cold with moderate headache and backache...About four o'clock he had a chill that made him shake considerably and hunched him up in a knot.'"
+        },
+        "turn_4": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Patient"
+            ],
+            "real_name": "Richard C. Cabot",
+            "timestamp": "March 26, 1923, Upon Admission, immediately after patient's description of chill",
+            "message": "And the pain and breathing difficulty, when did that start?",
+            "intention": "Focusing on chief complaints - pain and dyspnea.",
+            "context": "Continuing history taking, focusing on current symptoms.",
+            "source_reference": "P. I.: 'At three o'clock on the day of admission he awoke with severe pain just below the ensiform associated with and aggravated by unproductive cough. Breathing was difficult, and deep breathing aggravated the pain.'"
+        },
+        "turn_5": {
+            "speaker": "Patient",
+            "listeners": [
+                "Doctor A"
+            ],
+            "real_name": null,
+            "timestamp": "March 26, 1923, Upon Admission, immediately after Doctor A's question about pain and breathing",
+            "message": "This morning, when I woke up around three, the pain got really bad, right below my breastbone. It hurts more when I cough, and it's hard to breathe deeply. A doctor put some tape on my chest, adhesive plaster, which helped the pain a little.",
+            "intention": "Describing current pain and breathing difficulties and prior intervention.",
+            "context": "Detailing the acute onset of severe symptoms and pre-hospital treatment.",
+            "source_reference": "P. I.: 'At three o'clock on the day of admission he awoke with severe pain just below the ensiform associated with and aggravated by unproductive cough. Breathing was difficult, and deep breathing aggravated the pain. A physician applied adhesive plaster to his chest with great relief to the pain.'"
+        },
+        "turn_6": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Patient"
+            ],
+            "real_name": "Richard C. Cabot",
+            "timestamp": "March 26, 1923, Upon Admission, after patient described symptoms",
+            "message": "Alright, let's take a look at you now. Nurse, can we get vitals and prepare the patient for examination?",
+            "intention": "Transitioning to physical examination.",
+            "context": "Preparing for physical assessment.",
+            "source_reference": "P. E. (Because of his condition the examination was incomplete and unsatisfactory.)"
+        },
+        "turn_7": {
+            "speaker": "Nurse A",
+            "listeners": [
+                "Doctor A",
+                "Patient"
+            ],
+            "real_name": null,
+            "timestamp": "March 26, 1923, During Physical Examination",
+            "message": "Yes doctor. Sir, can you please sit up for me? We need to check your temperature and blood pressure.",
+            "intention": "Preparing patient for vital signs measurement.",
+            "context": "Assisting with initial patient assessment.",
+            "source_reference": "T. 103.1\u00b0-105.5\u00b0, rectal. P. Steadily rising, 92-145. R. 28-58."
+        },
+        "turn_8": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Patient",
+                "Nurse A"
+            ],
+            "real_name": "Richard C. Cabot",
+            "timestamp": "March 26, 1923, During Physical Examination",
+            "message": "(Examining patient) You are breathing quite rapidly and shallowly. Your skin is hot and dry.  Can you cough for me?",
+            "intention": "Performing initial physical examination and observing respiratory status.",
+            "context": "Observing patient's general condition and respiratory effort.",
+            "source_reference": "P. E. Breathing rapid, shallow, labored, painful. Skin dry and hot."
+        },
+        "turn_9": {
+            "speaker": "Patient",
+            "listeners": [
+                "Doctor A",
+                "Nurse A"
+            ],
+            "real_name": null,
+            "timestamp": "March 26, 1923, During Physical Examination, after Doctor A's request to cough",
+            "message": "(Coughs, producing sputum)  It hurts a lot right here (points to lower sternum) when I cough. And I'm bringing up this phlegm.",
+            "intention": "Demonstrating cough and describing pain location and sputum production.",
+            "context": "Patient exhibiting symptoms during examination.",
+            "source_reference": "P. E. Frequent paroxysms of racking cough which caused excruciating pain chiefly under the lower sternum, with production of small amounts of pinkish, thick, slightly purulent sputum."
+        },
+        "turn_10": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Patient",
+                "Nurse A"
+            ],
+            "real_name": "Richard C. Cabot",
+            "timestamp": "March 26, 1923, During Physical Examination, after observing sputum",
+            "message": "Hmm, pinkish sputum. Let's listen to your lungs. Take deep breaths, if you can.",
+            "intention": "Proceeding to lung auscultation based on sputum observation.",
+            "context": "Focusing on respiratory examination.",
+            "source_reference": "P. E. Lungs. Expansion greater on the left. Diminished breathing at the right back from the lower third of the scapula down."
+        },
+        "turn_11": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Nurse A"
+            ],
+            "real_name": "Richard C. Cabot",
+            "timestamp": "March 26, 1923, After initial lung auscultation",
+            "message": "Breathing sounds diminished on the right side, especially at the back lower part. Expansion seems better on the left. No obvious r\u00e2les or rub yet. Heart sounds are fast but regular, systolic murmur at the apex, soft.",
+            "intention": "Summarizing initial lung and heart auscultation findings.",
+            "context": "Documenting preliminary physical exam findings.",
+            "source_reference": "P. E. Diminished breathing at the right back from the lower third of the scapula down. No r\u00e2les or friction rub heard. Sounds rapid, regular, of good quality. Soft systolic murmur at the apex, not transmitted."
+        },
+        "turn_12": {
+            "speaker": "Nurse A",
+            "listeners": [
+                "Doctor A"
+            ],
+            "real_name": null,
+            "timestamp": "March 26, 1923, After Doctor A summarized lung and heart findings",
+            "message": "Doctor, temperature is 104.3\u00b0F rectally, pulse is 120, and respirations are 45.",
+            "intention": "Reporting vital signs.",
+            "context": "Providing objective data from vital signs measurement.",
+            "source_reference": "T. 103.1\u00b0-105.5\u00b0, rectal. P. Steadily rising, 92-145. R. 28-58."
+        },
+        "turn_13": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Nurse A"
+            ],
+            "real_name": "Richard C. Cabot",
+            "timestamp": "March 26, 1923, After Nurse A reported vital signs",
+            "message": "Okay, high fever and rapid pulse.  Let's get some blood work and a urine sample.  And we need a chest X-ray right away.",
+            "intention": "Ordering initial diagnostic tests.",
+            "context": "Initiating further investigations based on initial assessment.",
+            "source_reference": "Urine, f, 24 on the one occasion recorded. Sp. gr. 1.032. No albumin or sugar, two or three leucocytes per high power field and a few hyalin casts. Blood. Hgb. 90%. Leucocytes 14,500-3,700. Polynuclears 79%. X-ray. (See illustration.)"
+        },
+        "turn_14": {
+            "speaker": "Doctor E",
+            "listeners": [
+                "Doctor A",
+                "House Officer A"
+            ],
+            "real_name": "Merrill",
+            "timestamp": "March 26, 1923, After X-ray was taken, reviewing X-ray findings",
+            "message": "Doctor Cabot, on the X-ray, there's an area of dullness at the left base, obscuring the heart and diaphragm.  There are also scattered shadows in the rest of the lung fields, especially the lower two-thirds of the right lung.",
+            "intention": "Reporting X-ray findings.",
+            "context": "Interpreting radiographic imaging for diagnostic clues.",
+            "source_reference": "9431 Area of dullness at left base occupying the costophrenic angle and obscuring the heart apex and diaphragm...On the right side scattered throughout the lower two-thirds of the lung field, most marked in the lower half, are numerous shadows of mottled dullness."
+        },
+        "turn_15": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Doctor E",
+                "House Officer A"
+            ],
+            "real_name": "Richard C. Cabot",
+            "timestamp": "March 26, 1923, After Doctor E reported X-ray findings",
+            "message": "So, Dr. Merrill, what does this X-ray suggest to you?",
+            "intention": "Seeking radiologist's interpretation and differential diagnosis based on imaging.",
+            "context": "Discussing radiographic findings and their clinical significance.",
+            "source_reference": "Discussion by de. richard c. cabot notes on the history Ordinarily if the pain is in the chest and we have the combination of pain and dyspnea we cannot help registering a guess that pneumonia is what we are dealing with."
+        },
+        "turn_16": {
+            "speaker": "Doctor E",
+            "listeners": [
+                "Doctor A",
+                "House Officer A"
+            ],
+            "real_name": "Merrill",
+            "timestamp": "March 26, 1923, After Doctor Cabot's question about X-ray interpretation",
+            "message": "It looks like a pathological process in the lung tissue itself, most prominent at the left base.  The scattered shadows suggest an infectious condition throughout both lungs.  There's no clear fluid, but there might be a little fluid at the left base.",
+            "intention": "Providing radiological interpretation and suggesting possible diagnoses.",
+            "context": "Offering differential diagnoses based on radiographic pattern.",
+            "source_reference": "X-ray. 'The findings are probably due to a pathological process in the lung parenchyma, most marked in the left base. . . . Shadows in the remainder of the lung fields are suggestive of a scattered infectious condition throughout both lungs probably of the same nature as the denser area noted. There is no evidence of free fluid, but there may be a small amount of fluid in the left base.'"
+        },
+        "turn_17": {
+            "speaker": "Doctor D",
+            "listeners": [
+                "House Officer A",
+                "Nurse A"
+            ],
+            "real_name": "W. H. Smith",
+            "timestamp": "March 27, 1923, The day after admission, during morning rounds",
+            "message": "He is very ill today. Still having dyspnea and pain when breathing in.  Couldn't find a clear source of staph infection. Abdomen is rigid, probably from the chest pain.  Did note two small red spots, one on his palm, one on his finger.  Heart murmur seems okay. Right lung base sounds dull, could be fluid, not sure about consolidation.  Outlook is serious.",
+            "intention": "Reporting patient's condition and assessment on the day after admission.",
+            "context": "Updating clinical picture and prognosis after initial day of hospitalization.",
+            "source_reference": "The day after admission Dr. W. H. Smith noted, 'Very ill. Dyspnea with pain on inspiration. No focus found for aureus infection. No costovertebral tenderness. No palpable kidney. Abdominal muscles held rigid, probably from pleural pain. Two small hyperemic papules, one on the left palm, the other on the right index finger. The systolic apical bruit appears harmless. ...At the right base some dullness, suggesting fluid rather than consolidation. Serious outlook.'"
+        },
+        "turn_18": {
+            "speaker": "House Officer A",
+            "listeners": [
+                "Doctor D"
+            ],
+            "real_name": null,
+            "timestamp": "March 27, 1923, Afternoon of the day after admission",
+            "message": "Doctor Smith, I re-examined his lungs this afternoon, and I couldn't find any abnormal signs at all anymore.",
+            "intention": "Reporting change in physical exam findings later in the day.",
+            "context": "Documenting variability in clinical signs.",
+            "source_reference": "That afternoon the house officer could make out no abnormal signs in the lungs."
+        },
+        "turn_19": {
+            "speaker": "Nurse A",
+            "listeners": [
+                "House Officer A"
+            ],
+            "real_name": null,
+            "timestamp": "March 27, 1923, Afternoon of the day after admission, around the same time as House Officer A's exam",
+            "message": "But doctor, he's been coughing up a lot of sputum, and it's now completely bloody and seems to be getting more and more purulent each time.",
+            "intention": "Reporting change in sputum characteristics.",
+            "context": "Highlighting worsening respiratory secretions.",
+            "source_reference": "The patient Avas raising considerable amounts of sputum colored uniformly with blood and becoming more and more purulent with each examination."
+        },
+        "turn_20": {
+            "speaker": "House Officer A",
+            "listeners": [
+                "Doctor A"
+            ],
+            "real_name": null,
+            "timestamp": "March 28, 1923, Morning rounds on March 28th",
+            "message": "Doctor Cabot, this morning, the left back now has dullness, increased fremitus and voice sounds, loud bronchial breathing, and a few r\u00e2les down low. Right back is slightly dull, distant breathing, and some medium r\u00e2les. Sputum is much more purulent now.",
+            "intention": "Reporting worsening lung exam findings and sputum purulence on March 28th.",
+            "context": "Documenting progression of respiratory signs and symptoms.",
+            "source_reference": "March 28 the left back showed dullness, increased fremitus and voice, loud bronchial breathing and a very few r\u00e2les from the lower third of the scapula down. The right back showed slight dullness, distant breathing and occasional medium r\u00e2les. The sputum was much more purulent."
+        },
+        "turn_21": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "House Officer A"
+            ],
+            "real_name": "Richard C. Cabot",
+            "timestamp": "March 28, 1923, Morning rounds on March 28th, after House Officer A's report",
+            "message": "Bronchial breathing and increased fremitus on the left... sounds like consolidation developing. And more purulent sputum... we need to consider pneumonia more strongly. What about the sputum culture?",
+            "intention": "Interpreting new physical exam findings and considering pneumonia as leading diagnosis.",
+            "context": "Refining differential diagnosis based on evolving clinical picture.",
+            "source_reference": "Discussion by de. richard c. cabot notes on the history Ordinarily if the pain is in the chest and we have the combination of pain and dyspnea we cannot help registering a guess that pneumonia is what we are dealing with."
+        },
+        "turn_22": {
+            "speaker": "House Officer B",
+            "listeners": [
+                "Doctor A"
+            ],
+            "real_name": null,
+            "timestamp": "March 28, 1923, Morning rounds on March 28th, after Doctor Cabot's question about sputum culture",
+            "message": "Doctor, the sputum culture from yesterday grew a lot of staphylococcus aureus.",
+            "intention": "Reporting sputum culture result.",
+            "context": "Providing microbiological data.",
+            "source_reference": "A culture showed a profuse growth of staphylococcus aureus."
+        },
+        "turn_23": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "House Officer B"
+            ],
+            "real_name": "Richard C. Cabot",
+            "timestamp": "March 28, 1923, Morning rounds on March 28th, after hearing about staph aureus in sputum",
+            "message": "Staph aureus\u2026 that changes things.  Did we get blood cultures?",
+            "intention": "Considering implications of staphylococcus aureus and inquiring about blood cultures.",
+            "context": "Revising differential diagnosis in light of culture results.",
+            "source_reference": "Dr. Cabot : Dr. Smith was, of course, looking for some source of staphylococcus infection, of which a carbuncle is the ordinary example."
+        },
+        "turn_24": {
+            "speaker": "House Officer B",
+            "listeners": [
+                "Doctor A"
+            ],
+            "real_name": null,
+            "timestamp": "March 28, 1923, Morning rounds on March 28th, answering Doctor Cabot's question about blood cultures",
+            "message": "Yes, doctor. We took two blood cultures on admission, but both were negative.",
+            "intention": "Reporting blood culture results.",
+            "context": "Providing further microbiological data.",
+            "source_reference": "Two blood cultures negative."
+        },
+        "turn_25": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "House Officer B"
+            ],
+            "real_name": "Richard C. Cabot",
+            "timestamp": "March 28, 1923, Morning rounds on March 28th, after hearing blood cultures were negative",
+            "message": "Negative blood cultures, but staph aureus in sputum... still leaning towards pneumonia, but with a staph component now, maybe bronchopneumonia with abscesses.  Keep a close watch on him.",
+            "intention": "Reiterating pneumonia diagnosis with consideration of staphylococcal involvement and abscess formation.",
+            "context": "Formulating working diagnosis and plan of care.",
+            "source_reference": "Dr. Cabot : The diagnosis then seems to me between multiple abscesses of the lung, which this purulent sputum strongly suggests, and a number of foci of bronchopneumonia with a purulent bronchitis and with or without an empyema on the left."
+        },
+        "turn_26": {
+            "speaker": "Nurse A",
+            "listeners": [],
+            "real_name": null,
+            "timestamp": "March 28, 1923, Evening of March 28th",
+            "message": "(Nursing note) Patient's condition has deteriorated throughout the day. He is growing weaker.",
+            "intention": "Documenting patient's declining condition.",
+            "context": "Observing patient's progressive weakness.",
+            "source_reference": "The condition the next morning was much the same as the day before. The patient gradually grew weaker, and that evening died."
+        },
+        "turn_27": {
+            "speaker": "Nurse A",
+            "listeners": [],
+            "real_name": null,
+            "timestamp": "March 28, 1923, Evening of March 28th, shortly after the previous note",
+            "message": "(Nursing note) Patient expired at [Time not specified]. Doctor notified.",
+            "intention": "Documenting patient's death.",
+            "context": "Reporting patient's demise.",
+            "source_reference": "The patient gradually grew weaker, and that evening died."
+        },
+        "turn_28": {
+            "speaker": "Doctor F",
+            "listeners": [
+                "Doctor A",
+                "Other Clinicians"
+            ],
+            "real_name": "Richardson",
+            "timestamp": "Post-mortem discussion",
+            "message": "At autopsy, we found about 150cc of purulent fluid in each pleural cavity.  The lungs showed fibrinopurulent exudate.  The trachea and bronchi were red and inflamed, with a thin grayish membrane \u2013 a diphtheritic membrane. The lung tissue itself was saturated with fluid and had areas of necrosis and pus, abscesses.  We also saw bronchopneumonia areas.",
+            "intention": "Presenting key autopsy findings.",
+            "context": "Sharing anatomical findings to confirm or refine clinical diagnoses.",
+            "source_reference": "Dr. Richardson : Yes. In each pleural cavity there was about 150 c.c. of thin purulent fluid. The lungs here and there were coated with fibrinopurulent ex\u00fadate...The trachea and bronchi and even the small branches showed blackish-red, thick, velvety mucosae and on top of that a thin layer of fibrinous dirty grayish material\u2014in other words the character of pneumonic influenza and added to that a so-called diphtheritic membrane...In places the tissue is almost gelatinous ; it sinks in water, and yet is not consolidated tissue. Here and there were smaller and larger resistant areas more or less soft and necrotic, and in places the center material was frankly purulent, semi-fluid,\u2014in other words, pus. Besides these there were places here and there scattered through the lungs, most marked in the lower lobes, which were areas grayish-red to dark brownish red, resistant, and which could very well be called bronchopneumonia."
+        },
+        "turn_29": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Doctor F",
+                "Other Clinicians"
+            ],
+            "real_name": "Richard C. Cabot",
+            "timestamp": "Post-mortem discussion, after Doctor Richardson's findings",
+            "message": "So, empyema, pneumonia, and abscesses.  And you're saying influenza as the primary cause?",
+            "intention": "Summarizing autopsy findings and clarifying primary cause of death.",
+            "context": "Integrating pathological findings with clinical understanding.",
+            "source_reference": "Dr. Cabot : An empyema ? ... Dr. Cabot : You spoke of this all through as 'influenza.' You do not mean by that to suggest any adherence to the bacillus of Pfeiffer?"
+        },
+        "turn_30": {
+            "speaker": "Doctor F",
+            "listeners": [
+                "Doctor A",
+                "Other Clinicians"
+            ],
+            "real_name": "Richardson",
+            "timestamp": "Post-mortem discussion, after Doctor Cabot's summary and question",
+            "message": "Yes, influenza, meaning the clinical entity, not specifically Pfeiffer's bacillus.  The bloody, inflamed airways, that's classic for influenza.  The bronchopneumonia and abscesses were complications.",
+            "intention": "Clarifying influenza as clinical diagnosis and explaining the pathological picture.",
+            "context": "Providing pathological interpretation in the context of clinical presentation.",
+            "source_reference": "Dr. Richardson : No ;I do not follow any one in that. I do not know what the cause of influenza is. They find the so-called influenza bacillus, but we do not bow down to it. ...Post mortem the distinguishing thing is the presence of a lot of blood in the trachea and bronchi and everywhere. "
+        }
+    },
+    "clinical_data": {
+        "presentation": {
+            "chief_complaint": "Pain and dyspnea",
+            "history_of_present_illness": "Began 3 days prior to admission with cold symptoms, headache, backache, and weakness. Progressed to dry cough, chills, fever, and severe epigastric pain aggravated by cough and deep breathing. Adhesive plaster applied for pain relief.",
+            "physical_exam": "Acutely ill, nervous, shivering young man. Rapid, shallow, labored breathing. Hot, dry skin. Slight pyorrhea, injected throat, absent tonsils. Frequent racking cough with pinkish, thick, slightly purulent sputum. Apex impulse at 5th intercostal space, midclavicular line, no enlargement. Rapid, regular heart sounds, soft systolic murmur at apex. Lungs: greater expansion left, diminished breathing right lower back, no dullness, r\u00e2les, or rub initially. Abdomen negative except hernia scar. Normal genitals, extremities, pupils, reflexes.",
+            "vital_signs": {
+                "initial": {
+                    "temperature": "103.1-105.5\u00b0F (rectal)",
+                    "pulse": "92-145 bpm (steadily rising)",
+                    "respiratory_rate": "28-58 breaths/min"
+                },
+                "subsequent": {}
+            }
+        },
+        "diagnostics": {
+            "laboratory_data": [
+                {
+                    "test": "Urine",
+                    "value": "Sp. gr. 1.032",
+                    "units": null,
+                    "reference_range": "No albumin or sugar, 2-3 leucocytes/hpf, few hyaline casts"
+                },
+                {
+                    "test": "Blood Hemoglobin",
+                    "value": "90%",
+                    "units": "%",
+                    "reference_range": null
+                },
+                {
+                    "test": "Leucocytes",
+                    "value": "14,500-3,700",
+                    "units": "/mm\u00b3",
+                    "reference_range": null
+                },
+                {
+                    "test": "Polynuclears",
+                    "value": "79%",
+                    "units": "%",
+                    "reference_range": null
+                },
+                {
+                    "test": "Blood Cultures",
+                    "value": "Negative (x2)",
+                    "units": null,
+                    "reference_range": null
+                },
+                {
+                    "test": "Sputum Culture",
+                    "value": "Profuse growth of Staphylococcus aureus",
+                    "units": null,
+                    "reference_range": null
+                }
+            ],
+            "imaging": [
+                {
+                    "modality": "X-ray",
+                    "description": "Dullness at left base, obscuring heart apex and diaphragm. Mottled dullness in lung above and lung root. Scattered mottled dullness in lower two-thirds of right lung field, most marked in lower half. No evidence of free fluid, possible small fluid in left base.",
+                    "figures": [
+                        "Illustration mentioned in text"
+                    ]
+                }
+            ]
+        },
+        "procedures": [
+            {
+                "procedure": "Adhesive plaster application",
+                "description": "Applied to chest by physician prior to admission for pain relief.",
+                "time": "Before admission"
+            },
+            {
+                "procedure": "Blood cultures",
+                "description": "Two blood cultures taken, both negative.",
+                "time": "On admission"
+            },
+            {
+                "procedure": "Sputum culture",
+                "description": "Sputum culture taken, showed profuse growth of Staphylococcus aureus.",
+                "time": "During hospitalization"
+            },
+            {
+                "procedure": "Chest X-ray",
+                "description": "Chest X-ray performed and interpreted.",
+                "time": "On admission"
+            }
+        ],
+        "timeline_events": [
+            {
+                "time": "March 23",
+                "event": "Patient develops cold symptoms, headache, backache, weakness."
+            },
+            {
+                "time": "March 25",
+                "event": "Dry cough noted, chills, fever suspected. Aspirin taken for headache and backache."
+            },
+            {
+                "time": "March 26",
+                "event": "Severe epigastric pain onset, aggravated by cough and breathing. Adhesive plaster applied. Admission to hospital."
+            },
+            {
+                "time": "March 27",
+                "event": "Dr. Smith's examination, noted patient very ill, no aureus focus, possible fluid at right base. House officer found no lung signs later. Sputum more bloody and purulent."
+            },
+            {
+                "time": "March 28",
+                "event": "Left back dullness, bronchial breathing, increased fremitus. Right back slight dullness, distant breathing. Sputum more purulent, Staphylococcus aureus culture positive. Patient gradually weakened."
+            },
+            {
+                "time": "March 28 Evening",
+                "event": "Patient died."
+            }
+        ],
+        "final_diagnoses": [
+            "Clinical Diagnosis: Bronchopneumonia. Septicemia, staphylococcus.",
+            "Dr. Richard C. Cabot's Diagnosis: Bronchopneumonia.",
+            "Anatomical Diagnosis: 1. Primary Fatal Lesions: Pneumonic influenza. Bronchopneumonia with abscess formation and hemorrhages. Diphtheritic tracheitis and bronchitis. 2. Secondary or Terminal Lesion: Fibrinopurulent pleuritis. 3. Historical Landmarks: Slight chronic pleuritis."
+        ]
+    },
+    "setting": "Inpatient Clinic",
+    "case_id": "NEJM192310251891705",
+    "original_case_number": "NEJM192310251891705",
+    "final_diagnosis": "N/A"
+}

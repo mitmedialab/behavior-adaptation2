@@ -1,0 +1,483 @@
+{
+    "case_metadata": {
+        "case_id": "9442",
+        "title": "Case 9442: Norwegian Housewife with Neurological Symptoms and Respiratory Findings",
+        "source": {
+            "journal": "Unknown Medical Case Records",
+            "publication_date": "1910",
+            "volume": "Unknown",
+            "issue": "Unknown",
+            "pages": "Page 1, 2",
+            "doi": "Not Applicable"
+        }
+    },
+    "patient_info": {
+        "age": 37,
+        "gender": "F",
+        "demographics": {
+            "ethnicity": "Norwegian",
+            "occupation": "Housewife",
+            "living_arrangement": "Not mentioned"
+        },
+        "social_history": {
+            "alcohol_use": "Not mentioned",
+            "tobacco_use": "Not mentioned",
+            "substance_use": "Not mentioned",
+            "other": "Not mentioned"
+        },
+        "medical_history": {
+            "allergies": "Not mentioned",
+            "past_medical_conditions": "Childhood diseases, subject to colds, 'grippe and influenza' last year",
+            "medications": "Took medicine for headache and vomiting (unspecified)"
+        },
+        "surgical_history": {
+            "None": "mentioned"
+        }
+    },
+    "participants": {
+        "clinicians": {
+            "Nurse A": {
+                "specialty": "Nursing",
+                "role": "Admission Nurse"
+            },
+            "Doctor A": {
+                "specialty": "Internal Medicine/General Practice",
+                "role": "Admitting Physician"
+            },
+            "Doctor B": {
+                "specialty": "Neurology/Internal Medicine",
+                "role": "Consulting Physician (Dr. Richard C. Cabot)"
+            },
+            "Doctor C": {
+                "specialty": "Pathology",
+                "role": "Pathologist (Dr. Richardson)"
+            },
+            "Doctor D": {
+                "specialty": "Unknown",
+                "role": "Physician in Discussion 1"
+            },
+            "Doctor E": {
+                "specialty": "Unknown",
+                "role": "Physician in Discussion 2"
+            }
+        },
+        "others": {
+            "Patient": {
+                "role": "Patient",
+                "real_name": "Not mentioned"
+            }
+        }
+    },
+    "conversation": {
+        "turn_1": {
+            "speaker": "Nurse A",
+            "listeners": [
+                "Patient"
+            ],
+            "real_name": "Nurse A",
+            "timestamp": "Morning of March 29, 1910, upon admission",
+            "message": "Good morning, Mrs. We are admitting you today. Can you tell me your name and age for our records?",
+            "intention": "Gather patient identification and confirm demographic details upon admission.",
+            "context": "Patient is being admitted to the hospital.",
+            "source_reference": "Page 1: 'CASE 9442 A Norwegian housewife of thirty-seven, entered March 29, 1910.'"
+        },
+        "turn_2": {
+            "speaker": "Patient",
+            "listeners": [
+                "Nurse A"
+            ],
+            "real_name": "Patient",
+            "timestamp": "Immediately after Nurse A's question, during admission",
+            "message": "I... I am... thirty-seven... years old...",
+            "intention": "Respond to nurse's question, but with difficulty and disorientation.",
+            "context": "Patient is dull, apathetic, wandering, and forgetful.",
+            "source_reference": "Page 1: 'During the history taking she was dull, apathetic, wandering, and forgetful.'"
+        },
+        "turn_3": {
+            "speaker": "Nurse A",
+            "listeners": [
+                "Patient"
+            ],
+            "real_name": "Nurse A",
+            "timestamp": "Following Patient's slow response, during admission",
+            "message": "Okay. And what brings you in today? What's been troubling you?",
+            "intention": "Elicit the chief complaint and reason for admission.",
+            "context": "Continuing admission history taking.",
+            "source_reference": "Page 1: 'Four days before admission, after feeling perfectly well, she felt as though she were going to be ill.'"
+        },
+        "turn_4": {
+            "speaker": "Patient",
+            "listeners": [
+                "Nurse A"
+            ],
+            "real_name": "Patient",
+            "timestamp": "Answering Nurse A's question about chief complaint, during admission",
+            "message": "Head... headache... and sick... to my stomach... started a few days ago... period... hardly anything...",
+            "intention": "Describe the onset of symptoms, including headache, malaise, and menstrual changes.",
+            "context": "Patient is providing history of present illness, but is slow and irrelevant.",
+            "source_reference": "Page 1: 'Four days before admission, after feeling perfectly well, she felt as though she were going to be ill. Her menstrual period began, but there was scarcely any flowing. The next day she had a very severe headache.'"
+        },
+        "turn_5": {
+            "speaker": "Nurse A",
+            "listeners": [
+                "Patient"
+            ],
+            "real_name": "Nurse A",
+            "timestamp": "After patient describes initial symptoms, during admission",
+            "message": "You mentioned a headache, can you describe it? And have you had any other symptoms, like vomiting?",
+            "intention": "Clarify the headache and inquire about associated symptoms.",
+            "context": "Trying to gather a detailed history despite patient's confusion.",
+            "source_reference": "Page 1: 'The next day she had a very severe headache. She had vomited several times after taking medicine.'"
+        },
+        "turn_6": {
+            "speaker": "Patient",
+            "listeners": [
+                "Nurse A"
+            ],
+            "real_name": "Patient",
+            "timestamp": "Responding to Nurse A's questions about headache and vomiting, during admission",
+            "message": "Yes... headache... bad... and threw up... medicine... didn't help...",
+            "intention": "Confirm headache and vomiting and mention medication ineffectiveness.",
+            "context": "Patient's answers are slow, halting and not fully grasping questions.",
+            "source_reference": "Page 1: 'She had vomited several times after taking medicine... She did not grasp questions. Her answers were irrelevant, and very slow and halting.'"
+        },
+        "turn_7": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Nurse A",
+                "Patient"
+            ],
+            "real_name": "Doctor A",
+            "timestamp": "Shortly after Nurse A finishes initial assessment, upon admission",
+            "message": "Hello Mrs. Let's take a look at you. Nurse tells me you've been having headaches and vomiting?",
+            "intention": "Introduce himself and confirm the chief complaints.",
+            "context": "Doctor A is starting the physical examination after initial nursing assessment.",
+            "source_reference": "Page 1: 'P. E. Fairly well nourished.'"
+        },
+        "turn_8": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Nurse A",
+                "Patient"
+            ],
+            "real_name": "Doctor A",
+            "timestamp": "During physical examination upon admission",
+            "message": "Tongue looks dry, and coated. Let's listen to your heart and lungs. Take a deep breath for me.",
+            "intention": "Begin physical exam, focusing on oral mucosa and auscultation of heart and lungs.",
+            "context": "Performing general physical examination.",
+            "source_reference": "Page 1: 'Tongue, dry brown coat. Apex impulse of the heart not seen or felt. No enlargement to percussion. Sounds at the apex fair in quality. P2 greater than A2. Lungs. Slight dullness, a few crackles and consonating r\u00e2les...'"
+        },
+        "turn_9": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Nurse A"
+            ],
+            "real_name": "Doctor A",
+            "timestamp": "After lung auscultation, during physical examination upon admission",
+            "message": "I hear some unusual sounds in your lungs, especially at the top, front and back. Sounds like some congestion. And your blood pressure is a bit high, 165 over something.",
+            "intention": "Summarize lung findings and note elevated blood pressure.",
+            "context": "Describing findings of respiratory and cardiovascular examination.",
+            "source_reference": "Page 1: 'Slight dullness, a few crackles and consonating r\u00e2les, vocal and tactile fremitus slightly increased at both apices, front and back, with bronchovesicular breathing in front and bronchial breathing in the back ; signs more marked posteriorly. Systolic B.P. 165.'"
+        },
+        "turn_10": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Nurse A"
+            ],
+            "real_name": "Doctor A",
+            "timestamp": "Continuing physical exam, checking abdomen, upon admission",
+            "message": "Any pain in your belly? Just going to press here... any tenderness?",
+            "intention": "Palpate abdomen to assess for tenderness.",
+            "context": "Abdominal examination.",
+            "source_reference": "Page 1: 'Abdomen. Slight tenderness in the epigastrium.'"
+        },
+        "turn_11": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Nurse A"
+            ],
+            "real_name": "Doctor A",
+            "timestamp": "Neurological exam, checking pupils, upon admission",
+            "message": "Let's check your pupils. Just look straight ahead... good, they react normally to light. Reflexes... hmm, knee-jerks are not responding. And I'm not sure about this Babinski sign...",
+            "intention": "Perform basic neurological exam including pupillary reflexes and deep tendon reflexes.",
+            "context": "Neurological examination.",
+            "source_reference": "Page 1: 'Pupils. Normal reactions. Reflexes. Knee-jerks not obtained. Double Babinski?'"
+        },
+        "turn_12": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Nurse A"
+            ],
+            "real_name": "Doctor A",
+            "timestamp": "After initial exam, discussing plan with nurse, upon admission",
+            "message": "Temperature is elevated, around 102. Pulse is fast too. We need to get some urine and spinal fluid samples. And blood work as well, though it's not recorded here yet.",
+            "intention": "Outline initial investigations based on physical exam findings.",
+            "context": "Planning diagnostic tests.",
+            "source_reference": "Page 1: 'T. 100.7\u00b0-102\u00b0, with slight afternoon rise on three of the five days. P. 110-131. R. normal. Urine, f, 30 on the one occasion recorded. Sp. gr. 1.011-1.013... Blood not recorded. Spinal fluid. 2-3 c.c of clear colorless fluid... Two hundred leucocytes per cu. mm., 80 per cent, mononuclears, 20 per cent, polynuclears.'"
+        },
+        "turn_13": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Nurse A"
+            ],
+            "real_name": "Doctor A",
+            "timestamp": "Reviewing spinal fluid results with Nurse A, after initial tests.",
+            "message": "Spinal fluid shows a lot of white blood cells, mostly mononuclear. This looks like meningitis. And with those lung signs, we really need to consider tuberculous meningitis.",
+            "intention": "Interpret spinal fluid findings and suggest tuberculous meningitis as a possible diagnosis.",
+            "context": "Initial differential diagnosis based on spinal fluid and lung exam.",
+            "source_reference": "Page 1: 'Spinal fluid... Two hundred leucocytes per cu. mm., 80 per cent, mononuclears, 20 per cent, polynuclears... This lung examination should mean tuberculosis... The spinal fluid shows chronic meningitis, which with her lungs should spell tuberculous meningitis.'"
+        },
+        "turn_14": {
+            "speaker": "Doctor B",
+            "listeners": [
+                "Doctor A"
+            ],
+            "real_name": "Richard C. Cabot",
+            "timestamp": "Consultation after initial assessment and spinal fluid results, before hemiplegia.",
+            "message": "So, a young woman with headache, vomiting, confusion, lung findings suggestive of TB, and spinal fluid pointing to meningitis... Tuberculous meningitis is high on the list, especially with those lung signs.",
+            "intention": "Agree with initial assessment and reinforce tuberculous meningitis as a primary diagnosis.",
+            "context": "Dr. Cabot's initial assessment and diagnostic impression.",
+            "source_reference": "Page 1: 'Obviously there is cerebral trouble of some sort... This lung examination should mean tuberculosis... The spinal fluid shows chronic meningitis, which with her lungs should spell tuberculous meningitis.'"
+        },
+        "turn_15": {
+            "speaker": "Doctor B",
+            "listeners": [
+                "Doctor A"
+            ],
+            "real_name": "Richard C. Cabot",
+            "timestamp": "Considering differential diagnoses, before hemiplegia.",
+            "message": "We should also consider other possibilities, though. A brain tumor could explain some of her symptoms, but the spinal fluid makes meningitis much more likely. Vascular issue is less likely in someone this young, and the history doesn't really fit.",
+            "intention": "Discuss alternative diagnoses while still favoring tuberculous meningitis.",
+            "context": "Differential diagnosis considerations.",
+            "source_reference": "Page 1: 'On the other hand, with a cerebral tumor, which she might perfectly well have, hemiplegia is not rare at all. Can this thing be a vascular affair, an arteriosclerosis with plugging or rupture of a cerebral vessel? She is young for it. The history does not sound like it...'"
+        },
+        "turn_16": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Doctor B"
+            ],
+            "real_name": "Doctor A",
+            "timestamp": "Responding to Dr. Cabot, before hemiplegia.",
+            "message": "What about encephalitis? Could that fit?",
+            "intention": "Propose encephalitis as another differential diagnosis.",
+            "context": "Considering broader differential diagnosis.",
+            "source_reference": "Page 2: 'A Physician : What would you say about encephalitis ?'"
+        },
+        "turn_17": {
+            "speaker": "Doctor B",
+            "listeners": [
+                "Doctor A"
+            ],
+            "real_name": "Richard C. Cabot",
+            "timestamp": "Responding to the question about encephalitis, before hemiplegia.",
+            "message": "Encephalitis... less likely. The course seems too acute, and her initial symptoms aren't quite typical for encephalitis. Spinal fluid could fit, but I still lean towards tuberculous meningitis.",
+            "intention": "Discount encephalitis as less likely given the clinical picture and time course.",
+            "context": "Ruling out encephalitis.",
+            "source_reference": "Page 2: 'Dr. Cabot : We certainly did not see it in 1910. I do not believe it occurred then, because it is such a clear picture. In this case the course is too acute, and during the time she lived she did not have the symptoms we should expect with encephalitis. The spinal fluid would go well enough. '"
+        },
+        "turn_18": {
+            "speaker": "Nurse A",
+            "listeners": [
+                "Doctor A",
+                "Doctor B"
+            ],
+            "real_name": "Nurse A",
+            "timestamp": "Afternoon of April 1, 1910, reporting new neurological sign.",
+            "message": "Doctor, the patient has developed weakness on her left side. Seems like a left-sided hemiplegia.",
+            "intention": "Report new and significant neurological finding.",
+            "context": "Patient developing hemiplegia.",
+            "source_reference": "Page 1: 'The afternoon of April 1 the patient developed a complete left-sided hemiplegia.'"
+        },
+        "turn_19": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Nurse A",
+                "Doctor B"
+            ],
+            "real_name": "Doctor A",
+            "timestamp": "Immediately after Nurse A's report, afternoon of April 1.",
+            "message": "Hemiplegia? That's concerning. Let's re-examine her right away.",
+            "intention": "React to the new neurological finding and plan for immediate re-evaluation.",
+            "context": "Urgency due to new hemiplegia.",
+            "source_reference": "Page 1: 'The afternoon of April 1 the patient developed a complete left-sided hemiplegia.'"
+        },
+        "turn_20": {
+            "speaker": "Doctor B",
+            "listeners": [
+                "Doctor A"
+            ],
+            "real_name": "Richard C. Cabot",
+            "timestamp": "Discussing hemiplegia in the context of diagnosis, afternoon of April 1.",
+            "message": "Hemiplegia with tuberculous meningitis is unusual, though not impossible. It does make me wonder if we should reconsider a brain tumor or even a vascular event, despite her age. But the spinal fluid really points to meningitis.",
+            "intention": "Re-evaluate differential diagnosis in light of new hemiplegia, still leaning towards tuberculous meningitis but considering alternatives.",
+            "context": "Re-assessing diagnosis after hemiplegia onset.",
+            "source_reference": "Page 1: 'Hemiplegia in tuberculous meningitis is not unknown, but is unexpected, unusual. It makes us wonder whether we are right in guessing at that first.'"
+        },
+        "turn_21": {
+            "speaker": "Doctor B",
+            "listeners": [
+                "Doctor A"
+            ],
+            "real_name": "Richard C. Cabot",
+            "timestamp": "Concluding diagnostic discussion, afternoon of April 1.",
+            "message": "On the whole, despite the hemiplegia, I'm still going to stick with my original diagnosis: tuberculous meningitis, likely with pulmonary tuberculosis and possibly general miliary tuberculosis.",
+            "intention": "Reaffirm original diagnosis despite the unexpected hemiplegia.",
+            "context": "Finalizing clinical diagnosis based on available information.",
+            "source_reference": "Page 1: 'On the whole, in spite of the hemiplegia, I shall stick to the original diagnosis,\u2014tuberculosis of the lungs, tuberculous meningitis, and very probably a general miliary tuberculosis...'"
+        },
+        "turn_22": {
+            "speaker": "Nurse A",
+            "listeners": [
+                "Doctor A",
+                "Doctor B"
+            ],
+            "real_name": "Nurse A",
+            "timestamp": "Morning of April 2, 1910, reporting patient's status.",
+            "message": "Doctor, the patient's condition has worsened overnight. She's failing gradually. No new symptoms, but she's weaker.",
+            "intention": "Report patient's deteriorating condition.",
+            "context": "Patient's decline before death.",
+            "source_reference": "Page 1: 'She failed gradually, showing no new signs or symptoms, and died April 2.'"
+        },
+        "turn_23": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Nurse A"
+            ],
+            "real_name": "Doctor A",
+            "timestamp": "Shortly after Nurse A's report, morning of April 2.",
+            "message": "Let's continue supportive care and keep her comfortable.",
+            "intention": "Provide instructions for palliative care.",
+            "context": "Focus shifts to comfort care as patient is deteriorating.",
+            "source_reference": "Implied from 'She failed gradually, showing no new signs or symptoms, and died April 2.'"
+        },
+        "turn_24": {
+            "speaker": "Doctor C",
+            "listeners": [
+                "Doctor B",
+                "Doctor A"
+            ],
+            "real_name": "Dr. Richardson",
+            "timestamp": "Presenting anatomical findings post-mortem.",
+            "message": "The autopsy showed extensive tuberculous meningitis, exactly as we suspected. The exudate was classic, extending along the base of the brain. Brain itself was otherwise negative \u2013 no tumor, no hemorrhage.",
+            "intention": "Present post-mortem findings confirming tuberculous meningitis.",
+            "context": "Anatomical diagnosis presentation.",
+            "source_reference": "Page 2: 'Dr. Richardson: Extending all along the base of the brain and out the fissures of Sylvius was the characteristic ex\u00fadate of tuberculous meningitis,\u2014that is, the grayish granular ex\u00fadate... The brain was otherwise negative. I found no evidence for hemiplegia, no solitary tubercles, no areas of hemorrhage.'"
+        },
+        "turn_25": {
+            "speaker": "Doctor C",
+            "listeners": [
+                "Doctor B",
+                "Doctor A"
+            ],
+            "real_name": "Dr. Richardson",
+            "timestamp": "Continuing post-mortem findings.",
+            "message": "Her lungs were full of miliary tubercles, right and left, and pleurae too. We also found a small area of caseous pneumonia in the left lung. Bronchial glands were enlarged but not tuberculous. Tuberculosis was mainly in lungs, pleurae, and meninges.",
+            "intention": "Describe pulmonary and pleural tuberculous lesions.",
+            "context": "Continuing anatomical diagnosis presentation \u2013 thoracic findings.",
+            "source_reference": "Page 2: 'The pleura of the right lung showed miliary tubercles scattered over it and throughout the substance of the lung many tubercles. The left lung showed a similar condition, with a small focus of caseous pneumonia in addition. The bronchial glands were enlarged, pigmented, firm, but there was no evidence of any tuberculous lesions. In other words, the tuberculosis in this case, so far as the necropsy went, was present only in the lungs, the pleurae, and the meninges.'"
+        },
+        "turn_26": {
+            "speaker": "Doctor C",
+            "listeners": [
+                "Doctor B",
+                "Doctor A"
+            ],
+            "real_name": "Dr. Richardson",
+            "timestamp": "Finalizing post-mortem findings.",
+            "message": "We also found tubercles in the liver and spleen, and a few in the kidneys. And she had otitis media in the left ear, pus had bacteria but no TB bacilli. Typical miliary TB case, though unusual not to see TB in the glands.",
+            "intention": "Describe findings in other organs and conclude with final anatomical diagnosis.",
+            "context": "Concluding anatomical diagnosis presentation \u2013 abdominal and other findings.",
+            "source_reference": "Page 2: 'The liver showed a few tubercles here and there and one yellowish nodule. The spleen showed miliary tubercles. Nothing was found in the kidney except a few scattered tubercles in the tissue... In the head there was otitis media on the left side... This is a typical case except that it is rather unusual not to find any tuberculous lesions in the glands examined.'"
+        }
+    },
+    "clinical_data": {
+        "presentation": {
+            "chief_complaint": "Headache, vomiting, confusion",
+            "history_of_present_illness": "Four days prior to admission, patient felt unwell with menstrual period onset but minimal flow. Developed severe headache and vomiting the next day. Became dull, apathetic, wandering, and forgetful.",
+            "physical_exam": "Fairly well nourished, dry brown coated tongue, normal heart sounds with P2>A2, slight dullness and crackles/rales in lung apices, slight epigastric tenderness, normal pupil reactions, absent knee-jerks, questionable Babinski sign, elevated blood pressure.",
+            "vital_signs": {
+                "initial": {
+                    "temperature": "100.7\u00b0-102\u00b0F",
+                    "pulse": "110-131 bpm",
+                    "respiratory_rate": "Normal (not specified)",
+                    "blood_pressure": "165/Unspecified mmHg"
+                },
+                "subsequent": {
+                    "temperature": "Rose to 105.4\u00b0F terminally",
+                    "pulse": "Rose to uncountable terminally",
+                    "respiratory_rate": "Rose to 40 terminally"
+                }
+            }
+        },
+        "diagnostics": {
+            "laboratory_data": [
+                {
+                    "test": "Urine",
+                    "value": "Volume 30 (unspecified units), Specific Gravity 1.011-1.013, Cloudy (once), Neutral (once), Alkaline (once), Trace to slight trace of albumin",
+                    "units": "Various",
+                    "reference_range": "Not applicable"
+                },
+                {
+                    "test": "Spinal Fluid",
+                    "value": "2-3 c.c., Clear, Colorless, Not increased pressure, Not coagulated, 200 leucocytes/cu. mm (80% mononuclear, 20% polynuclear)",
+                    "units": "Various",
+                    "reference_range": "Not applicable"
+                },
+                {
+                    "test": "White Blood Cell Count",
+                    "value": "13,000/mm\u00b3 (after hemiplegia)",
+                    "units": "/mm\u00b3",
+                    "reference_range": "Not applicable"
+                }
+            ],
+            "imaging": [
+                {
+                    "modality": "Fundus Examination",
+                    "description": "Blurring of disc edges bilaterally, marked vessel tortuosity, hemorrhage in center of left disc",
+                    "figures": []
+                }
+            ]
+        },
+        "procedures": [],
+        "timeline_events": [
+            {
+                "time": "4 days prior to admission",
+                "event": "Patient felt unwell, menstrual period with minimal flow started."
+            },
+            {
+                "time": "3 days prior to admission",
+                "event": "Severe headache and vomiting developed."
+            },
+            {
+                "time": "March 29, 1910",
+                "event": "Admission to hospital; patient found to be dull, apathetic, wandering, forgetful."
+            },
+            {
+                "time": "Morning after admission (March 30, 1910)",
+                "event": "Patient mentally clearer; fundus examination performed."
+            },
+            {
+                "time": "Afternoon of April 1, 1910",
+                "event": "Developed complete left-sided hemiplegia; white blood cell count rose to 13,000."
+            },
+            {
+                "time": "April 2, 1910",
+                "event": "Patient died."
+            },
+            {
+                "time": "Post-mortem examination",
+                "event": "Anatomical diagnosis of General miliary tuberculosis and Tuberculous meningitis."
+            }
+        ],
+        "final_diagnoses": [
+            "General miliary tuberculosis",
+            "Tuberculous meningitis",
+            "Otitis media, left (secondary/terminal)",
+            "Small focus of caseous pneumonia, superior lobe of left lung (secondary/terminal)",
+            "Chronic pleuritis, left (historical landmark)"
+        ]
+    },
+    "case_id": "NEJM192311011891812",
+    "original_case_number": "NEJM192311011891812",
+    "final_diagnosis": "N/A"
+}

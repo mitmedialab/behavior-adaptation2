@@ -1,0 +1,585 @@
+{
+    "case_metadata": {
+        "case_id": "Case 9433",
+        "title": "Case 9433: American Barber with Stomach Pain",
+        "source": {
+            "journal": "Massachusetts Medical Society Case Records",
+            "publication_date": "October 3, 1923"
+        }
+    },
+    "patient_info": {
+        "age": 62,
+        "gender": "M",
+        "demographics": {
+            "ethnicity": "American",
+            "occupation": "Barber",
+            "living_arrangement": "Not specified"
+        },
+        "social_history": {
+            "alcohol_use": "Not mentioned",
+            "tobacco_use": "Not mentioned",
+            "substance_use": "Not mentioned",
+            "other": "Not mentioned"
+        },
+        "medical_history": {
+            "allergies": "Not mentioned",
+            "past_medical_conditions": "Gonorrhea at 22, Tapeworms at 32",
+            "medications": "Sloan's liniment, Baking soda, Lime water, Magnesium oxide, Sodium bicarbonate, Atropin, Morphia, Hyoscin hydrobromide, Veronal, Cocain"
+        },
+        "surgical_history": {
+            "surgeries": "Operation on August 8, 1923 (Laparotomy with drainage)"
+        }
+    },
+    "participants": {
+        "clinicians": {
+            "Doctor A": {
+                "real_name": "Dr. Edward L. Young, Jr.",
+                "specialty": "Surgery",
+                "role": "Surgeon, Discussant"
+            },
+            "Doctor B": {
+                "real_name": "Dr. Cabot",
+                "specialty": "Internal Medicine",
+                "role": "Physician, Discussant"
+            },
+            "Doctor C": {
+                "real_name": "Dr. Merrill",
+                "specialty": "Radiology",
+                "role": "Radiologist, Discussant"
+            },
+            "Doctor D": {
+                "real_name": "Dr. E. L. Oliver",
+                "specialty": "Internal Medicine",
+                "role": "Physician, Discussant"
+            },
+            "Doctor E": {
+                "real_name": "Dr. Foster",
+                "specialty": "Internal Medicine",
+                "role": "Physician, Discussant"
+            },
+            "Doctor F": {
+                "real_name": "Dr. Harmer",
+                "specialty": "Surgery",
+                "role": "Surgeon, Discussant, Operator"
+            },
+            "Doctor G": {
+                "real_name": "Dr. Linenthal",
+                "specialty": "Internal Medicine",
+                "role": "Physician, Discussant"
+            },
+            "Doctor H": {
+                "real_name": "Dr. Richardson",
+                "specialty": "Pathology",
+                "role": "Pathologist, Discussant"
+            },
+            "Doctor I": {
+                "real_name": "Dr. Davis",
+                "specialty": "Surgery",
+                "role": "Surgical Consultant"
+            },
+            "Doctor J": {
+                "real_name": "Dr. Jones",
+                "specialty": "Surgery",
+                "role": "Surgical Consultant"
+            },
+            "Nurse A": {
+                "real_name": "Miss Painter",
+                "specialty": "Nursing",
+                "role": "Nurse Present in Discussion"
+            }
+        },
+        "others": {
+            "Patient": {
+                "role": "Patient",
+                "real_name": "Patient (American Barber)"
+            }
+        }
+    },
+    "conversation": {
+        "turn_1": {
+            "speaker": "Patient",
+            "listeners": [
+                "Doctor A"
+            ],
+            "real_name": "Patient (American Barber)",
+            "timestamp": "July 21, 1923, Admission",
+            "message": "Doctor, I've been having this stomach pain for about a year and a half now. It's a burning pain, like fire, right under my breastbone, and it goes straight to my back.",
+            "intention": "Describing chief complaint and symptom location and quality.",
+            "context": "Patient admitted complaining of pain in the stomach.",
+            "source_reference": "Page 2: 'An American barber of sixty-two entered July 21, 1923, complaining of pain in the stomach.' Page 2: 'A year and a half before admission he began to have pain under the ensiform radiating to the back, steady, and \"burning like fire.\"'"
+        },
+        "turn_2": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Patient"
+            ],
+            "real_name": "Dr. Edward L. Young, Jr.",
+            "timestamp": "Immediately after Patient's initial complaint, July 21, 1923, Admission",
+            "message": "Can you tell me more about when this pain occurs? Is it related to meals or time of day?",
+            "intention": "Gathering detailed history of present illness, focusing on pain triggers and patterns.",
+            "context": "Doctor starts taking history of present illness.",
+            "source_reference": "Page 3: 'There are two things in this history that stick in my mind: (1) the comparatively recent onset of pain, which may be suggestive of stomach trouble ; and (2) the fact that this pain comes on in the middle of the forenoon or night,\u2014in other words, when the stomach is presumably empty.'"
+        },
+        "turn_3": {
+            "speaker": "Patient",
+            "listeners": [
+                "Doctor A"
+            ],
+            "real_name": "Patient (American Barber)",
+            "timestamp": "Following Doctor A's question, July 21, 1923, Admission",
+            "message": "It\u2019s strange, Doc. It can hit me anytime \u2013 morning, afternoon, or even in the middle of the night.  Sometimes it's mid-forenoon, sometimes mid-afternoon, sometimes at night.  And it\u2019s bad enough to make me double over or pace around.",
+            "intention": "Describing the unpredictable timing and severity of pain episodes.",
+            "context": "Patient elaborates on pain timing and impact on daily life.",
+            "source_reference": "Page 2: 'It occurred every day, sometimes in the middle of the forenoon or the middle of the afternoon, sometimes at night. It was severe enough to make him curl up or walk the floor.'"
+        },
+        "turn_4": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Patient"
+            ],
+            "real_name": "Dr. Edward L. Young, Jr.",
+            "timestamp": "Continuing history taking, July 21, 1923, Admission",
+            "message": "And what makes it feel better? Anything you've found that helps relieve the pain?",
+            "intention": "Inquiring about pain alleviating factors to differentiate between diagnoses.",
+            "context": "Doctor probes for factors that modify the patient's pain.",
+            "source_reference": "Page 3: 'We have another thing that is of considerable importance, and that is that this pain is relieved by food, by alkali, and by getting rid of the acid contents of the stomach.'"
+        },
+        "turn_5": {
+            "speaker": "Patient",
+            "listeners": [
+                "Doctor A"
+            ],
+            "real_name": "Patient (American Barber)",
+            "timestamp": "Providing details on pain relief, July 21, 1923, Admission",
+            "message": "Yes, pressing on my stomach helps a bit. Eating corn flakes and milk sometimes works. Baking soda gives me relief for a few hours, and so does Sloan's liniment or a hot towel.  When the pain is really bad, I vomit a clear, bitter, and very acid fluid, and that gives me a little break, but it's temporary.",
+            "intention": "Describing methods that provide relief and the nature of vomit.",
+            "context": "Patient lists pain relief measures and characteristics of vomitus.",
+            "source_reference": "Page 2: 'It was relieved by pressing his hand to his stomach, eating a bowl of corn flakes and milk, taking baking soda, which gave immediate relief for several hours, or applying Sloan's liniment or a hot towel. During the attacks he frequently vomited with temporary relief clear fluid, extremely bitter and very acid; no blood.'"
+        },
+        "turn_6": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Patient"
+            ],
+            "real_name": "Dr. Edward L. Young, Jr.",
+            "timestamp": "Further questioning about diet and other symptoms, July 21, 1923, Admission",
+            "message": "Have you noticed any changes in your diet, and any other symptoms like heartburn or bowel changes?",
+            "intention": "Exploring dietary modifications and related gastrointestinal symptoms.",
+            "context": "Doctor expands questioning to diet, heartburn, and bowel habits.",
+            "source_reference": "Page 2: 'For over a year he had been limiting his diet... For seven months he had had heartburn daily... Three weeks ago his bowels, usually regular, did not move for three days.'"
+        },
+        "turn_7": {
+            "speaker": "Patient",
+            "listeners": [
+                "Doctor A"
+            ],
+            "real_name": "Patient (American Barber)",
+            "timestamp": "Answering questions about diet and other symptoms, July 21, 1923, Admission",
+            "message": "Yes, I've had to change my diet a lot.  First, I cut out pork, then all meats. For the past month, it\u2019s just been corn flakes and milk.  Heartburn\u2019s been a daily thing for seven months, only lime water helps with that. And about three weeks ago, I got really constipated for three days.  After taking something, it was a really hard, gray movement.",
+            "intention": "Detailing dietary restrictions, heartburn management, and bowel movement changes.",
+            "context": "Patient describes dietary changes, heartburn relief, and constipation.",
+            "source_reference": "Page 2: 'For over a year he had been limiting his diet, first omitting pork, then all meats. For the past month he had eaten nothing but corn flakes and milk. For seven months he had had heartburn daily, relieved by lime water. Three weeks ago his bowels, usually regular, did not move for three days. As a result of MgSGj he had a movement as \"hard as stone,\" he thought gray.'"
+        },
+        "turn_8": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Patient"
+            ],
+            "real_name": "Dr. Edward L. Young, Jr.",
+            "timestamp": "Asking about weight loss and general health, July 21, 1923, Admission",
+            "message": "Have you noticed any weight loss recently? And how has your overall health been?",
+            "intention": "Assessing weight changes and overall health status to gauge severity and chronicity.",
+            "context": "Doctor inquires about weight loss and general well-being.",
+            "source_reference": "Page 3: 'Here is a man with definite symptoms, although not all typical, with loss of weight.'"
+        },
+        "turn_9": {
+            "speaker": "Patient",
+            "listeners": [
+                "Doctor A"
+            ],
+            "real_name": "Patient (American Barber)",
+            "timestamp": "Responding to questions about weight and health, July 21, 1923, Admission",
+            "message": "Yes, doctor, I\u2019ve lost about thirty pounds in the last year and a half. I used to weigh around 196, now I\u2019m probably down to 170. And I've been feeling weaker and paler too.",
+            "intention": "Confirming weight loss and reporting general decline in health.",
+            "context": "Patient confirms weight loss and reports feeling unwell.",
+            "source_reference": "Page 2: 'He had grown pale and had lost about thirty pounds in the past year and a half. His best weight was 196 pounds, his present weight probably 170.'"
+        },
+        "turn_10": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Patient"
+            ],
+            "real_name": "Dr. Edward L. Young, Jr.",
+            "timestamp": "After Physical Examination, July 21, 1923, Admission",
+            "message": "Alright, after the physical exam, I've noted some paleness, and resistance in your upper abdomen. We'll need to run some tests, including blood work and x-rays, to get a clearer picture. We're also getting a gastric analysis.",
+            "intention": "Summarizing initial physical findings and outlining next steps for diagnostic workup.",
+            "context": "Doctor communicates preliminary findings and diagnostic plan.",
+            "source_reference": "Page 2: 'P. E. Rather obese. Mucous membranes pale. Abdomen. Resistance in the upper abdomen... Gastric analysis.'"
+        },
+        "turn_11": {
+            "speaker": "Doctor C",
+            "listeners": [
+                "Doctor A",
+                "Doctor B"
+            ],
+            "real_name": "Dr. Merrill",
+            "timestamp": "After X-ray results, July 25, 1923, Diagnostic Review",
+            "message": "Dr. Young, the x-ray shows an irregular outline along the lower part of the lesser curvature of the stomach, with a large projection. It seems to be affecting the peristaltic waves. The sphincter also looks wide and irregular.  The duodenum isn't filling properly either.",
+            "intention": "Presenting and interpreting X-ray findings to other clinicians.",
+            "context": "Radiologist reports on the X-ray results.",
+            "source_reference": "Page 2: 'X-ray, July 25... Stomach contained a small residue at six hours. Peristalsis active. Outline irregular along the lower portion of the lesser curvature, presenting at this region a large projection... The sphincter appeared wide and questionable in regularity... The first portion of the duodenum never filled with good outline.'"
+        },
+        "turn_12": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Doctor C",
+                "Doctor B"
+            ],
+            "real_name": "Dr. Edward L. Young, Jr.",
+            "timestamp": "Discussing X-ray findings, July 25, 1923, Diagnostic Review",
+            "message": "Dr. Merrill, does this suggest ulcer or malignancy based on the X-ray findings?",
+            "intention": "Seeking radiological interpretation to narrow down differential diagnoses.",
+            "context": "Doctor Young asks for diagnostic guidance based on X-ray.",
+            "source_reference": "Page 3: 'Dr. Merrill, will you comment on the x-ray plate?'"
+        },
+        "turn_13": {
+            "speaker": "Doctor C",
+            "listeners": [
+                "Doctor A",
+                "Doctor B"
+            ],
+            "real_name": "Dr. Merrill",
+            "timestamp": "Providing radiological interpretation, July 25, 1923, Diagnostic Review",
+            "message": "It's complex. The projection could be an ulcer crater, but with the irregular outline and the way it\u2019s affecting peristalsis, malignancy can't be excluded.  The duodenal issue complicates things further. It could be related or a separate lesion.",
+            "intention": "Offering a differential diagnosis based on radiographic findings, highlighting uncertainties.",
+            "context": "Radiologist provides a nuanced interpretation, considering both ulcer and malignancy.",
+            "source_reference": "Page 3: 'The findings are suggestive of an ulcerative lesion on the lesser curvature... although malignancy cannot be excluded... Coincident lesions in the duodenum and the lesser curvature of the stomach are not at all uncommon.'"
+        },
+        "turn_14": {
+            "speaker": "Doctor B",
+            "listeners": [
+                "Doctor A",
+                "Doctor C"
+            ],
+            "real_name": "Dr. Cabot",
+            "timestamp": "Contributing to the discussion, July 25, 1923, Diagnostic Review",
+            "message": "The anemia without blood in the stool or vomit is unusual for a simple ulcer causing this level of symptoms.  And the achromia on the blood smear points strongly towards something more serious than just dietary issues.",
+            "intention": "Adding clinical and lab findings to support a more serious diagnosis like malignancy.",
+            "context": "Physician Cabot weighs in, considering anemia and blood smear results.",
+            "source_reference": "Page 3: 'Dr. Cabot : One point, I should say, in favor of your diagnosis is that he has anemia and yet he has not lost any blood. He cannot have a secondary anemia from ulcer unless he has lost blood... Dr. E. L. Oliver: It says that he has achromia at the first examination. Dr. Cabot : That is much more important, I think.'"
+        },
+        "turn_15": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Doctor B",
+                "Doctor C",
+                "Doctor D",
+                "Doctor E"
+            ],
+            "real_name": "Dr. Edward L. Young, Jr.",
+            "timestamp": "Concluding pre-operative discussion, August 7, 1923, Pre-operative Planning",
+            "message": "Considering everything \u2013 the recent onset in a man of this age, the weight loss, the persistent pain, the X-ray findings, and now the acute retention and hiccups... I'm leaning towards malignancy, possibly near the pylorus. But a perforated ulcer remains a strong possibility, especially given the more acute worsening recently.  We should prepare for surgery.",
+            "intention": "Summarizing the case, stating pre-operative diagnosis, and planning surgical intervention.",
+            "context": "Doctor Young synthesizes all information to formulate a pre-operative plan.",
+            "source_reference": "Page 3-4: 'It seems to me, however, that in spite of the lack of blood there is enough to say that there is some organic condition near the pylorus... Dr. Cabot : You mean cancer? Dr. Young : Yes... The hiccups always suggest attacks of trouble with the kidneys. Of course it can be due to plenty of other things... August 7 he had acute retention, requiring catheterization. The prostate was felt by rectum to be enlarged. August 8 he was definitely weaker and hiccuping.'"
+        },
+        "turn_16": {
+            "speaker": "Doctor F",
+            "listeners": [
+                "Doctor A",
+                "Surgical Team"
+            ],
+            "real_name": "Dr. Harmer",
+            "timestamp": "During Operation, August 8, 1923, Operation Room",
+            "message": "Alright team, let's proceed with a local novocaine approach. Incision's made. We're encountering adhesions to the anterior abdominal wall... and more between the duodenum and liver.  Let's carefully separate these.  There's an inflammatory mass here.",
+            "intention": "Guiding the surgical procedure and describing operative findings.",
+            "context": "Surgeon describes the progress and findings during the laparotomy.",
+            "source_reference": "Page 5: 'OPERATION Local novocain. Four-inch high right rectus muscle-splitting incision. The peritoneum was opened without incident except for adhesions of the omentum to the anterior abdominal wall. There were also many adhesions between the duodenum and the liver, most of them of old standing. These were cautiously separated, and a recent inflammatory mass was encountered.'"
+        },
+        "turn_17": {
+            "speaker": "Doctor F",
+            "listeners": [
+                "Doctor A",
+                "Surgical Team"
+            ],
+            "real_name": "Dr. Harmer",
+            "timestamp": "Continuing during Operation, August 8, 1923, Operation Room",
+            "message": "No free fluid in the cavity.  I'm placing a cigarette drain to the foramen of Winslow as a precaution.  Closing up in layers. We didn\u2019t find a frank perforation but there are signs of a localized inflammatory process.",
+            "intention": "Describing the drainage placement and operative conclusion.",
+            "context": "Surgeon details the drain placement and wound closure.",
+            "source_reference": "Page 5: 'A cigarette drain was placed to the foramen of Winslow. There was no free fluid in the abdominal cavity. Abdomen closed in layers to wick... There were a few fresh adhesions, but most of them seemed to be old, as if he had had an old process which in the past had started to perforate and had walled itself off. There was no free fluid.'"
+        },
+        "turn_18": {
+            "speaker": "Nurse A",
+            "listeners": [
+                "Doctor A",
+                "Doctor F"
+            ],
+            "real_name": "Miss Painter",
+            "timestamp": "August 18, 1923, Ward - Post-operative Day 10, Before Fainting",
+            "message": "Doctor, the patient says he's feeling much better today.  He says he's hungry and comfortable.",
+            "intention": "Reporting patient's subjective improvement post-operation.",
+            "context": "Nurse updates doctors on patient's condition.",
+            "source_reference": "Page 2: 'August 16 he was hungry and comfortable.'"
+        },
+        "turn_19": {
+            "speaker": "Nurse A",
+            "listeners": [
+                "Doctor A",
+                "Doctor F"
+            ],
+            "real_name": "Miss Painter",
+            "timestamp": "August 18, 1923, Ward - Post-operative Day 10, Immediately After Fainting",
+            "message": "Doctor! He just fainted after walking across the ward! He\u2019s dyspneic and pale now, pulse is rapid, and blood pressure is down!",
+            "intention": "Reporting sudden deterioration in patient's condition.",
+            "context": "Nurse alerts doctors to a critical event.",
+            "source_reference": "Page 2: 'August 18 after walking across the ward he fainted. A few minutes later he was dyspneic, pale and in moderate shock, with pulse 120 and blood pressure 118/75.'"
+        },
+        "turn_20": {
+            "speaker": "Doctor F",
+            "listeners": [
+                "Doctor A",
+                "Nurse A",
+                "Medical Team"
+            ],
+            "real_name": "Dr. Harmer",
+            "timestamp": "August 18, 1923, Ward - Post-operative Day 10, During Emergency",
+            "message": "Get oxygen, start treatment for shock immediately! Check his vitals again, and be ready for anything. What was his blood pressure?",
+            "intention": "Initiating emergency response and directing immediate actions.",
+            "context": "Surgeon takes charge in response to patient's sudden collapse.",
+            "source_reference": "Page 2: 'He was treated for shock.'"
+        },
+        "turn_21": {
+            "speaker": "Nurse A",
+            "listeners": [
+                "Doctor F",
+                "Doctor A",
+                "Medical Team"
+            ],
+            "real_name": "Miss Painter",
+            "timestamp": "August 18, 1923, Ward - Post-operative Day 10, During Emergency",
+            "message": "Blood pressure is still low, Doctor. He just vomited, no blood in it.  He\u2019s complaining of right chest pain now, becoming very dyspneic and cyanotic...",
+            "intention": "Providing updated vital signs and reporting new symptoms.",
+            "context": "Nurse relays patient's deteriorating status and new symptoms.",
+            "source_reference": "Page 2: 'Soon afterwards he vomited (no blood)... Ten minutes later he complained of pain over the right chest, became very dyspneic and cyanotic.'"
+        },
+        "turn_22": {
+            "speaker": "Doctor F",
+            "listeners": [
+                "Doctor A",
+                "Nurse A",
+                "Medical Team"
+            ],
+            "real_name": "Dr. Harmer",
+            "timestamp": "August 18, 1923, Ward - Post-operative Day 10, Moments Before Death",
+            "message": "We're losing him... Respiratory arrest!  Code blue!",
+            "intention": "Announcing impending death and initiating resuscitation efforts.",
+            "context": "Surgeon recognizes terminal event and calls for emergency response.",
+            "source_reference": "Page 2: 'and died a respiratory death.'"
+        },
+        "turn_23": {
+            "speaker": "Doctor H",
+            "listeners": [
+                "Doctor A",
+                "Doctor F",
+                "Other Doctors"
+            ],
+            "real_name": "Dr. Richardson",
+            "timestamp": "Post-mortem, Anatomical Diagnosis Discussion",
+            "message": "The autopsy revealed a duodenal ulcer, about 4.5 by 3 cm. It was located posteriorly on the right side, extending to the anterior-lateral wall. It was adherent to the liver, and there was evidence of a previous perforation. The stomach itself was surprisingly normal.",
+            "intention": "Presenting key findings from the post-mortem examination.",
+            "context": "Pathologist reports the anatomical diagnosis.",
+            "source_reference": "Page 5: 'In the duodenum however, on the right side posteriorly and extending around to the anterior lateral wall on the right, was a loss of substance 4% x 3 cm., a frank ulcer... The stomach was considerably enlarged and contained much opaque fluid and food-like material; the mucosa was rather pale,\u2014a good stomach.'"
+        },
+        "turn_24": {
+            "speaker": "Doctor H",
+            "listeners": [
+                "Doctor A",
+                "Doctor F",
+                "Other Doctors"
+            ],
+            "real_name": "Dr. Richardson",
+            "timestamp": "Continuing Post-mortem findings, Anatomical Diagnosis Discussion",
+            "message": "The heart was enlarged, 482 grams, with significant arteriosclerosis, particularly in the coronary arteries.  We found a V-shaped pulmonary embolus.  That's likely what caused the sudden collapse and death.",
+            "intention": "Explaining the cause of death based on autopsy findings.",
+            "context": "Pathologist identifies pulmonary embolism as the terminal event.",
+            "source_reference": "Page 5: 'The heart weighed 482 grams,\u2014enlargement due to sclerosis... In the pulmonary artery there was a V-shaped embolus. On the left side, while the first great branches were frankly negative, in remoter branches there were small bits of embolie material.'"
+        },
+        "turn_25": {
+            "speaker": "Doctor A",
+            "listeners": [
+                "Doctor H",
+                "Doctor F",
+                "Other Doctors"
+            ],
+            "real_name": "Dr. Edward L. Young, Jr.",
+            "timestamp": "Post-mortem discussion conclusion, Anatomical Diagnosis Discussion",
+            "message": "So, duodenal ulcer was the primary issue, and the pulmonary embolism was the fatal event.  Despite our pre-operative suspicions, it wasn't cancer after all.  A reminder that even with strong clinical impressions, pathology is the ultimate truth.",
+            "intention": "Reflecting on the case outcome and diagnostic accuracy.",
+            "context": "Doctor Young summarizes the final diagnosis and learning points.",
+            "source_reference": "Page 5: 'ANATOMICAL DIAGNOSIS 1. Primary, Fatal Lesion Ulcer of the duodenum. 2. Secondary or Terminal Lesions Pulmonary embolism.'"
+        }
+    },
+    "clinical_data": {
+        "presentation": {
+            "chief_complaint": "Pain in the stomach",
+            "history_of_present_illness": "1.5 year history of epigastric pain radiating to the back, described as burning, occurring daily, sometimes relieved by food, alkali, vomiting, or topical treatments. Recent weight loss, dietary changes, and constipation.",
+            "physical_exam": "Obese, pale mucous membranes, deviated septum, reddened throat and tonsils, clear lungs, systolic murmur at apex, resistance in upper abdomen, liver palpable, possible spasm or mass under upper rectus liver, enlarged prostate.",
+            "vital_signs": {
+                "initial": {
+                    "blood_pressure": "160/85 mmHg",
+                    "pulse": "71-106 bpm",
+                    "temperature": "98-101.8\u00b0F (August 4-8)"
+                },
+                "pre_operative": {
+                    "blood_pressure": "Not specified",
+                    "pulse": "102 bpm (August 4)",
+                    "respirations": "26/min (August 4)",
+                    "temperature": "101.8\u00b0F (August 4)"
+                },
+                "post_fainting": {
+                    "blood_pressure": "118/75 mmHg",
+                    "pulse": "120 bpm"
+                }
+            }
+        },
+        "diagnostics": {
+            "laboratory_data": [
+                {
+                    "test": "Hemoglobin",
+                    "value": "60-75%",
+                    "units": "%",
+                    "reference_range": "Not specified"
+                },
+                {
+                    "test": "Leukocytes",
+                    "value": "10,800-25,000/mm\u00b3",
+                    "units": "/mm\u00b3",
+                    "reference_range": "Not specified"
+                },
+                {
+                    "test": "Polynuclears",
+                    "value": "72%",
+                    "units": "%",
+                    "reference_range": "Not specified"
+                },
+                {
+                    "test": "Red blood cells",
+                    "value": "4,230,000-5,960,000/mm\u00b3",
+                    "units": "/mm\u00b3",
+                    "reference_range": "Not specified"
+                },
+                {
+                    "test": "Gastric Analysis - Fasting Contents",
+                    "value": "Free HCl: 1, Total acid: 12",
+                    "units": "Not specified",
+                    "reference_range": "Not specified"
+                },
+                {
+                    "test": "Gastric Analysis - Test Meal",
+                    "value": "Free HCl: 41, Total acid: 59",
+                    "units": "Not specified",
+                    "reference_range": "Not specified"
+                },
+                {
+                    "test": "Lumbar puncture",
+                    "value": "3 cells, Total protein 30",
+                    "units": "Not specified",
+                    "reference_range": "Not specified"
+                },
+                {
+                    "test": "Urine",
+                    "value": "sp. gr. 1.010-1.022, alkaline (4/5 exams), trace to slight albumin (2 exams), 2-3 leucocytes/hpf (1 exam)",
+                    "units": "Not specified",
+                    "reference_range": "Not specified"
+                },
+                {
+                    "test": "Guaiac test (stool/vomit)",
+                    "value": "Negative (5 examinations)",
+                    "units": "Not specified",
+                    "reference_range": "Not specified"
+                }
+            ],
+            "imaging": [
+                {
+                    "modality": "X-ray",
+                    "description": "Stomach with small residue at 6 hours, active peristalsis, irregular outline along lower lesser curvature with large projection, questionable sphincter regularity, duodenum poorly filled, high and limited left diaphragm."
+                }
+            ]
+        },
+        "procedures": [
+            {
+                "procedure": "Laparotomy with drainage",
+                "description": "Local novocain, right rectus muscle-splitting incision, separation of omental and duodenal-liver adhesions, cigarette drain to foramen of Winslow, abdominal closure.",
+                "time": "August 8, 1923"
+            },
+            {
+                "procedure": "Catheterization",
+                "description": "For acute urinary retention.",
+                "time": "August 7, 1923"
+            }
+        ],
+        "timeline_events": [
+            {
+                "time": "1.5 years prior to admission",
+                "event": "Onset of epigastric pain."
+            },
+            {
+                "time": "Year and a half before admission",
+                "event": "Weight loss of 30 pounds."
+            },
+            {
+                "time": "7 months prior to admission",
+                "event": "Daily heartburn."
+            },
+            {
+                "time": "2.5 months prior to admission",
+                "event": "Stopped working due to pain."
+            },
+            {
+                "time": "3 weeks prior to admission",
+                "event": "Constipation for 3 days."
+            },
+            {
+                "time": "July 21, 1923",
+                "event": "Admission to hospital."
+            },
+            {
+                "time": "July 25, 1923",
+                "event": "X-ray examination."
+            },
+            {
+                "time": "August 4-8, 1923",
+                "event": "Elevated temperature and pulse."
+            },
+            {
+                "time": "August 7, 1923",
+                "event": "Acute urinary retention, catheterization."
+            },
+            {
+                "time": "August 8, 1923",
+                "event": "Laparotomy with drainage."
+            },
+            {
+                "time": "August 18, 1923",
+                "event": "Fainting, respiratory distress, death."
+            }
+        ],
+        "final_diagnoses": [
+            "Ulcer of the duodenum",
+            "Pulmonary embolism",
+            "Arteriosclerosis",
+            "Arteriosclerosis of the vessels of Willis",
+            "Wet brain",
+            "Partial arteriosclerotic occlusion of the coronary arteries",
+            "Slight fibrous myocarditis",
+            "Hypertrophy and dilatation of the heart",
+            "Edema of the lungs",
+            "Chronic localized peritonitis",
+            "Cholelithiasis"
+        ]
+    },
+    "case_id": "NEJM192310251891707",
+    "original_case_number": "NEJM192310251891707",
+    "final_diagnosis": "N/A"
+}
