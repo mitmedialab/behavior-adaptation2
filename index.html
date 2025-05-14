@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BEHAVIORBENCH Annotation Tool (v6 - No Comments)</title>
+    <title>BEHAVIORBENCH Annotation Tool (v18 - Separate Config)</title>
     <style>
-        /* CSS from v5 - no major changes needed here, textareas are just removed from HTML */
+        /* CSS from previous version - remains the same */
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
         :root {
             --primary-color: #007bff; /* Blue */
@@ -38,6 +38,14 @@
         .btn-secondary:hover { background-color: #545b62; }
         .btn-success { background-color: var(--success-color); color: var(--white); }
         .btn-success:hover { background-color: #1e7e34; }
+         .btn-disabled {
+             background-color: #cccccc;
+             color: #666666;
+             cursor: not-allowed;
+         }
+         .btn-disabled:hover {
+             background-color: #cccccc;
+         }
         .controls-group { display: flex; align-items: center; gap: 15px; }
         .controls-group select { flex-grow: 1; margin-bottom: 0; }
         .task-display pre, .case-presentation-section pre, .full-conversation-view pre {
@@ -45,17 +53,78 @@
             white-space: pre-wrap; word-wrap: break-word; border: 1px solid var(--medium-gray);
             font-size: 0.95em; max-height: 300px; overflow-y: auto; margin-bottom: 15px;
         }
-        .dataset-info { background-color: #e6f3ff; padding: 15px; border-radius: var(--border-radius); margin: 15px 0; border: 1px solid #b3d9ff; }
-        .dataset-info p { margin: 5px 0; font-size: 0.9em; }
-        .dataset-info strong { color: var(--primary-color); }
+         /* Specific style for conversation pre to allow emoji alignment */
+        .full-conversation-view pre {
+             white-space: pre-wrap; /* Standard property */
+             word-break: break-word; /* Ensure long words break */
+             font-family: inherit; /* Use body font, not monospace */
+             line-height: 1.6; /* Improve readability */
+        }
+        /* Style for individual turns */
+        .conversation-turn {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed var(--medium-gray);
+        }
+        .conversation-turn:last-child {
+            border-bottom: none; /* No border on the last turn */
+        }
+        .conversation-turn strong {
+            color: var(--primary-color);
+            display: block; /* Make speaker line a block element */
+            margin-bottom: 5px; /* Space between speaker and message */
+        }
+        .dataset-info { background-color: #e9ecef; padding: 15px; border-radius: var(--border-radius); margin: 15px 0; border: 1px solid var(--medium-gray); font-size: 0.9em;}
+        .dataset-info p { margin: 5px 0; }
+        .dataset-info strong { color: var(--dark-gray); }
         .annotation-form .form-group { margin-bottom: 20px; }
-        /* Textarea style removed as textareas are removed */
+
+        /* Styles for inline radio buttons within the options list */
+        #taskOptionsList {
+             list-style-type: none; /* Remove default list bullets */
+             padding-left: 0; /* Remove default padding */
+        }
+        #taskOptionsList li {
+             margin-bottom: 15px; /* Space between options */
+        }
+        #taskOptionsList li label {
+             display: flex; /* Use flexbox for alignment */
+             align-items: flex-start; /* Align text nicely if it wraps */
+             margin-bottom: 0; /* Remove label's default bottom margin */
+             font-weight: 400; /* Option text is not bold */
+             cursor: pointer;
+        }
+        #taskOptionsList li input[type="radio"] {
+             margin-top: 5px; /* Adjust vertical alignment */
+             margin-right: 10px; /* Space between radio and text */
+             transform: scale(1.1);
+             flex-shrink: 0; /* Prevent radio button from shrinking */
+        }
+
+
         .radio-group label { font-weight: 400; margin-right: 20px; display: inline-flex; align-items: center; cursor: pointer;}
         .radio-group input[type="radio"] { margin-right: 8px; transform: scale(1.1); }
+
+        /* Styles for the Proactivity Level Slider */
         .range-slider-group { display: flex; align-items: center; margin-top: 5px; }
         .range-slider-group span { font-size: 0.9em; color: #555; }
         .range-slider-group input[type="range"] { flex-grow: 1; margin: 0 10px; cursor: pointer; accent-color: var(--primary-color); }
-        #behavioralAppropriatenessValue { font-weight: 500; color: var(--primary-color); }
+        #proactivityLevelValue { font-weight: 500; color: var(--primary-color); }
+
+        /* Style for comment textarea */
+        .comment-group textarea {
+             width: 100%;
+             padding: 10px;
+             margin-top: 10px;
+             border: 1px solid #ced4da;
+             border-radius: var(--border-radius);
+             box-sizing: border-box;
+             font-size: 0.95em;
+             min-height: 80px; /* Give it some initial height */
+             resize: vertical; /* Allow vertical resizing */
+        }
+
+
         .task-navigation { text-align: right; margin-top: 20px; }
         .task-navigation button { margin-left: 10px; }
         .pdf-download a { display: inline-block; padding: 10px 15px; background-color: var(--secondary-color); color: var(--white); text-decoration: none; border-radius: var(--border-radius); font-weight: 500; transition: background-color 0.2s ease; }
@@ -63,21 +132,46 @@
         .case-presentation-section .btn-primary { margin-top: 15px; }
         .hidden { display: none; }
         #caseInfo { margin-top: 10px; font-style: italic; color: #555; }
-        .conversation-turn { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px dashed var(--medium-gray); }
-        .conversation-turn:last-child { border-bottom: none; }
-        .conversation-turn strong { color: var(--primary-color); }
+        #firebaseStatus { margin-top: 10px; font-style: italic; }
+
+
         .toggle-conversation-btn { margin-bottom: 15px; }
+         /* Style for the conversation content within the task view */
+        #taskConversationContentRepeat {
+             max-height: 300px;
+             overflow-y: auto;
+             border: 1px solid var(--medium-gray);
+             padding: 10px;
+             background-color: var(--light-gray);
+        }
+         /* Style for the conversation content within the case context view */
+        #fullConversationContent {
+             max-height: 400px;
+             overflow-y: auto;
+             border: 1px solid var(--medium-gray);
+             padding: 10px;
+             background-color: var(--light-gray);
+        }
+
+        /* Indicator for annotated tasks in the header */
+        .annotated-task-header::after {
+            content: " ✓"; /* Checkmark */
+            color: var(--success-color);
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
 
 <div class="main-container">
     <h1>BEHAVIORBENCH Annotation Tool</h1>
+    <p id="firebaseStatus"></p>
 
     <div class="card" id="annotatorCard">
         <h2>Annotator Information</h2>
         <label for="annotatorName">Annotator Name/ID:</label>
         <input type="text" id="annotatorName" placeholder="Enter your name or ID">
+         <p><small>Your annotations will be saved under this ID.</small></p>
     </div>
 
     <div class="card" id="caseSelectionCard">
@@ -85,7 +179,7 @@
         <label for="caseFile">Select Task File:</label>
         <div class="controls-group">
             <select id="caseFile"></select>
-            <button onclick="loadCaseAndConversation()" class="btn-primary">Load Case Data</button>
+            <button id="loadCaseBtn" class="btn-primary">Load Case Data</button>
         </div>
         <p id="caseInfo"></p>
     </div>
@@ -98,24 +192,20 @@
         </div>
         <div class="full-conversation-view">
             <h3>Full Conversation (from Conversation File)</h3>
-            <div id="fullConversationContent" style="max-height: 400px; overflow-y: auto; border: 1px solid var(--medium-gray); padding: 10px; background-color: var(--light-gray);">
-                Loading conversation...
-            </div>
+            <div id="fullConversationContent">Loading conversation...</div>
         </div>
         <div class="pdf-download" style="margin-top:15px;">
             <a id="pdfDownloadLink" href="#" target="_blank" download class="hidden">Download Original Case PDF</a>
         </div>
-        <button onclick="startAnnotation()" class="btn-primary" style="margin-top: 20px;">Start Annotating Tasks</button>
+        <button id="startAnnotationBtn" class="btn-primary" style="margin-top: 20px;">Start Annotating Tasks</button>
     </div>
 
 
     <div id="taskContainer" class="card hidden">
-        <button onclick="toggleFullConversationView()" class="btn-secondary toggle-conversation-btn">Show/Hide Full Conversation</button>
+        <button id="toggleConvBtn" class="btn-secondary toggle-conversation-btn">Show/Hide Full Conversation</button>
         <div id="taskFullConversationViewer" class="full-conversation-view hidden" style="margin-bottom:20px;">
              <h3>Full Conversation Reference</h3>
-             <div id="taskConversationContentRepeat" style="max-height: 300px; overflow-y: auto; border: 1px solid var(--medium-gray); padding: 10px; background-color: var(--light-gray);">
-                <!-- Conversation will be cloned here -->
-            </div>
+             <div id="taskConversationContentRepeat"></div>
         </div>
 
         <h2 id="currentTaskHeader">Current Task: 1</h2>
@@ -126,9 +216,9 @@
             <pre id="taskQuestion"></pre>
             <div id="taskOptionsContainer" class="hidden">
                 <h4>Options:</h4>
-                <ul id="taskOptionsList" style="list-style-type: upper-alpha; padding-left: 20px;"></ul>
+                <ul id="taskOptionsList"></ul>
             </div>
-            <div class="dataset-info">
+            <div class="dataset-info hidden">
                 <p><strong>Dataset's Correct Answer Option:</strong> <span id="datasetCorrectAnswerOption"></span></p>
                 <p><strong>Dataset's Proactivity Score:</strong> <span id="datasetProactivityScore"></span></p>
                 <p><strong>Dataset's Proactivity Category:</strong> <span id="datasetProactivityCategory"></span></p>
@@ -138,298 +228,557 @@
         <div class="annotation-form">
             <h3>Annotator's Evaluation:</h3>
             <div class="form-group">
-                <label>1. Answer Correctness & Optimality:</label>
-                <div class="radio-group" id="answerCorrectness">
-                    <label><input type="radio" name="answerCorrectness" value="Yes"> Yes</label>
-                    <label><input type="radio" name="answerCorrectness" value="Mostly Yes"> Mostly Yes</label>
-                    <label><input type="radio" name="answerCorrectness" value="Partially"> Partially</label>
-                    <label><input type="radio" name="answerCorrectness" value="No"> No</label>
+                <label>1. Your Confidence in Your Selected Answer:</label>
+                <div class="radio-group" id="annotatorConfidence">
+                    <label><input type="radio" name="annotatorConfidence" value="Very High"> Very High</label>
+                    <label><input type="radio" name="annotatorConfidence" value="High"> High</label>
+                    <label><input type="radio" name="annotatorConfidence" value="Moderate"> Moderate</label>
+                    <label><input type="radio" name="annotatorConfidence" value="Low"> Low</label>
                 </div>
-                <!-- Textarea removed, but you might want to keep the conditional mandatory logic if a "No" or "Partially" still requires explanation elsewhere -->
             </div>
-
             <div class="form-group">
-                <label for="behavioralAppropriatenessSlider">2. Behavioral Appropriateness: <span id="behavioralAppropriatenessValue">0.50</span></label>
-                <div class="range-slider-group">
-                    <span>Reactive (0.0)</span>
-                    <input type="range" id="behavioralAppropriatenessSlider" name="behavioralAppropriatenessSlider" min="0" max="1" step="0.01" value="0.5" oninput="updateSliderValueDisplay(this.value)">
-                    <span>Proactive (1.0)</span>
+                <label>2. Your Assessment of Task Proactivity Level:</label>
+                 <div class="range-slider-group">
+                    <span>0.0 (Reactive)</span>
+                    <input type="range" id="proactivityLevelSlider" name="proactivityLevelSlider" min="0" max="1" step="0.1" value="0.5">
+                    <span>1.0 (Proactive)</span>
+                    <span id="proactivityLevelValue">0.50</span>
                 </div>
-                <!-- Textarea removed -->
             </div>
-
-            <div class="form-group">
-                <label>3. Alignment with Dataset's Proactivity Label:</label>
-                <div class="radio-group" id="alignmentWithDataset">
-                    <label><input type="radio" name="alignmentWithDataset" value="Yes"> Yes</label>
-                    <label><input type="radio" name="alignmentWithDataset" value="Somewhat"> Somewhat</label>
-                    <label><input type="radio" name="alignmentWithDataset" value="No"> No</label>
+            <div class="form-group" id="clinicalPlausibilityGroup">
+                <label>3. Is this task (question and options) clinically plausible within the case context?</label>
+                <div class="radio-group" id="clinicalPlausibility">
+                    <label><input type="radio" name="clinicalPlausibility" value="Yes"> Yes</label>
+                    <label><input type="radio" name="clinicalPlausibility" value="No"> No</label>
+                     <label><input type="radio" name="clinicalPlausibility" value="Unsure"> Unsure</label>
                 </div>
-                <!-- Textarea removed -->
+                <div class="comment-group hidden" id="clinicalPlausibilityCommentGroup">
+                    <label for="clinicalPlausibilityComment">Please explain why it is not clinically plausible:</label>
+                    <textarea id="clinicalPlausibilityComment" placeholder="Provide your explanation here..."></textarea>
+                </div>
             </div>
         </div>
 
         <div class="task-navigation">
-            <button onclick="navigateTask(-1)" id="prevTaskBtn" class="btn-secondary">Previous Task</button>
-            <button onclick="navigateTask(1)" id="nextTaskBtn" class="btn-primary">Save & Next Task</button>
+            <button id="prevTaskBtn" class="btn-secondary">Previous Task</button>
+            <button id="nextTaskBtn" class="btn-primary">Save & Next Task</button>
         </div>
     </div>
 
     <div class="card hidden" id="exportSectionContainer">
         <h2>Export Annotations</h2>
-        <button onclick="exportAnnotations()" class="btn-success">Export All Annotations for This Case (JSON)</button>
+         <p>Annotations are automatically saved to Firebase as you click "Save & Next Task".</p>
+         <p>Annotated tasks for this case: <span id="annotatedTaskCount">0</span> / <span id="totalSelectedTaskCount">0</span></p>
+        <button id="exportAnnotationsBtn" class="btn-success">Download Current Case Annotations (JSON)</button>
+         <p style="margin-top: 15px; font-size: 0.9em; color: #666;">Note: This exports annotations loaded for the current case. For a full export across all cases, you would typically need to access the Firebase database directly.</p>
     </div>
 </div>
 
-<script>
-    // JavaScript from v5, with modifications to remove comment handling
+<!-- Load config.js first (this file should NOT be committed if it contains real keys) -->
+<script src="config.js"></script>
+<!-- Then load the main module script -->
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-app.js";
+    import { getFirestore, collection, doc, getDocs, setDoc } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-firestore.js";
+
+    // Firebase config is expected to be globally available from config.js
+    // const firebaseConfig = { ... }; // This is now in config.js
+
+    // Initialize Firebase
+    let app;
+    let db;
+    const firebaseStatusElement = document.getElementById('firebaseStatus');
+
+    if (typeof firebaseConfig === 'undefined') {
+        console.error("Firebase config not loaded! Make sure config.js is present and correct, and included BEFORE this script.");
+        if(firebaseStatusElement) {
+            firebaseStatusElement.textContent = "Firebase configuration missing! Create config.js with your Firebase project details.";
+            firebaseStatusElement.style.color = 'red';
+        }
+    } else {
+        try {
+             app = initializeApp(firebaseConfig); // Use the global firebaseConfig
+             db = getFirestore(app);
+             if (firebaseStatusElement) {
+                 firebaseStatusElement.textContent = "Firebase connected successfully.";
+                 firebaseStatusElement.style.color = 'green';
+             }
+             console.log("Firebase app and Firestore initialized.");
+        } catch (error) {
+             console.error("Firebase initialization failed:", error);
+              if (firebaseStatusElement) {
+                   firebaseStatusElement.textContent = "Firebase connection failed: " + error.message;
+                   firebaseStatusElement.style.color = 'red';
+               }
+        }
+    }
+
+
+    // --- Global variables used by functions ---
     let currentTaskDataFile = null;
     let currentConversationDataFile = null;
     let tasksToAnnotate = [];
     let currentTaskPointer = 0;
     let allAnnotations = [];
     let currentJsonFileName = "";
+    let currentCaseId = "";
+
+    const roleEmojis = {
+        "doctor": "⚕️", "physician": "⚕️", "nurse": "👩‍⚕️", "patient": "🤒",
+        "caregiver": "🤗", "user": "👤", "model": "🤖", "llm": "🤖", "system": "💻",
+    };
+    const defaultEmoji = "🗣️";
 
     const taskFileNames = [
-        "NEJM192310251891705_tasks.json",	
-        "NEJM192311011891813_tasks.json",
-        "NEJM192310251891706_tasks.json",
-        "NEJM192311081891905_tasks.json",
-        "NEJM192310251891707_tasks.json",
-        "NEJM192311081891906_tasks.json",
-        "NEJM192311011891811_tasks.json",
-        "NEJM192311081891907_tasks.json", 
-        "NEJM192311011891812_tasks.json",	
-        "NEJM9410133311508_tasks.json"
+        "NEJM192310251891705_tasks.json", "NEJM192311011891813_tasks.json",
+        "NEJM192310251891706_tasks.json", "NEJM192311081891905_tasks.json",
+        "NEJM192310251891707_tasks.json", "NEJM192311081891906_tasks.json",
+        "NEJM192311011891811_tasks.json", "NEJM192311081891907_tasks.json",
+        "NEJM192311011891812_tasks.json", "NEJM9410133311508_tasks.json"
     ];
 
-    window.onload = function() {
-        const taskFileDropdown = document.getElementById('caseFile');
-        taskFileNames.forEach(fileName => {
-            const option = document.createElement('option');
-            option.value = fileName;
-            option.textContent = fileName.replace("_tasks.json", "");
-            taskFileDropdown.appendChild(option);
-        });
-    };
+
+    // --- Function Definitions ---
 
     async function loadCaseAndConversation() {
+        if (!db) {
+            alert("Firebase is not connected. Cannot load case data. Please check console for errors.");
+            return;
+        }
+        const annotatorName = document.getElementById('annotatorName').value.trim();
+        if (!annotatorName) {
+             alert("Please enter your Annotator Name/ID before loading a case.");
+             document.getElementById('annotatorName').focus();
+             return;
+        }
+
         const selectedTaskFile = document.getElementById('caseFile').value;
         if (!selectedTaskFile) { alert("Please select a task file."); return; }
         currentJsonFileName = selectedTaskFile;
         document.getElementById('caseInfo').textContent = `Loading ${selectedTaskFile.replace("_tasks.json", "")}...`;
         document.getElementById('pdfDownloadLink').classList.add('hidden');
         document.getElementById('fullConversationContent').innerHTML = 'Loading conversation...';
+        document.getElementById('casePresentationText').textContent = 'Loading...';
+        document.getElementById('startAnnotationBtn').disabled = true;
+        document.getElementById('startAnnotationBtn').classList.add('btn-disabled');
+         allAnnotations = [];
+         tasksToAnnotate = [];
+         currentCaseId = "";
 
         try {
             const taskResponse = await fetch(`./outputs/${selectedTaskFile}`);
             if (!taskResponse.ok) throw new Error(`HTTP error! status: ${taskResponse.status} for ${selectedTaskFile}`);
             currentTaskDataFile = await taskResponse.json();
-            const caseId = currentTaskDataFile.metadata.case_id;
+            currentCaseId = currentTaskDataFile.metadata.case_id;
 
-            const presentationText = currentTaskDataFile.metadata.case_presentation_summary || `Case ID: ${caseId}. (No 'case_presentation_summary' in task metadata).`;
-            document.getElementById('casePresentationText').textContent = presentationText;
+            document.getElementById('casePresentationText').textContent = currentTaskDataFile.metadata.case_presentation_summary || `Case ID: ${currentCaseId}. (No summary).`;
 
-            const conversationFileName = `${caseId}_conversation.json`;
+            const conversationFileName = `${currentCaseId}_conversation.json`;
+            const txtConvFileName = `${currentCaseId}_conversation.txt`;
+            currentConversationDataFile = null;
             try {
                 const convResponse = await fetch(`./conversations/${conversationFileName}`);
-                if (!convResponse.ok) throw new Error(`HTTP error! status: ${convResponse.status} for ${conversationFileName}`);
-                currentConversationDataFile = await convResponse.json();
+                if (convResponse.ok) {
+                    currentConversationDataFile = await convResponse.json();
+                } else {
+                    const txtConvResponse = await fetch(`./conversations/${txtConvFileName}`);
+                    if (txtConvResponse.ok) {
+                        const txtContent = await txtConvResponse.text();
+                         const lines = txtContent.split('\n').filter(line => line.trim() !== '');
+                         const conversationObj = {};
+                         lines.forEach((line, index) => {
+                              const speakerMatch = line.match(/^([^:]+):/);
+                              let speaker = (index % 2 === 0) ? "User" : "Model";
+                              let message = line.trim();
+                              if(speakerMatch && speakerMatch[1]) {
+                                  speaker = speakerMatch[1].trim();
+                                  message = line.substring(speakerMatch[0].length).trim();
+                              }
+                              conversationObj[`turn_${index + 1}`] = { speaker: speaker, message: message };
+                         });
+                        currentConversationDataFile = { conversation: conversationObj };
+                    } else { throw new Error(`Neither JSON nor TXT conversation file found.`); }
+                }
                 displayFullConversation(currentConversationDataFile.conversation, 'fullConversationContent');
             } catch (convError) {
                 console.error("Error loading conversation file:", convError);
-                document.getElementById('fullConversationContent').innerHTML = `Error loading conversation file: ${conversationFileName}.<br>${convError.message}<br>Ensure it exists in the 'conversations' folder.`;
-                currentConversationDataFile = null;
+                document.getElementById('fullConversationContent').innerHTML = `Error loading conversation: <br>${convError.message}`;
             }
 
             const pdfDownloadLink = document.getElementById('pdfDownloadLink');
-            const pdfFileName = `${caseId}.pdf`;
-            pdfDownloadLink.href = `./originals/${pdfFileName}`;
-            pdfDownloadLink.download = pdfFileName;
-            pdfDownloadLink.classList.remove('hidden');
+            const pdfFileName = `${currentCaseId}.pdf`;
+             try {
+                const pdfResponse = await fetch(`./originals/${pdfFileName}`, { method: 'HEAD' });
+                pdfDownloadLink.classList.toggle('hidden', !pdfResponse.ok);
+                if(pdfResponse.ok) pdfDownloadLink.href = `./originals/${pdfFileName}`;
+             } catch (e) { pdfDownloadLink.classList.add('hidden'); }
+
+            document.getElementById('caseInfo').textContent = `Loading annotations for ${annotatorName}/${currentCaseId}...`;
+            try {
+                const caseDocRef = doc(collection(db, 'annotations', annotatorName, 'cases'), currentCaseId);
+                const annotationsCollectionRef = collection(caseDocRef, 'tasks');
+                const snapshot = await getDocs(annotationsCollectionRef);
+                allAnnotations = snapshot.docs.map(doc => doc.data());
+                console.log(`Loaded ${allAnnotations.length} existing annotations for ${annotatorName} on case ${currentCaseId}.`);
+            } catch (firebaseError) {
+                console.error("Error loading annotations from Firebase:", firebaseError);
+                alert(`Warning: Could not load existing annotations from Firebase.\n${firebaseError.message}`);
+                allAnnotations = [];
+            }
 
             document.getElementById('caseContextContainer').classList.remove('hidden');
             document.getElementById('taskContainer').classList.add('hidden');
             document.getElementById('exportSectionContainer').classList.add('hidden');
-            document.getElementById('caseInfo').textContent = `Loaded: ${caseId}`;
-            allAnnotations = [];
+            document.getElementById('caseInfo').textContent = `Case Loaded: ${currentCaseId}. ${allAnnotations.length} existing annotations found.`;
+            document.getElementById('startAnnotationBtn').disabled = false;
+            document.getElementById('startAnnotationBtn').classList.remove('btn-disabled');
         } catch (error) {
             console.error("Error loading case data:", error);
-            alert(`Error loading case data for ${selectedTaskFile.replace("_tasks.json", "")}:\n${error.message}`);
-            document.getElementById('caseInfo').textContent = `Error loading ${selectedTaskFile.replace("_tasks.json", "")}.`;
+            alert(`Error loading case data: ${error.message}`);
+            document.getElementById('caseInfo').textContent = `Error loading selected file.`;
             document.getElementById('caseContextContainer').classList.add('hidden');
+            document.getElementById('taskContainer').classList.add('hidden');
+            document.getElementById('exportSectionContainer').classList.add('hidden');
+             document.getElementById('startAnnotationBtn').disabled = true;
+             document.getElementById('startAnnotationBtn').classList.add('btn-disabled');
+             currentCaseId = "";
         }
     }
 
-    function displayFullConversation(conversationObj, targetElementId) {
+     function displayFullConversation(conversationObj, targetElementId) {
         const container = document.getElementById(targetElementId);
         container.innerHTML = '';
-        if (!conversationObj) { container.textContent = 'Conversation data not available.'; return; }
-        const sortedTurnKeys = Object.keys(conversationObj).sort((a, b) => parseInt(a.replace('turn_', '')) - parseInt(b.replace('turn_', '')));
+        if (!conversationObj || Object.keys(conversationObj).length === 0) {
+            container.textContent = 'Conversation data not available or empty.'; return;
+        }
+        const sortedTurnKeys = Object.keys(conversationObj).sort((a, b) => (parseInt(a.replace('turn_', '')) || 0) - (parseInt(b.replace('turn_', '')) || 0));
         sortedTurnKeys.forEach(turnKey => {
             const turn = conversationObj[turnKey];
+            const speakerRole = turn.speaker || 'Unknown Speaker';
+            const normalizedRole = speakerRole.trim().toLowerCase();
+            let emoji = defaultEmoji;
+            for (const roleKey in roleEmojis) { if (normalizedRole.includes(roleKey)) { emoji = roleEmojis[roleKey]; break; } }
             const turnDiv = document.createElement('div');
             turnDiv.classList.add('conversation-turn');
-            turnDiv.innerHTML = `<strong>${turn.speaker || 'Unknown Speaker'} (Turn ${turnKey.replace('turn_','')}):</strong> ${turn.message || ''}`;
+            turnDiv.innerHTML = `<strong>${emoji} ${speakerRole} (Turn ${turnKey.replace('turn_','')}):</strong> ${turn.message ? turn.message.replace(/\n/g, '<br>') : ''}`;
             container.appendChild(turnDiv);
         });
     }
 
     function startAnnotation() {
+         if (!currentTaskDataFile || !currentCaseId) { alert("Please load a case file first."); return; }
         document.getElementById('caseContextContainer').classList.add('hidden');
         document.getElementById('taskContainer').classList.remove('hidden');
         document.getElementById('exportSectionContainer').classList.remove('hidden');
+        const taskConversationRepeatDiv = document.getElementById('taskConversationContentRepeat');
+        taskConversationRepeatDiv.innerHTML = '';
         if (currentConversationDataFile && currentConversationDataFile.conversation) {
-            displayFullConversation(currentConversationDataFile.conversation, 'taskConversationContentRepeat');
-        } else {
-            document.getElementById('taskConversationContentRepeat').textContent = 'Conversation data not available.';
-        }
+            const fullConvContent = document.getElementById('fullConversationContent');
+            Array.from(fullConvContent.children).forEach(child => taskConversationRepeatDiv.appendChild(child.cloneNode(true)));
+        } else { taskConversationRepeatDiv.textContent = 'Conversation data not available.'; }
         document.getElementById('taskFullConversationViewer').classList.add('hidden');
         selectRepresentativeTasks();
         currentTaskPointer = 0;
-        if (tasksToAnnotate.length > 0) { displayTask(); }
-        else {
-            alert("No representative tasks found. Please check task data.");
+        if (tasksToAnnotate.length > 0) {
+            updateAnnotatedTaskCount();
+            displayTask();
+        } else {
+            alert("No representative tasks found for annotation in this case.");
             document.getElementById('taskContainer').classList.add('hidden');
+            document.getElementById('exportSectionContainer').classList.add('hidden');
         }
     }
 
     function toggleFullConversationView() { document.getElementById('taskFullConversationViewer').classList.toggle('hidden'); }
 
+    function shuffleArray(array) { for (let i = array.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [array[i], array[j]] = [array[j], array[i]]; } return array; }
+
     function selectRepresentativeTasks() {
         tasksToAnnotate = [];
-        if (!currentTaskDataFile || !currentTaskDataFile.tasks) return;
+        if (!currentTaskDataFile || !currentTaskDataFile.tasks || currentTaskDataFile.tasks.length === 0) return;
         const allTasks = currentTaskDataFile.tasks;
-        const reactiveTasks = allTasks.filter(task => (task.proactive_score <= 0.35) || (task.proactive_category && task.proactive_category.toLowerCase().includes('reactive')));
-        const balancedTasks = allTasks.filter(task => (task.proactive_score > 0.35 && task.proactive_score < 0.65) || (task.proactive_category && task.proactive_category.toLowerCase().includes('balanced')));
-        const proactiveTasks = allTasks.filter(task => (task.proactive_score >= 0.65) || (task.proactive_category && task.proactive_category.toLowerCase().includes('proactive')));
+        const reactiveTasks = allTasks.filter(t => (t.proactive_category && t.proactive_category.toLowerCase().includes('reactive')) || (t.proactive_score !== undefined && t.proactive_score < 0.35));
+        const balancedTasks = allTasks.filter(t => (t.proactive_category && t.proactive_category.toLowerCase().includes('balanced')) || (t.proactive_score !== undefined && t.proactive_score >= 0.35 && t.proactive_score < 0.65));
+        const proactiveTasks = allTasks.filter(t => (t.proactive_category && t.proactive_category.toLowerCase().includes('proactive')) || (t.proactive_score !== undefined && t.proactive_score >= 0.65));
+        const unknownProactivityTasks = allTasks.filter(t => !t.proactive_category && t.proactive_score === undefined);
         if (reactiveTasks.length > 0) tasksToAnnotate.push(reactiveTasks[Math.floor(Math.random() * reactiveTasks.length)]);
         if (balancedTasks.length > 0) tasksToAnnotate.push(balancedTasks[Math.floor(Math.random() * balancedTasks.length)]);
         if (proactiveTasks.length > 0) tasksToAnnotate.push(proactiveTasks[Math.floor(Math.random() * proactiveTasks.length)]);
+        if (unknownProactivityTasks.length > 0 && tasksToAnnotate.length < 3) tasksToAnnotate.push(unknownProactivityTasks[Math.floor(Math.random() * unknownProactivityTasks.length)]);
         tasksToAnnotate = [...new Set(tasksToAnnotate)];
-        if (tasksToAnnotate.length === 0 && allTasks.length > 0) {
-            for(let i=0; i < Math.min(3, allTasks.length); i++){
-                let randomTask = allTasks[Math.floor(Math.random() * allTasks.length)];
-                if(!tasksToAnnotate.find(t => t.task_id === randomTask.task_id)) tasksToAnnotate.push(randomTask);
-            }
+        let tasksAdded = tasksToAnnotate.length;
+        let availableTasks = shuffleArray([...allTasks]);
+        for (let i = 0; tasksAdded < 3 && i < availableTasks.length; i++) {
+            const task = availableTasks[i];
+            if (!tasksToAnnotate.find(t => t.task_id === task.task_id)) { tasksToAnnotate.push(task); tasksAdded++; }
         }
-        console.log("Selected tasks for annotation:", tasksToAnnotate.map(t => t.task_id || 'Unknown Task ID'));
+        if (tasksToAnnotate.length === 0 && allTasks.length > 0) tasksToAnnotate = [...allTasks];
+        tasksToAnnotate.sort((a, b) => currentTaskDataFile.tasks.findIndex(t => t.task_id === a.task_id) - currentTaskDataFile.tasks.findIndex(t => t.task_id === b.task_id));
+        console.log("Selected tasks for annotation:", tasksToAnnotate.map(t => t.task_id));
     }
 
     function displayTask() {
-        if (tasksToAnnotate.length === 0 || currentTaskPointer < 0 || currentTaskPointer >= tasksToAnnotate.length) {
-            if (tasksToAnnotate.length > 0 && currentTaskPointer >= tasksToAnnotate.length) {
-                alert("All selected tasks for this case annotated! You can now export.");
-                document.getElementById('taskContainer').classList.add('hidden');
-            }
-            return;
-        }
+        if (tasksToAnnotate.length === 0 || currentTaskPointer < 0 || currentTaskPointer >= tasksToAnnotate.length) return;
         const task = tasksToAnnotate[currentTaskPointer];
-        document.getElementById('currentTaskHeader').textContent = `Task ${currentTaskPointer + 1} of ${tasksToAnnotate.length}`;
+        const taskHeader = document.getElementById('currentTaskHeader');
+        taskHeader.textContent = `Task ${currentTaskPointer + 1} of ${tasksToAnnotate.length}`;
+        const existingAnnotation = allAnnotations.find(ann => ann.task_id === task.task_id);
+        taskHeader.classList.toggle('annotated-task-header', !!existingAnnotation);
         document.getElementById('taskContext').textContent = task.llm_input_context || task.context_hint || "N/A";
         document.getElementById('taskQuestion').textContent = task.question || "N/A";
         const optionsContainer = document.getElementById('taskOptionsContainer');
         const optionsList = document.getElementById('taskOptionsList');
         optionsList.innerHTML = '';
         if (task.options && typeof task.options === 'object' && Object.keys(task.options).length > 0) {
-            Object.entries(task.options).forEach(([key, value]) => {
-                const li = document.createElement('li'); li.textContent = `${value}`; optionsList.appendChild(li);
+            Object.keys(task.options).sort().forEach(key => {
+                const li = document.createElement('li');
+                const label = document.createElement('label');
+                const radio = document.createElement('input'); radio.type = 'radio'; radio.name = 'annotatorAnswerSelection'; radio.value = key;
+                Object.assign(radio.style, {marginTop: '5px', marginRight: '10px', transform: 'scale(1.1)', flexShrink: '0'});
+                const textSpan = document.createElement('span'); textSpan.textContent = `${key}: ${task.options[key]}`;
+                Object.assign(textSpan.style, {flexGrow: '1', wordBreak: 'break-word'});
+                label.append(radio, textSpan); li.appendChild(label); optionsList.appendChild(li);
             });
             optionsContainer.classList.remove('hidden');
-        } else { optionsContainer.classList.add('hidden'); }
+        } else {
+            optionsContainer.classList.add('hidden');
+            document.querySelectorAll('#taskOptionsList input[name="annotatorAnswerSelection"]').forEach(r => r.checked = false);
+        }
         document.getElementById('datasetCorrectAnswerOption').textContent = task.correct_index || task.correct_answer_text || task.correct_answer || "N/A";
         document.getElementById('datasetProactivityScore').textContent = task.proactive_score !== undefined ? task.proactive_score : "N/A";
         document.getElementById('datasetProactivityCategory').textContent = task.proactive_category || "N/A";
-        const resourcePathContainer = document.getElementById('resourcePathContainer');
-        const resourcePathsList = document.getElementById('resourcePathsList');
-        resourcePathsList.innerHTML = '';
-        if (task.resource_path && task.resource_path.length > 0) {
-            task.resource_path.forEach(path => {
-                const li = document.createElement('li'); li.textContent = path; resourcePathsList.appendChild(li);
-            });
-            resourcePathContainer.classList.remove('hidden');
-        } else { resourcePathContainer.classList.add('hidden'); }
+        document.querySelector('.dataset-info').classList.add('hidden');
         clearAnnotationForm();
+        if (existingAnnotation) loadAnnotationToForm(existingAnnotation.annotations);
         document.getElementById('prevTaskBtn').disabled = currentTaskPointer === 0;
-        document.getElementById('nextTaskBtn').disabled = false;
         document.getElementById('nextTaskBtn').textContent = (currentTaskPointer === tasksToAnnotate.length - 1) ? "Save & Finish Case" : "Save & Next Task";
+        updateAnnotatedTaskCount();
+    }
+
+    function updateAnnotatedTaskCount() {
+        const annotatedCount = allAnnotations.filter(ann => tasksToAnnotate.some(task => task.task_id === ann.task_id)).length;
+        document.getElementById('annotatedTaskCount').textContent = annotatedCount;
+        document.getElementById('totalSelectedTaskCount').textContent = tasksToAnnotate.length;
     }
 
     function clearAnnotationForm() {
-        document.querySelectorAll('input[type="radio"]').forEach(radio => radio.checked = false);
-        // Comment textareas are removed, so no need to clear their values
-        document.getElementById('behavioralAppropriatenessSlider').value = 0.5;
-        updateSliderValueDisplay('0.5');
+        ['annotatorAnswerSelection', 'annotatorConfidence', 'clinicalPlausibility', 'taskComplexity', 'taskRelevance'].forEach(name =>
+            document.querySelectorAll(`input[name="${name}"]`).forEach(radio => radio.checked = false)
+        );
+        const commentGroup = document.getElementById('clinicalPlausibilityCommentGroup');
+        const commentTextarea = document.getElementById('clinicalPlausibilityComment');
+        commentTextarea.value = ''; commentGroup.classList.add('hidden'); commentTextarea.required = false;
+        const proactivitySlider = document.getElementById('proactivityLevelSlider');
+        if (proactivitySlider) { proactivitySlider.value = 0.5; updateProactivitySliderValueDisplay(0.5); }
     }
 
-    function getRadioValue(name) { return document.querySelector(`input[name="${name}"]:checked`)?.value || ""; }
-    function updateSliderValueDisplay(value) { document.getElementById('behavioralAppropriatenessValue').textContent = parseFloat(value).toFixed(2); }
+    function loadAnnotationToForm(annotations) {
+        if (annotations.annotator_answer_selection) {
+             const radio = document.querySelector(`#taskOptionsList input[name="annotatorAnswerSelection"][value="${annotations.annotator_answer_selection}"]`);
+             if (radio) radio.checked = true;
+        }
+        if (annotations.annotator_confidence) {
+            const radio = document.querySelector(`input[name="annotatorConfidence"][value="${annotations.annotator_confidence}"]`);
+            if (radio) radio.checked = true;
+        }
+        if (annotations.annotator_proactivity_level !== undefined) {
+             const proactivitySlider = document.getElementById('proactivityLevelSlider');
+             if (proactivitySlider) {
+                 const value = parseFloat(annotations.annotator_proactivity_level);
+                 const steppedValue = Math.round(value * 10) / 10;
+                 proactivitySlider.value = Math.max(0, Math.min(1, steppedValue));
+                 updateProactivitySliderValueDisplay(proactivitySlider.value);
+             }
+        }
+        if (annotations.clinical_plausibility) {
+            const radio = document.querySelector(`input[name="clinicalPlausibility"][value="${annotations.clinical_plausibility}"]`);
+            if (radio) {
+                radio.checked = true;
+                toggleClinicalPlausibilityComment(annotations.clinical_plausibility);
+                if (annotations.clinical_plausibility === "No" && annotations.clinical_plausibility_comment !== undefined) {
+                     document.getElementById('clinicalPlausibilityComment').value = annotations.clinical_plausibility_comment;
+                }
+            }
+        }
+    }
 
-    function saveCurrentAnnotation() {
-        if (tasksToAnnotate.length === 0) return false;
-        const annotatorName = document.getElementById('annotatorName').value || "UnknownAnnotator";
+    function toggleClinicalPlausibilityComment(selectedValue) {
+        selectedValue = selectedValue || getRadioValue('clinicalPlausibility');
+        const commentGroup = document.getElementById('clinicalPlausibilityCommentGroup');
+        const commentTextarea = document.getElementById('clinicalPlausibilityComment');
+        commentGroup.classList.toggle('hidden', selectedValue !== 'No');
+        commentTextarea.required = selectedValue === 'No';
+        if(selectedValue !== 'No') commentTextarea.value = '';
+    }
+
+    function updateProactivitySliderValueDisplay(value) {
+         document.getElementById('proactivityLevelValue').textContent = parseFloat(value).toFixed(2);
+    }
+
+    function getRadioValue(name) {
+         const checkedRadio = document.querySelector(`input[name="${name}"]:checked`);
+         return checkedRadio ? checkedRadio.value : "";
+    }
+
+    async function saveCurrentAnnotation() {
+        const annotatorName = document.getElementById('annotatorName').value.trim();
+        if (!annotatorName) { alert("Annotator Name/ID is required."); return false; }
+        if (!db) { alert("Firebase not connected. Cannot save."); return false; }
+        if (!currentCaseId) { alert("Case data not loaded. Cannot save."); return false; }
+        if (tasksToAnnotate.length === 0 || currentTaskPointer < 0 || currentTaskPointer >= tasksToAnnotate.length) {
+             if (currentTaskPointer === tasksToAnnotate.length) {
+                  const lastTask = tasksToAnnotate[tasksToAnnotate.length -1];
+                  if (lastTask && allAnnotations.some(ann => ann.task_id === lastTask.task_id)) return true;
+             }
+             console.warn("Save attempted when no task is active."); return false;
+        }
         const task = tasksToAnnotate[currentTaskPointer];
-        const annotation = {
-            annotator_id: annotatorName,
-            case_id: currentTaskDataFile.metadata.case_id,
-            task_id: task.task_id,
+        const annotatorAnswer = getRadioValue('annotatorAnswerSelection');
+        const annotatorConfidence = getRadioValue('annotatorConfidence');
+        const annotatorProactivityLevel = document.getElementById('proactivityLevelSlider')?.value || 0.5;
+        const clinicalPlausibility = getRadioValue('clinicalPlausibility');
+        let clinicalPlausibilityComment = (clinicalPlausibility === 'No') ? document.getElementById('clinicalPlausibilityComment').value.trim() : '';
+
+        if (!annotatorAnswer) { alert("Please select your answer option."); return false; }
+        if (!annotatorConfidence) { alert("Please select your Annotator Confidence level."); return false; }
+        if (!clinicalPlausibility) { alert("Please select Clinical Plausibility."); return false; }
+        if (clinicalPlausibility === 'No' && clinicalPlausibilityComment === '') {
+             alert("Please explain why the task is not clinically plausible.");
+             document.getElementById('clinicalPlausibilityComment').focus(); return false;
+        }
+
+        const annotationData = {
+            annotator_id: annotatorName, case_id: currentCaseId, task_id: task.task_id,
             task_index_in_case: currentTaskDataFile.tasks.findIndex(t => t.task_id === task.task_id),
-            original_task_data: { /* ... as before ... */
-                task_id: task.task_id, question: task.question, proactive_score: task.proactive_score,
-                proactive_category: task.proactive_category, correct_index: task.correct_index
+            original_task_data: {
+                task_id: task.task_id,
+                question: task.question || null, options: task.options || null,
+                proactive_score: task.proactive_score !== undefined ? task.proactive_score : null,
+                proactive_category: task.proactive_category !== undefined ? task.proactive_category : null,
+                correct_index: task.correct_index !== undefined ? task.correct_index : null
             },
-            annotations: { // Comments fields removed
-                clinical_plausibility: getRadioValue('clinicalPlausibility'),
-                answer_correctness: getRadioValue('answerCorrectness'),
-                behavioral_appropriateness_slider: document.getElementById('behavioralAppropriatenessSlider').value,
-                alignment_with_dataset: getRadioValue('alignmentWithDataset'),
-                task_complexity: getRadioValue('taskComplexity'),
-            },
+            annotations: { annotator_answer_selection: annotatorAnswer, annotator_confidence: annotatorConfidence,
+                annotator_proactivity_level: parseFloat(annotatorProactivityLevel), clinical_plausibility: clinicalPlausibility,
+                clinical_plausibility_comment: clinicalPlausibilityComment, },
             timestamp: new Date().toISOString()
         };
 
-        // Conditional comment checks are removed as comment fields are removed.
-        // Keep validation for mandatory radio button selections.
-        if (!annotation.annotations.answer_correctness ||
-            !annotation.annotations.alignment_with_dataset) {
-            alert("Please fill all mandatory annotation fields (the radio button groups)."); return false;
+        try {
+            const annotationDocRef = doc(collection(db, 'annotations', annotatorName, 'cases', currentCaseId, 'tasks'), task.task_id);
+            await setDoc(annotationDocRef, annotationData);
+            console.log(`Annotation saved to Firebase for Task ${task.task_id}.`);
+            const existingIdx = allAnnotations.findIndex(ann => ann.task_id === annotationData.task_id);
+            if (existingIdx > -1) allAnnotations[existingIdx] = annotationData; else allAnnotations.push(annotationData);
+            updateAnnotatedTaskCount();
+            return true;
+        } catch (error) {
+            console.error("Error saving annotation to Firebase:", error);
+            alert(`Error saving annotation to Firebase:\n${error.message}`);
+            return false;
         }
-
-        const existingAnnotationIndex = allAnnotations.findIndex(ann => ann.task_id === annotation.task_id);
-        if (existingAnnotationIndex > -1) allAnnotations[existingAnnotationIndex] = annotation;
-        else allAnnotations.push(annotation);
-        console.log("Annotation saved:", annotation);
-        return true;
     }
 
-    function navigateTask(direction) {
+    async function navigateTask(direction) {
         if (tasksToAnnotate.length === 0) return;
-        if (direction === 1) { if (!saveCurrentAnnotation()) return; }
+        const prevBtn = document.getElementById('prevTaskBtn');
+        const nextBtn = document.getElementById('nextTaskBtn');
+
+        if (direction === 1) {
+            prevBtn.disabled = true; nextBtn.disabled = true; nextBtn.classList.add('btn-disabled');
+            const saveSuccess = await saveCurrentAnnotation();
+            if (!saveSuccess) {
+                 prevBtn.disabled = currentTaskPointer === 0; nextBtn.disabled = false; nextBtn.classList.remove('btn-disabled');
+                return;
+            }
+        }
         currentTaskPointer += direction;
-        if (currentTaskPointer >= 0 && currentTaskPointer < tasksToAnnotate.length) displayTask();
-        else if (currentTaskPointer >= tasksToAnnotate.length) {
-            alert("All selected tasks for this case annotated! You can now export.");
-            document.getElementById('nextTaskBtn').disabled = true;
-        } else { currentTaskPointer = 0; displayTask(); }
+        if (currentTaskPointer >= 0 && currentTaskPointer < tasksToAnnotate.length) {
+            displayTask();
+            document.getElementById('taskContainer').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else if (currentTaskPointer >= tasksToAnnotate.length) {
+             const annotatedCount = allAnnotations.filter(ann => tasksToAnnotate.some(t => t.task_id === ann.task_id)).length;
+            if (annotatedCount === tasksToAnnotate.length) {
+                 alert("All selected tasks for this case annotated!");
+                 document.getElementById('taskContainer').classList.add('hidden');
+                 document.getElementById('exportSectionContainer').classList.remove('hidden');
+                 currentTaskPointer = tasksToAnnotate.length;
+            } else {
+                 alert(`End of selected tasks. ${annotatedCount}/${tasksToAnnotate.length} annotated. Use "Previous Task" or "Export".`);
+                 currentTaskPointer = tasksToAnnotate.length - 1;
+                 displayTask();
+            }
+        } else {
+             if (currentTaskPointer < 0) currentTaskPointer = 0;
+             if (currentTaskPointer === 0) {
+                 displayTask();
+                 document.getElementById('taskContainer').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                 if (direction === -1) alert("You are at the first task.");
+             }
+        }
+        prevBtn.disabled = currentTaskPointer === 0;
+        nextBtn.disabled = currentTaskPointer >= tasksToAnnotate.length;
+        nextBtn.classList.toggle('btn-disabled', currentTaskPointer >= tasksToAnnotate.length);
     }
 
     function exportAnnotations() {
         if (allAnnotations.length === 0) { alert("No annotations to export."); return; }
-        const annotatorName = document.getElementById('annotatorName').value || "UnknownAnnotator";
-        const filename = `annotations_${annotatorName}_${currentJsonFileName.replace('_tasks.json','')}_${new Date().toISOString().slice(0,19).replace(/:/g,'-')}.json`;
+        const annotatorName = document.getElementById('annotatorName').value.trim();
+        if (!annotatorName) { alert("Please enter Annotator Name/ID."); return; }
+        const caseId = currentCaseId || "UnknownCase";
+        if (caseId === "UnknownCase") { alert("Case data not loaded."); return; }
+        const sanitizedCaseId = caseId.replace(/[^a-zA-Z0-9_-]/g, '_');
+        const filename = `behaviorbench_annotations_${annotatorName}_${sanitizedCaseId}_${new Date().toISOString().slice(0,19).replace(/:/g,'-')}.json`;
         const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(allAnnotations, null, 2));
         const downloadAnchorNode = document.createElement('a');
         downloadAnchorNode.setAttribute("href", dataStr);
         downloadAnchorNode.setAttribute("download", filename);
         document.body.appendChild(downloadAnchorNode);
         downloadAnchorNode.click();
-        downloadAnchorNode.remove();
-        alert(`Annotations exported as ${filename}`);
+        document.body.removeChild(downloadAnchorNode);
+        console.log(`Annotations exported as ${filename}`);
     }
 
-    // Conditional comment toggling functions are removed as textareas are removed
-    // function toggleAnswerCorrectnessComment() { ... }
-    // function toggleAlignmentComment() { ... }
+    function toggleLoadButtonState() {
+       const annotatorName = document.getElementById('annotatorName').value.trim();
+       const loadButton = document.getElementById('loadCaseBtn');
+       if (loadButton) {
+           loadButton.disabled = (annotatorName === "" || !db);
+           loadButton.classList.toggle('btn-disabled', loadButton.disabled);
+       }
+    }
+
+    // --- Initial Setup and Event Listeners ---
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log("DOM fully loaded.");
+        const taskFileDropdown = document.getElementById('caseFile');
+        if (taskFileDropdown) {
+            taskFileNames.forEach(fileName => {
+                const option = document.createElement('option');
+                option.value = fileName; option.textContent = fileName.replace("_tasks.json", "");
+                taskFileDropdown.appendChild(option);
+            });
+        }
+        document.getElementById('loadCaseBtn').addEventListener('click', loadCaseAndConversation);
+        document.getElementById('startAnnotationBtn').addEventListener('click', startAnnotation);
+        document.getElementById('toggleConvBtn').addEventListener('click', toggleFullConversationView);
+        document.getElementById('prevTaskBtn').addEventListener('click', () => navigateTask(-1));
+        document.getElementById('nextTaskBtn').addEventListener('click', () => navigateTask(1));
+        document.getElementById('exportAnnotationsBtn').addEventListener('click', exportAnnotations);
+        document.getElementById('proactivityLevelSlider').addEventListener('input', (e) => updateProactivitySliderValueDisplay(e.target.value));
+        document.getElementById('annotatorName').addEventListener('input', toggleLoadButtonState);
+        document.getElementById('clinicalPlausibility').addEventListener('change', (e) => { if (e.target.name === 'clinicalPlausibility') toggleClinicalPlausibilityComment(); });
+
+        toggleLoadButtonState(); // Initial state for load button
+        const startBtn = document.getElementById('startAnnotationBtn');
+        startBtn.disabled = true; startBtn.classList.add('btn-disabled');
+        updateProactivitySliderValueDisplay(document.getElementById('proactivityLevelSlider').value);
+
+        if (firebaseStatusElement && !firebaseStatusElement.textContent.includes("failed") && !db) {
+            firebaseStatusElement.textContent = "Firebase connection status unknown.";
+            firebaseStatusElement.style.color = 'orange';
+        }
+    });
 
 </script>
 
