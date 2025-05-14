@@ -1,0 +1,19 @@
+name: Test Secrets Access
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Access Secrets
+        env: # Make the secret available as an environment variable to the run step
+          MY_API_KEY: ${{ secrets.API_KEY }}
+        run : |
+          echo "Secrets : $MY_API_KEY"
+          # For security, often you wouldn't echo the secret directly in a real workflow
+          # This is just for testing that it's accessible.
+          # In a real build, you'd use it in a command, e.g., to replace a placeholder.
+          echo "API Key Length: ${#MY_API_KEY}" # A safer way to check if it's there
