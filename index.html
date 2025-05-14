@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BEHAVIORBENCH Annotation Tool (v18 - Separate Config)</title>
+    <title>BEHAVIORBENCH Annotation Tool (v17 - Final Firebase Fix)</title>
     <style>
-        /* CSS from previous version - remains the same */
+        /* CSS adapted from v12 */
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
         :root {
             --primary-color: #007bff; /* Blue */
@@ -159,13 +159,17 @@
             color: var(--success-color);
             font-weight: bold;
         }
+
+
     </style>
+    <!-- Firebase SDKs - Use Modular Version -->
+    <!-- Script tag moved to the end of the body -->
 </head>
 <body>
 
 <div class="main-container">
     <h1>BEHAVIORBENCH Annotation Tool</h1>
-    <p id="firebaseStatus"></p>
+    <p id="firebaseStatus"></p> <!-- Firebase Status Message -->
 
     <div class="card" id="annotatorCard">
         <h2>Annotator Information</h2>
@@ -230,7 +234,7 @@
             <div class="form-group">
                 <label>1. Your Confidence in Your Selected Answer:</label>
                 <div class="radio-group" id="annotatorConfidence">
-                    <label><input type="radio" name="annotatorConfidence" value="Very High"> Very High</label>
+
                     <label><input type="radio" name="annotatorConfidence" value="High"> High</label>
                     <label><input type="radio" name="annotatorConfidence" value="Moderate"> Moderate</label>
                     <label><input type="radio" name="annotatorConfidence" value="Low"> Low</label>
@@ -269,56 +273,52 @@
         <h2>Export Annotations</h2>
          <p>Annotations are automatically saved to Firebase as you click "Save & Next Task".</p>
          <p>Annotated tasks for this case: <span id="annotatedTaskCount">0</span> / <span id="totalSelectedTaskCount">0</span></p>
-        <button id="exportAnnotationsBtn" class="btn-success">Download Current Case Annotations (JSON)</button>
-         <p style="margin-top: 15px; font-size: 0.9em; color: #666;">Note: This exports annotations loaded for the current case. For a full export across all cases, you would typically need to access the Firebase database directly.</p>
     </div>
 </div>
 
-<!-- Load config.js first (this file should NOT be committed if it contains real keys) -->
-<script src="config.js"></script>
-<!-- Then load the main module script -->
+<!-- Moved script tag to the end of the body -->
 <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-app.js";
     import { getFirestore, collection, doc, getDocs, setDoc } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-firestore.js";
 
-    // Firebase config is expected to be globally available from config.js
-    // const firebaseConfig = { ... }; // This is now in config.js
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "__FIREBASE_API_KEY__",
+      authDomain: "behavior-adaptation.firebaseapp.com",
+      projectId: "behavior-adaptation",
+      storageBucket: "behavior-adaptation.firebasestorage.app",
+      messagingSenderId: "252062583138",
+      appId: "1:252062583138:web:69a0d618c676a3a8f2843b",
+      measurementId: "G-K93EMQ9EN2"
+    };
 
     // Initialize Firebase
     let app;
     let db;
-    const firebaseStatusElement = document.getElementById('firebaseStatus');
+    const firebaseStatusElement = document.getElementById('firebaseStatus'); // Get status element early
 
-    if (typeof firebaseConfig === 'undefined') {
-        console.error("Firebase config not loaded! Make sure config.js is present and correct, and included BEFORE this script.");
-        if(firebaseStatusElement) {
-            firebaseStatusElement.textContent = "Firebase configuration missing! Create config.js with your Firebase project details.";
-            firebaseStatusElement.style.color = 'red';
-        }
-    } else {
-        try {
-             app = initializeApp(firebaseConfig); // Use the global firebaseConfig
-             db = getFirestore(app);
-             if (firebaseStatusElement) {
-                 firebaseStatusElement.textContent = "Firebase connected successfully.";
-                 firebaseStatusElement.style.color = 'green';
-             }
-             console.log("Firebase app and Firestore initialized.");
-        } catch (error) {
-             console.error("Firebase initialization failed:", error);
-              if (firebaseStatusElement) {
-                   firebaseStatusElement.textContent = "Firebase connection failed: " + error.message;
-                   firebaseStatusElement.style.color = 'red';
-               }
-        }
+    try {
+         app = initializeApp(firebaseConfig);
+         db = getFirestore(app); // Get Firestore instance
+         if (firebaseStatusElement) {
+             firebaseStatusElement.textContent = "Firebase connected successfully.";
+             firebaseStatusElement.style.color = 'green';
+         }
+         console.log("Firebase app and Firestore initialized.");
+    } catch (error) {
+         console.error("Firebase initialization failed:", error);
+          if (firebaseStatusElement) {
+               firebaseStatusElement.textContent = "Firebase connection failed: " + error.message;
+               firebaseStatusElement.style.color = 'red';
+           }
     }
 
 
     // --- Global variables used by functions ---
     let currentTaskDataFile = null;
     let currentConversationDataFile = null;
-    let tasksToAnnotate = [];
+    let tasksToAnnotate = []; // Subset of tasks selected for annotation
     let currentTaskPointer = 0;
     let allAnnotations = [];
     let currentJsonFileName = "";
@@ -713,7 +713,7 @@
              if (currentTaskPointer === 0) {
                  displayTask();
                  document.getElementById('taskContainer').scrollIntoView({ behavior: 'smooth', block: 'start' });
-                 if (direction === -1) alert("You are at the first task.");
+                 if (direction === -1) alert("You are at the first task."); // Only alert if trying to go back from first
              }
         }
         prevBtn.disabled = currentTaskPointer === 0;
@@ -743,7 +743,7 @@
        const annotatorName = document.getElementById('annotatorName').value.trim();
        const loadButton = document.getElementById('loadCaseBtn');
        if (loadButton) {
-           loadButton.disabled = (annotatorName === "" || !db);
+           loadButton.disabled = (annotatorName === "" || !db); // Also disable if db not connected
            loadButton.classList.toggle('btn-disabled', loadButton.disabled);
        }
     }
